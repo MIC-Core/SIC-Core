@@ -1,0 +1,25 @@
+= SIC Core Specification
+:sectnums:
+:sectnumlevels: 5
+:sectlinks:
+:toc: left
+:toc-title: Contents
+:toclevels: 5
+:xrefstyle: short
+:docinfo: shared
+:stylesheet: sic-core-spec.css
+:stem: latexmath
+:source-highlighter: highlightjs
+:nofooter:
+:icons: font
+:imagesdir: images
+
+include::0___preamble.adoc[]
+
+include::1___overview.adoc[]
+
+include::2___core_attributes.adoc[]
+
+include::3___conformance.adoc[]
+
+include::4___literature.adoc[]

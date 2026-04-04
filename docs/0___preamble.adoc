@@ -1,0 +1,10 @@
+The SIC Core specification is a free standard that defines a set of harmonized simulation meta data attributes that meta-data standards can adopt to avoid ambuity and incompatibility in common attributes across domains and standards.
+It is maintained as a joint undertaking of IRT SystemX and prostep ivip.
+Releases and issues can be found on https://github.com/MIC-Core/SIC-Core[GitHub].
+
+{empty} +
+{empty}
+
+Copyright (C) 2022-2026 IRT SystemX and 2022-2026 prostep ivip.
+
+{empty}
