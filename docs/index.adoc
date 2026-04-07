@@ -7,7 +7,7 @@
 :toclevels: 5
 :xrefstyle: short
 :docinfo: shared
-:stylesheet: sic-core-spec.css
+:stylesheet: mic-core-spec.css
 :stem: latexmath
 :source-highlighter: highlightjs
 :nofooter:
