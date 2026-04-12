@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../schemas/SRMDSICCore.xsd" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<SimulationResourceMetaData
+    xmlns="http://ssp-standard.org/SSPTraceability1/SimulationResourceMetaData"
+    xmlns:stc="http://ssp-standard.org/SSPTraceability1/SSPTraceabilityCommon"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://ssp-standard.org/SSPTraceability1/SimulationResourceMetaData ../schemas/SRMDSICCore.xsd"
+    name="SRMDSICCoreExample" version="1.0.0">
+
+    <stc:Classification type="org.mic-core.sic-core">
+        <!-- Administrative Data -->
+        <stc:ClassificationEntry keyword="administrative.specific-product.name">AD-34basic</stc:ClassificationEntry>
+        <stc:ClassificationEntry keyword="administrative.ordering-project.name">cam34basic</stc:ClassificationEntry>
+        <stc:ClassificationEntry keyword="administrative.simulation-request.name">SIM-REQ-2026-0001</stc:ClassificationEntry>
+        <stc:ClassificationEntry keyword="administrative.simulation-task.name">SIM-TASK-2026-0001</stc:ClassificationEntry>
+        <stc:ClassificationEntry keyword="administrative.overall-product.name">carZZ</stc:ClassificationEntry>
+        <stc:ClassificationEntry keyword="administrative.simulation-task.confidentiality">CSC-2: confidential</stc:ClassificationEntry>
+        <stc:ClassificationEntry keyword="administrative.simulation-task.date.start">2026-04-20</stc:ClassificationEntry>
+        <stc:ClassificationEntry keyword="administrative.simulation-task.date.delivery">2026-05-15</stc:ClassificationEntry>
+        <stc:ClassificationEntry keyword="administrative.contact.customer-person">Jane Requester</stc:ClassificationEntry>
+        <stc:ClassificationEntry keyword="administrative.contact.customer-entity">ADAS Engineering Dept.</stc:ClassificationEntry>
+        <stc:ClassificationEntry keyword="administrative.contact.contractor-person">John Contractor</stc:ClassificationEntry>
+        <stc:ClassificationEntry keyword="administrative.contact.contractor-entity">Simulation Service Center</stc:ClassificationEntry>
+        <stc:ClassificationEntry keyword="administrative.simulation-task.contact.insert-name">Alex Creator</stc:ClassificationEntry>
+        <stc:ClassificationEntry keyword="administrative.simulation-task.date.creation">2026-04-12</stc:ClassificationEntry>
+
+        <!-- Analysis -->
+        <stc:ClassificationEntry keyword="analysis.item-under-test.name">camera34-A-sampleV23</stc:ClassificationEntry>
+        <stc:ClassificationEntry keyword="analysis.simulation-task.objectives">Assess camera resolution performance for AD use case.</stc:ClassificationEntry>
+        <stc:ClassificationEntry keyword="analysis.simulation-task.further-requirements">Distance between vehicle and pedestrian must remain above 1.5 m.</stc:ClassificationEntry>
+        <stc:ClassificationEntry keyword="analysis.quality-aspects">companyZ simulation quality assessment</stc:ClassificationEntry>
+        <stc:ClassificationEntry keyword="analysis.engineering-task.higher-level">Development of an AD driving function based on camera signals.</stc:ClassificationEntry>
+        <stc:ClassificationEntry keyword="analysis.engineering-task.specific">Detection of critical occlusions when turning right with pedestrians.</stc:ClassificationEntry>
+        <stc:ClassificationEntry keyword="analysis.verification">Verification criterion: objective metrics reached in benchmark scenarios.</stc:ClassificationEntry>
+        <stc:ClassificationEntry keyword="analysis.validation">Validation criterion: engineering intent is represented by selected scenarios.</stc:ClassificationEntry>
+
+        <!-- Requirements -->
+        <stc:ClassificationEntry keyword="requirements.models.purpose-objectives">Specify camera resolution at object-list level for AD function.</stc:ClassificationEntry>
+        <stc:ClassificationEntry keyword="requirements.models.subject-information.modeled-entity">camera34-A-sampleV23</stc:ClassificationEntry>
+        <stc:ClassificationEntry keyword="requirements.parameters.subject-information.parametrized-entity">camera datasheet revision 4</stc:ClassificationEntry>
+        <stc:ClassificationEntry keyword="requirements.simulation-environment">Tool chain shall support FMI and scenario replay.</stc:ClassificationEntry>
+        <stc:ClassificationEntry keyword="requirements.simulation-integration">Model interfaces shall be integrated via SSP and validated I/O mapping.</stc:ClassificationEntry>
+        <stc:ClassificationEntry keyword="requirements.test-cases">Urban crossing and right-turn occlusion scenarios shall be included.</stc:ClassificationEntry>
+        <stc:ClassificationEntry keyword="requirements.models.effects-considered">Optical distortion and motion blur shall be considered.</stc:ClassificationEntry>
+        <stc:ClassificationEntry keyword="requirements.models.further-model-requirements">Thermal effects are excluded for this task.</stc:ClassificationEntry>
+        <stc:ClassificationEntry keyword="requirements.model.confidentiality">CSC-2: confidential</stc:ClassificationEntry>
+        <stc:ClassificationEntry keyword="requirements.parameters-value-distribution-function">Normal distribution with sigma based on supplier tolerance.</stc:ClassificationEntry>
+        <stc:ClassificationEntry keyword="requirements.parameter.confidentiality">CSC-1: internal</stc:ClassificationEntry>
+        <stc:ClassificationEntry keyword="requirements.quality-assurance">Peer review of requirements package required before design start.</stc:ClassificationEntry>
+        <stc:ClassificationEntry keyword="requirements.verification">Requirements verification passed with minor comments resolved.</stc:ClassificationEntry>
+        <stc:ClassificationEntry keyword="requirements.models.quality-requirements">Model shall reproduce baseline within +/-5% KPI error.</stc:ClassificationEntry>
+        <stc:ClassificationEntry keyword="requirements.parameters.quality-requirements">Parameter provenance shall be traceable to approved sources.</stc:ClassificationEntry>
+        <stc:ClassificationEntry keyword="requirements.simulation-environment.quality-requirements">Environment version shall be frozen for task execution.</stc:ClassificationEntry>
+        <stc:ClassificationEntry keyword="requirements.simulation-integration.quality-requirements">Integration test suite shall pass before execution.</stc:ClassificationEntry>
+        <stc:ClassificationEntry keyword="requirements.test-cases.quality-requirements">All critical scenarios shall include expected outcome definitions.</stc:ClassificationEntry>
+
+        <!-- Design -->
+        <stc:ClassificationEntry keyword="design.models">Model architecture with sensor, perception, and environment sub-models.</stc:ClassificationEntry>
+        <stc:ClassificationEntry keyword="design.parameters">Parameter set structure with nominal and tolerance values.</stc:ClassificationEntry>
+        <stc:ClassificationEntry keyword="design.simulation-environment">Environment design based on ToolX 5.2 and approved plugins.</stc:ClassificationEntry>
+        <stc:ClassificationEntry keyword="design.simulation-integration">Integration design based on SSP composition with explicit connectors.</stc:ClassificationEntry>
+        <stc:ClassificationEntry keyword="design.test-cases">Test case design document TC-ADAS-CAM-2026-01.</stc:ClassificationEntry>
+        <stc:ClassificationEntry keyword="design.quality-assurance">Design review checklist completed and signed.</stc:ClassificationEntry>
+        <stc:ClassificationEntry keyword="design.verification">Design verification passed by simulation lead.</stc:ClassificationEntry>
+        <stc:ClassificationEntry keyword="design.models.quality-requirements">Model modularity and interface consistency criteria met.</stc:ClassificationEntry>
+        <stc:ClassificationEntry keyword="design.parameters.quality-requirements">Parameter naming and units follow company standard.</stc:ClassificationEntry>
+        <stc:ClassificationEntry keyword="design.simulation-environment.quality-requirements">Toolchain reproducibility validated on clean setup.</stc:ClassificationEntry>
+        <stc:ClassificationEntry keyword="design.simulation-integration.quality-requirements">Integration latency constraints verified in dry runs.</stc:ClassificationEntry>
+        <stc:ClassificationEntry keyword="design.test-cases.quality-requirements">Coverage of required scenario classes confirmed.</stc:ClassificationEntry>
+
+        <!-- Implementation -->
+        <stc:ClassificationEntry keyword="implementation.model.name">cam_occlusion_model_v2</stc:ClassificationEntry>
+        <stc:ClassificationEntry keyword="implementation.parameters.name">cam_params_set_2026Q2</stc:ClassificationEntry>
+        <stc:ClassificationEntry keyword="implementation.simulation-environment.name">ToolX_5.2_FMIStack</stc:ClassificationEntry>
+        <stc:ClassificationEntry keyword="implementation.simulation-integration.name">ssp_integration_camstack_v4</stc:ClassificationEntry>
+        <stc:ClassificationEntry keyword="implementation.model.confidentiality">CSC-2: confidential</stc:ClassificationEntry>
+        <stc:ClassificationEntry keyword="implementation.model.quality">Model quality assessed as fit-for-purpose.</stc:ClassificationEntry>
+        <stc:ClassificationEntry keyword="implementation.parameter.confidentiality">CSC-1: internal</stc:ClassificationEntry>
+        <stc:ClassificationEntry keyword="implementation.parameters.quality">Parameter quality confirmed against source references.</stc:ClassificationEntry>
+        <stc:ClassificationEntry keyword="implementation.simulation-environment.quality">Environment validated with regression baseline.</stc:ClassificationEntry>
+        <stc:ClassificationEntry keyword="implementation.test-cases.name">tc_right_turn_occlusion_set</stc:ClassificationEntry>
+        <stc:ClassificationEntry keyword="implementation.test-cases.confidentiality">CSC-1: internal</stc:ClassificationEntry>
+        <stc:ClassificationEntry keyword="implementation.test-cases.quality">Test cases reviewed and executable.</stc:ClassificationEntry>
+        <stc:ClassificationEntry keyword="implementation.simulation-integration.settings">Solver=CVODE; step=1e-3; tolerance=1e-6</stc:ClassificationEntry>
+        <stc:ClassificationEntry keyword="implementation.simulation-integration.quality">Integration quality passed all interface checks.</stc:ClassificationEntry>
+        <stc:ClassificationEntry keyword="implementation.quality-assurance-results">Implementation QA passed with no blocking issues.</stc:ClassificationEntry>
+        <stc:ClassificationEntry keyword="implementation.verdict">passed</stc:ClassificationEntry>
+
+        <!-- Execution -->
+        <stc:ClassificationEntry keyword="execution.model.names">cam_occlusion_model_v2</stc:ClassificationEntry>
+        <stc:ClassificationEntry keyword="execution.parameters.names">cam_params_set_2026Q2</stc:ClassificationEntry>
+        <stc:ClassificationEntry keyword="execution.test-cases.names">tc_right_turn_occlusion_set</stc:ClassificationEntry>
+        <stc:ClassificationEntry keyword="execution.tool.name">ToolX</stc:ClassificationEntry>
+        <stc:ClassificationEntry keyword="execution.data">results/raw/run_2026_04_12.zip</stc:ClassificationEntry>
+        <stc:ClassificationEntry keyword="execution.tool.settings">profile=production; deterministic=true</stc:ClassificationEntry>
+        <stc:ClassificationEntry keyword="execution.log">logs/execution_2026_04_12.log</stc:ClassificationEntry>
+
+        <!-- Evaluation -->
+        <stc:ClassificationEntry keyword="evaluation.results">results/evaluation_summary_2026_04_12.pdf</stc:ClassificationEntry>
+        <stc:ClassificationEntry keyword="evaluation.quality-assurance">Evaluation peer review completed.</stc:ClassificationEntry>
+        <stc:ClassificationEntry keyword="evaluation.verdict">valid</stc:ClassificationEntry>
+
+        <!-- Fulfillment -->
+        <stc:ClassificationEntry keyword="fulfillment.objectives">fulfilled</stc:ClassificationEntry>
+        <stc:ClassificationEntry keyword="fulfillment.credibility">fulfilled</stc:ClassificationEntry>
+        <stc:ClassificationEntry keyword="fulfillment.task-status">finished</stc:ClassificationEntry>
+        <stc:ClassificationEntry keyword="fulfillment.evidence">reports/fulfillment_report_2026_04_12.pdf</stc:ClassificationEntry>
+        <stc:ClassificationEntry keyword="fulfillment.date">2026-04-12</stc:ClassificationEntry>
+    </stc:Classification>
+
+</SimulationResourceMetaData>

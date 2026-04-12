@@ -23,3 +23,5 @@ include::2___core_attributes.adoc[]
 include::3___conformance.adoc[]
 
 include::4___literature.adoc[]
+
+include::A___mapping_srmd.adoc[]
