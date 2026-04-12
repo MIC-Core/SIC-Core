@@ -31,7 +31,7 @@ Note that the abbreviated explanations are not considered a normative part of th
 
 ==== Administrative Data
 
-[cols="2,3m,1^e,7",width="70%",align="center",frame="topbot",options="header"]
+[cols="2,3m,^1e,17",align="center",frame="topbot",options="header"]
 |===
 | SIC Core Name | SRMD Mapping | Obligation | Short Explanation
 | Specific Product Name | administrative.specific-product.name | Mandatory | Unique master name of the specific product whose development or validation requires the simulation.
@@ -52,7 +52,7 @@ Note that the abbreviated explanations are not considered a normative part of th
 
 ==== Analysis
 
-[cols="2,3m,1^e,7",width="70%",align="center",frame="topbot",options="header"]
+[cols="2,3m,^1e,17",align="center",frame="topbot",options="header"]
 |===
 | SIC Core Name | SRMD Mapping | Obligation | Short Explanation
 | Name of Item under Test | analysis.item-under-test.name | Mandatory | Product, system, component, software, or other item that is subject to simulation.
@@ -68,7 +68,7 @@ Note that the abbreviated explanations are not considered a normative part of th
 
 ==== Requirements
 
-[cols="2,3m,1^e,7",width="70%",align="center",frame="topbot",options="header"]
+[cols="2,3m,^1e,17",align="center",frame="topbot",options="header"]
 |===
 | SIC Core Name | SRMD Mapping | Obligation | Short Explanation
 | Model Purpose and Objectives | requirements.models.purpose-objectives | Mandatory | Individual model purposes and objectives derived from simulation objectives.
@@ -93,7 +93,7 @@ Note that the abbreviated explanations are not considered a normative part of th
 
 ==== Design
 
-[cols="2,3m,1^e,7",width="70%",align="center",frame="topbot",options="header"]
+[cols="2,3m,^1e,17",align="center",frame="topbot",options="header"]
 |===
 | SIC Core Name | SRMD Mapping | Obligation | Short Explanation
 | Model Design Specification | design.models | Recommended | Definition of how models shall be implemented.
@@ -112,7 +112,7 @@ Note that the abbreviated explanations are not considered a normative part of th
 
 ==== Implementation
 
-[cols="2,3m,1^e,7",width="70%",align="center",frame="topbot",options="header"]
+[cols="2,3m,^1e,17",align="center",frame="topbot",options="header"]
 |===
 | SIC Core Name | SRMD Mapping | Obligation | Short Explanation
 | Simulation Model Name | implementation.model.name | Mandatory | Name of the implemented simulation model.
@@ -135,7 +135,7 @@ Note that the abbreviated explanations are not considered a normative part of th
 
 ==== Execution
 
-[cols="2,3m,1^e,7",width="70%",align="center",frame="topbot",options="header"]
+[cols="2,3m,^1e,17",align="center",frame="topbot",options="header"]
 |===
 | SIC Core Name | SRMD Mapping | Obligation | Short Explanation
 | Used Simulation Model Name | execution.model.names | Mandatory | Name of simulation model actually used in execution.
@@ -149,7 +149,7 @@ Note that the abbreviated explanations are not considered a normative part of th
 
 ==== Evaluation
 
-[cols="2,3m,1^e,7",width="70%",align="center",frame="topbot",options="header"]
+[cols="2,3m,^1e,17",align="center",frame="topbot",options="header"]
 |===
 | SIC Core Name | SRMD Mapping | Obligation | Short Explanation
 | Evaluation Results | evaluation.results | Mandatory | Key results produced by processing simulation output data.
@@ -159,7 +159,7 @@ Note that the abbreviated explanations are not considered a normative part of th
 
 ==== Fulfillment
 
-[cols="2,3m,1^e,7",width="70%",align="center",frame="topbot",options="header"]
+[cols="2,3m,^1e,17",align="center",frame="topbot",options="header"]
 |===
 | SIC Core Name | SRMD Mapping | Obligation | Short Explanation
 | Objectives Fulfilled | fulfillment.objectives | Mandatory | Decision whether simulation objectives are fulfilled.
