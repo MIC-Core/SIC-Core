@@ -9,7 +9,7 @@ Note that this draft is being worked on actively, and thus is subject
 to change without notice.
 
 This is currently not normative, nor is this document to be considered
-officially endorsed by any of the involved organisations prior to its
+officially endorsed by any of the involved organizations prior to its
 official adoption.
 
 The [SIC Core Specification][spec] is currently maintained on
