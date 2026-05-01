@@ -94,7 +94,12 @@ The goal of this specification is therefore not to prescribe a fixed metadata im
 
 === Simulation Process Context
 
-The metadata structure defined in this specification follows a simulation process aligned with the *Credible Simulation Process Framework.*
+The metadata structure defined in this specification follows a simulation process aligned with the https://modelica.github.io/ssp-ls-traceability/main/#sec-crediblesimulationprocessframework[*Credible Simulation Process Framework*]
+
+[#im-csp]
+.Credible Simulation Process with attached metadata to the process phases
+image::CSP.png[]
+
 
 This process distinguishes the following phases:
 
