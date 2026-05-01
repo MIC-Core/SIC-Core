@@ -1,22 +1,26 @@
 [appendix]
 == Subset of SIC-Core for basic usecases
     
-This appendix is an optional part of the SIC Core specification.
-It provides an implementation of the SIC Core standard attributes in the SRMD (Simulation Resource Meta Data) format, which is one of the formats specified in the SSP LS Traceability specification.
-It is normative for any mapping to the SRMD format that uses the specified classification type.
+The information and metadata required depend on the use case. The following proposes a set of metadata that enables basic functionality for search, analysis, reuse, and traceability. A key factor for user acceptance is that most of this information can be provided by the used IT systems. 
+The Administrative Data category contains information used to identify and organize the simulation. 
 
-=== Introduction
+This set of metadata can be used as starting point in implementation metadata for simulation.
 
-In the following, an implementation of the SIC Core standard into the SRMD metadata format will be shown.
-The SRMD (Simulation Resoure Meta Data) metadata format is one of the formats specified in the SSP LS Traceability specification.
-These formats form part of the Modelica Association Project SSP (System Structuring and Parametrization) provided format specifications.
-The SRMD format allows to specify any metadata or other attributes in the form of key value pairs in an XML-based format.
-The format description also specifies where this metadata file should be stored in an FMU or SSP archive.
-The SSP LS Traceability specification is a normative reference for this appendix.
+[cols="1>m,2^e,7<",width="100%",align="center",frame="topbot",options="header"]
+|===
+| Attribute Name| Category | Obligation | Description | Typical Source
+| Ordering project | Administrative |  Recommended | Unique name of the ordering project | Project management tool
+| Specific Product | Administrative |  Recommended | Unique name of the specific product | Project management tool
+| Simulation Request | Administrative |  Recommended | Unique name of the Simulation Request | Project management tool
+| Simulation task | Administrative | Mandatory | Unique name of the simulation task | Project management tool
+| Item under Test | Analysis | Mandatory | System, component, or product being analyzed | Tool / system
+| Simulation Objective | Analysis |  Recommended | Objective or purpose of the simulation | User
+| Quality criterion | Mandatory | Recommended | Criteria used to evaluate simulation success | User
+| Used Model | Execution | Mandatory | Model used for the simulation | Tool / system
+| Used Parameter | Execution | Mandatory | Parameter used for the simulation | user (selection)
+| Used Tool | Execution | Mandatory | Tool used for the simulation | Tool / system
+| Task status | Fulfillment | Mandatory | Is the task still in progress abortet, finished | User
+| Credibility fulfilled | Fulfillment | Recommended | Documentation of the credibility fulfillment decision | User
+| Objectives fulfilled | Fulfillment |  Recommended | Documentation of the objectives fulfillment decision  | User
+|===
 
-=== Mapping of SIC Core attributes to the SRMD format
-
-The `type` attribute of the `Classification` element must be specified as `org.mic-core.sic-core`.
-This `Classification` element must only contain `ClassificationEntry` elements with `keyword` attributes from the following table.
-It should contain entries for all SIC Core attributes that are considered mandatory.
-    
