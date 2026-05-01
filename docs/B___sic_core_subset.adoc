@@ -1,0 +1,22 @@
+[appendix]
+== Subset of SIC-Core for basic usecases
+    
+This appendix is an optional part of the SIC Core specification.
+It provides an implementation of the SIC Core standard attributes in the SRMD (Simulation Resource Meta Data) format, which is one of the formats specified in the SSP LS Traceability specification.
+It is normative for any mapping to the SRMD format that uses the specified classification type.
+
+=== Introduction
+
+In the following, an implementation of the SIC Core standard into the SRMD metadata format will be shown.
+The SRMD (Simulation Resoure Meta Data) metadata format is one of the formats specified in the SSP LS Traceability specification.
+These formats form part of the Modelica Association Project SSP (System Structuring and Parametrization) provided format specifications.
+The SRMD format allows to specify any metadata or other attributes in the form of key value pairs in an XML-based format.
+The format description also specifies where this metadata file should be stored in an FMU or SSP archive.
+The SSP LS Traceability specification is a normative reference for this appendix.
+
+=== Mapping of SIC Core attributes to the SRMD format
+
+The `type` attribute of the `Classification` element must be specified as `org.mic-core.sic-core`.
+This `Classification` element must only contain `ClassificationEntry` elements with `keyword` attributes from the following table.
+It should contain entries for all SIC Core attributes that are considered mandatory.
+    
