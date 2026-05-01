@@ -30,7 +30,7 @@ The attributes of SIC-Core are organized by the following attribute groups:
 
 Attributes marked with an *asterisk ( * )* represent *composite or sub-attributes with a predefined internal structure.* 
 
-In the list the sub-attributes are not separately listed.
+In the following list the sub-attributes are not separately listed.
 
 Example:
 
@@ -48,6 +48,7 @@ The attribute includes the following sub-attributes (details in chapter 2.9):
 
 *	Full Name
 
+*List of SIC-Core attributes*
 
 === Administrative Data
 
