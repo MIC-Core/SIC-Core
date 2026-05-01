@@ -25,3 +25,5 @@ include::3___conformance.adoc[]
 include::4___literature.adoc[]
 
 include::A___mapping_srmd.adoc[]
+
+include::B___sic_core_subset.adoc[]
