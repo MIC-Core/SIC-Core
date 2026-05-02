@@ -20,7 +20,7 @@ This set of metadata can be used as starting point in implementation metadata fo
 | Used Parameter | Execution | Mandatory | Parameter used for the simulation | user (selection)
 | Used Tool | Execution | Mandatory | Tool used for the simulation | Tool / system
 | Task status | Fulfillment | Mandatory | Is the task still in progress abortet, finished | User
-| Quality fulfiled | Fulfillment | Recommended | Documentation of the quality fulfillment decision | User
+| Quality fulfilled | Fulfillment | Recommended | Documentation of the quality fulfillment decision | User
 | Objectives fulfilled | Fulfillment |  Recommended | Documentation of the objectives fulfillment decision  | User
 |===
 
