@@ -386,59 +386,6 @@ Value entry examples::
 
 Additional explanation and rationale:: Providing the _Modeled Entity_ attribute enables specification of individual simulation models and parameters. This could not only comprise the item under test, but all additional entities modeled needed to conduct the simulation.
 
-==== Entity Parameter
-
-Attribute description:: The _Entity Parameter_ reference provided parameters of the entity to be modeled.
-
-Obligation:: Mandatory
-
-Can have multiple values:: Yes
-
-Value entry examples::
-
-* data sheet of camera
-* material database
-
-Additional explanation and rationale:: Providing the _Entity parameter_ attribute is essential input information for the parameterization.
-
-==== Simulation Environment Requirement
-
-Attribute description:: A _Simulation Environment Requirement_ is a requirement placed on the simulation environment.
-
-Obligation:: Mandatory
-
-Can have multiple values:: Yes
-
-Value entry examples::
-
-* tool for causal modeling and simulation and supporting FMI
-* FEM
-
-Additional explanation and rationale:: Providing the _Simulation Environment Requirement_ attribute helps specify the required simulation environment.
-
-==== Simulation Integration Requirement
-
-Attribute description:: A _Simulation Integration Requirement_ is a requirement placed on the interaction of the simulation setup elements.
-
-Obligation:: Mandatory
-
-Can have multiple values:: Yes
-
-Value entry examples::
-
-Additional explanation and rationale:: Providing the _Simulation Integration Requirement_ attribute helps specify the required simulation integration, i.e. to specify how all elements of the simulation setup should interact.
-
-==== Test Case Requirements
-
-Attribute description:: The _Test Case Requirements_ is the description of the goals and objectives of a test case.
-
-Obligation:: Mandatory
-
-Can have multiple values:: Yes
-
-Value entry examples::
-
-Additional explanation and rationale:: Providing the _Test Case Requirements_ attribute helps specify the implementation of test cases.
 
 ==== Required Modeled Effect
 
@@ -483,6 +430,34 @@ Value entry examples::
 
 Additional explanation and rationale:: The _Simulation Model Confidentiality Level_ attribute uses a classification system that specifies how confidential the information contained in the classified document is to be treated. Typically, there is a set of rules that specifies what may and may not be done with a document and the information it contains.
 
+==== Model Quality Requirement
+
+Attribute description:: A _Model Quality Requirement_ is a requirement placed on a simulation model.
+
+Obligation:: Optional
+
+Can have multiple values:: Yes
+
+Value entry examples::
+
+Additional explanation and rationale:: Providing the _Model Quality Requirement_ attribute helps specify the implementation of simulation models.
+
+==== Entity Parameter
+
+Attribute description:: The _Entity Parameter_ reference provided parameters of the entity to be modeled.
+
+Obligation:: Mandatory
+
+Can have multiple values:: Yes
+
+Value entry examples::
+
+* data sheet of camera
+* material database
+
+Additional explanation and rationale:: Providing the _Entity parameter_ attribute is essential input information for the parameterization.
+
+
 ==== Value Distribution Function
 
 Attribute description:: The _Value Distribution Function_ (value deviation) specifies the probability of deviations certain value.
@@ -512,6 +487,114 @@ Value entry examples::
 
 Additional explanation and rationale:: The _Parameter Confidentiality Level_ attribute uses a classification system that specifies how confidential the information contained in the classified document is to be treated. Typically, there is a set of rules that specifies what may and may not be done with a document and the information it contains.
 
+====Parameter Quality Requirement
+
+Attribute description:: A Parameter quality requirement is a requirement placed on (a set of) parameters.
+
+Obligation:: Optional
+
+Can have multiple values:: Yes
+
+Value entry examples::
+
+Additional explanation and rationale:: Providing the Parameter quality requirements in requieremts phase attribute helps specify the implentation of parameters. Quality requirements can be also part of general requirements
+
+==== Test Case Requirements
+
+Attribute description:: The _Test Case Requirements_ is the description of the goals and objectives of a test case.
+
+Obligation:: Mandatory
+
+Can have multiple values:: Yes
+
+Value entry examples::
+
+Additional explanation and rationale:: Providing the _Test Case Requirements_ attribute helps specify the implementation of test cases.
+
+==== Test Case Confidentiality Level
+
+Attribute description:: The _Test Case Confidentiality Level_ is a classification with respect to the access to classified information.
+
+Obligation:: Recommended
+
+Can have multiple values:: No
+
+Value entry examples::
+
+* CSC-0: public
+* CSC-1: internal
+* CSC-2: confidential
+* CSC-3: strictly confidential
+
+Additional explanation and rationale:: The _Parameter Confidentiality Level_ attribute uses a classification system that specifies how confidential the information contained in the classified document is to be treated. Typically, there is a set of rules that specifies what may and may not be done with a document and the information it contains.
+
+====Test Case Quality Requirement
+
+Attribute description:: A Test case quality requirement is a requirement that is placed on a test case.
+
+Obligation:: Optional
+
+Can have multiple values:: Yes
+
+Value entry examples::
+
+Additional explanation and rationale:: Providing the Test case requirements attribute helps specify the implementation of test cases. Quality requirements can be also part of general requirements
+
+==== Simulation Environment Requirement
+
+Attribute description:: A _Simulation Environment Requirement_ is a requirement placed on the simulation environment.
+
+Obligation:: Mandatory
+
+Can have multiple values:: Yes
+
+Value entry examples::
+
+* tool for causal modeling and simulation and supporting FMI
+* FEM
+
+Additional explanation and rationale:: Providing the _Simulation Environment Requirement_ attribute helps specify the required simulation environment.
+
+====Simulation Environment Quality Requirement
+
+Attribute description:: A Simulation environment quality requirement is a requirement placed on the simulation environment.
+
+Obligation:: Optional
+
+Can have multiple values:: Yes
+
+Value entry examples::
+
+Additional explanation and rationale:: Providing the Simulation environment quality requirement attribute helps specify the required simulation environment. Quality requirements can be also part of general requirements
+
+
+==== Simulation Integration Requirement
+
+Attribute description:: A _Simulation Integration Requirement_ is a requirement placed on the interaction of the simulation setup elements.
+
+Obligation:: Mandatory
+
+Can have multiple values:: Yes
+
+Value entry examples::
+
+Additional explanation and rationale:: Providing the _Simulation Integration Requirement_ attribute helps specify the required simulation integration, i.e. to specify how all elements of the simulation setup should interact.
+
+====Simulation Integration Quality Requirement
+
+Attribute description:: A Simulation integration quality requirement is a requirement that is placed on the simulation integration.
+
+Obligation:: Optional
+
+Can have multiple values:: Yes
+
+Value entry examples::
+
+Additional explanation and rationale:: Providing the Simulation integration quality requirement attribute helps specify the needed simulation integration, i.e., specify how all elements of the simulation setup shall interact.
+Quality requirements can be also part of general requirements
+
+
+
 ==== Quality Assurance Requirements
 
 Attribute description:: A _Quality Assurance Requirements_ is a requirements that is placed on the quality assurance in the requirements phase.
@@ -536,17 +619,7 @@ Value entry examples::
 
 Additional explanation and rationale:: Providing a _Requirements Verification Result_ attribute helps recognize the quality status of the requirements phase results. This attribute can contain a link to a verification report.
 
-==== Model Quality Requirement
 
-Attribute description:: A _Model Quality Requirement_ is a requirement placed on a simulation model.
-
-Obligation:: Optional
-
-Can have multiple values:: Yes
-
-Value entry examples::
-
-Additional explanation and rationale:: Providing the _Model Quality Requirement_ attribute helps specify the implementation of simulation models.
 
 ==== Parameter Quality Requirement
 
