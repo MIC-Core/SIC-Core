@@ -53,7 +53,7 @@ The attributes of SIC-Core are organized by the following attribute groups:
 
 The Administrative Data category contains information used to identify and organize the simulation.
 
-==== Overall Product Name
+==== #Overall Product Name#
 
 The Overall product name is the unique master name of the overall product within the company's project management IT infrastructure, whose development or validation requires the respective simulation.
 
@@ -67,7 +67,7 @@ Value entry examples::
 
 Additional explanation and rationale:: Providing the Overall product name attribute makes it easier to track and trace the impact of a simulation result on the overall product for which the simulation is initially being requested and executed. "Overall product” can also refer to a customer's product if a company develops and simulates a relevant product as a system or component specifically for a customer product.
 
-==== Specific Product Name
+==== #Specific Product Name#
 
 Attribute description:: The _Specific Product Name_ is the unique master name of the specific product within the company's project management IT infrastructure, whose development or validation requires the respective simulation.
 
