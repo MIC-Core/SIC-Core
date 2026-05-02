@@ -10,7 +10,7 @@ It enables consistent identification, management, and exchange of simulation mod
 
 However, simulation models are rarely used in isolation.
 In engineering practice they are typically applied within simulation tasks that follow a structured engineering workflow.
-These simulation tasks are initiated by simulation requests, use simulation models and other resources, and produce results that support engineering decisions.
+These simulation tasks are initiated by simulation requests, use simulation models and other resources, and produce results that support engineering decisions (see figure 1).
 
 In complex development environments, especially in large organizations and cross-company collaborations, the traceability and understanding of simulation activities becomes critical.
 It must be possible to answer questions such as:
