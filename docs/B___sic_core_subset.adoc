@@ -11,11 +11,11 @@ This set of metadata can be used as starting point in implementation metadata fo
 | Attribute Name| Category | Obligation | Description | Typical Source
 | Ordering project | Administrative |  Recommended | Unique name of the ordering project | Project management tool
 | Specific Product | Administrative |  Recommended | Unique name of the specific product | Project management tool
-| Simulation Request | Administrative |  Recommended | Unique name of the Simulation Request | Project management tool
+| Simulation Request | Administrative |  Mandatory | Unique name of the Simulation Request | Project management tool
 | Simulation task | Administrative | Mandatory | Unique name of the simulation task | Project management tool
 | Item under Test | Analysis | Mandatory | System, component, or product being analyzed | Tool / system
-| Simulation Objective | Analysis |  Recommended | Objective or purpose of the simulation | User
-| Quality criterion | Mandatory | Recommended | Criteria used to evaluate simulation success | User
+| Simulation Objective | Analysis |  Mandatory | Objective or purpose of the simulation | User
+| Quality criterion | Mandatory | Mandatory | Criteria used to evaluate simulation success | User
 | Used Model | Execution | Mandatory | Model used for the simulation | Tool / system
 | Used Parameter | Execution | Mandatory | Parameter used for the simulation | user (selection)
 | Used Tool | Execution | Mandatory | Tool used for the simulation | Tool / system
