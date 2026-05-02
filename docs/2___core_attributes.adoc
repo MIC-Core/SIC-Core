@@ -54,13 +54,27 @@ The attribute includes the following sub-attributes (details in chapter 2.9):
 
 The Administrative Data category contains information used to identify and organize the simulation.
 
+==== Overall Product Name
+
+The Overall product name is the unique master name of the overall product within the company's project management IT infrastructure, whose development or validation requires the respective simulation.
+
+Obligation:: Recommended
+
+Can have multiple values:: Yes
+
+Value entry examples::
+
+*  carZZ, aeroplaneTT 
+
+Providing the Overall product name attribute makes it easier to track and trace the impact of a simulation result on the overall product for which the simulation is initially being requested and executed. "Overall product” can also refer to a customer's product if a company develops and simulates a relevant product as a system or component specifically for a customer product.
+
 ==== Specific Product Name
 
 Attribute description:: The _Specific Product Name_ is the unique master name of the specific product within the company's project management IT infrastructure, whose development or validation requires the respective simulation.
 
 Obligation:: Mandatory
 
-Can have multiple values:: No
+Can have multiple values:: Yes
 
 Value entry examples::
 
@@ -105,21 +119,6 @@ Can have multiple values:: No
 Value entry examples::
 
 Additional explanation and rationale:: Providing the _Simulation Task Name_ attribute makes it easier to trace back to the simulation task when it is referenced in a simulation delivery.
-
-==== Overall Product Name
-
-Attribute description:: The _Overall Product Name_ is the unique master name of the overall product within the company's project management IT infrastructure, whose development or validation requires the respective simulation.
-
-Obligation:: Recommended
-
-Can have multiple values:: Yes
-
-Value entry examples::
-
-* carZZ
-* aeroplaneTT
-
-Additional explanation and rationale:: Providing the _Overall Product Name_ attribute makes it easier to track and trace the impact of a simulation result on the overall product for which the simulation is initially being requested and executed. "Overall product" can also refer to a customer's product if a company develops and simulates a relevant product as a system or component specifically for a customer product.
 
 ==== Simulation Task Confidentiality Level
 
@@ -242,7 +241,7 @@ Attribute description:: The _Name of Item under Test_ specifies the product, sys
 
 Obligation:: Mandatory
 
-Can have multiple values:: Yes
+Can have multiple values:: No
 
 Value entry examples::
 
@@ -250,6 +249,35 @@ Value entry examples::
 * camera34-A-sampleV23
 
 Additional explanation and rationale:: Providing the _Name of Item under Test_ attribute helps clarifying the subject of simulation.
+
+==== Specific engineering task
+
+Additional explanation and rationale:: The Specific engineering task is the engineering that directly benefits from the simulation results.
+Obligation:: Recommended
+
+Can have multiple values:: No
+
+Value entry examples::
+
+Detection of critical occlusions when turning right with pedestrians.
+
+Additional explanation and rationale:: The Specific engineering task attribute in combination with the Higher level engineering task attribute supports understanding the context in witch the simulation is placed.
+
+==== Higher level engineering task
+
+The Higher level engineering task is a higher level engineering task that sets the context of the specific engineering task.
+
+Obligation:: Recommended
+
+Can have multiple values:: No
+
+Value entry examples::
+
+Development of an AD driving function based on camera signals 
+
+Additional explanation and rationale:: The Higher level engineering task attribute in combination with the Specific engineering task attribute supports understanding the context in witch the simulation is placed.
+
+
 
 ==== Simulation Objective
 
@@ -292,34 +320,6 @@ Value entry examples::
 * companyZ simulation quality assessment
 
 Additional explanation and rationale:: The _Quality Criterion_ attribute facilitate the configuration of the simulation setup.
-
-==== Higher Level Engineering Task
-
-Attribute description:: The _Higher Level Engineering Task_ is a _Higher Level Engineering Task_ that sets the context of the _Specific Engineering Task_.
-
-Obligation:: Recommended
-
-Can have multiple values:: No
-
-Value entry examples::
-
-* development of an AD driving function based on camera signals
-
-Additional explanation and rationale:: The _Higher Level Engineering Task_ attribute in combination with the _Specific Engineering Task_ attribute supports understanding the context in which the simulation is placed.
-
-==== Specific Engineering Task
-
-Attribute description:: The _Specific Engineering Task_ is the engineering that directly benefits from the simulation results.
-
-Obligation:: Recommended
-
-Can have multiple values:: No
-
-Value entry examples::
-
-* detection of critical occlusions when turning right with pedestrians
-
-Additional explanation and rationale:: The _Specific Engineering Task_ attribute in combination with the _Higher Level Engineering Task_ attribute supports understanding the context in which the simulation is placed.
 
 ==== Verification Criterion
 
