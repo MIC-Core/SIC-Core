@@ -71,7 +71,7 @@ Additional explanation and rationale:: Providing the Overall product name attrib
 
 Attribute description:: The _Specific Product Name_ is the unique master name of the specific product within the company's project management IT infrastructure, whose development or validation requires the respective simulation.
 
-Obligation:: Mandatory
+Obligation:: Recommended
 
 Can have multiple values:: Yes
 
@@ -85,7 +85,7 @@ Additional explanation and rationale:: Providing the _Specific Product Name_ att
 
 Attribute description:: The _Ordering Project Name_ is the unique master name of the ordering development project within the company's project management IT infrastructure.
 
-Obligation:: Mandatory
+Obligation:: Recommended
 
 Can have multiple values:: No
 
@@ -99,7 +99,7 @@ Additional explanation and rationale:: Providing the _Ordering Project Name_ att
 
 Attribute description:: The _Simulation Request Name_ is the unique name of the simulation request within the company's project management IT infrastructure.
 
-Obligation:: Mandatory
+Obligation:: Recommended
 
 Can have multiple values:: No
 
@@ -296,7 +296,7 @@ Additional explanation and rationale:: Providing the _Simulation Objective_ attr
 
 Attribute description:: The _Simulation further Requirements_ define what is to be determined, confirmed, or neglected by a simulation.
 
-Obligation:: Mandatory
+Obligation:: Recommended
 
 Can have multiple values:: Yes
 
@@ -310,7 +310,7 @@ Additional explanation and rationale:: Providing the Simulation further requirem
 
 Attribute description:: A _Quality Criterion_ is a quality requirement that must be met during the simulation, particularly given the importance of the decision to be made.
 
-Obligation:: Mandatory
+Obligation:: Recommended
 
 Can have multiple values:: Yes
 
@@ -362,7 +362,7 @@ Additional explanation and rationale:: The _Analysis Phase Verification Result_ 
 
 Attribute description:: The _Model Purpose and Objectives_ are indicating, based on the simulation purpose and objectives, individual _Model Purpose and Objectives_.
 
-Obligation:: Mandatory
+Obligation:: Recommended
 
 Can have multiple values:: Yes
 
@@ -376,7 +376,7 @@ Additional explanation and rationale:: The _Model Purpose and Objectives_ attrib
 
 Attribute description:: The _Modeled Entity_ is the real-world entity that is to be modeled.
 
-Obligation:: Mandatory
+Obligation:: Recommended
 
 Can have multiple values:: Yes
 
@@ -503,7 +503,7 @@ Additional explanation and rationale:: Providing the Parameter quality requireme
 
 Attribute description:: The _Test Case Requirements_ is the description of the goals and objectives of a test case.
 
-Obligation:: Mandatory
+Obligation:: Recommended
 
 Can have multiple values:: Yes
 
@@ -544,7 +544,7 @@ Additional explanation and rationale:: Providing the Test case requirements attr
 
 Attribute description:: A _Simulation Environment Requirement_ is a requirement placed on the simulation environment.
 
-Obligation:: Mandatory
+Obligation:: Recommended
 
 Can have multiple values:: Yes
 
@@ -572,7 +572,7 @@ Additional explanation and rationale:: Providing the Simulation environment qual
 
 Attribute description:: A _Simulation Integration Requirement_ is a requirement placed on the interaction of the simulation setup elements.
 
-Obligation:: Mandatory
+Obligation:: Recommended
 
 Can have multiple values:: Yes
 
@@ -791,7 +791,7 @@ Additional explanation and rationale:: Providing the _Design Verification Result
 
 Attribute description:: The _Simulation Model Name_ is the given name for the implemented simulation model within the company's project management IT infrastructure.
 
-Obligation:: Mandatory
+Obligation:: Recommended
 
 Can have multiple values:: Yes
 
@@ -833,7 +833,7 @@ Additional explanation and rationale:: Providing the _Simulation Model Quality_ 
 
 Attribute description:: The _Parameter Name_ is the given name for the implemented (set of) parameters within the company's project management IT infrastructure.
 
-Obligation:: Mandatory
+Obligation:: Recommended
 
 Can have multiple values:: Yes
 
@@ -916,7 +916,7 @@ Additional explanation and rationale:: Providing the _Test Case Quality_ attribu
 
 Attribute description:: The _Simulation Environment Name_ is the given name for the implemented simulation environment within the company's project management IT infrastructure.
 
-Obligation:: Mandatory
+Obligation:: Recommended
 
 Can have multiple values:: Yes
 
@@ -954,7 +954,7 @@ Additional explanation and rationale:: Providing the _Solver Setting_ attribute 
 
 Attribute description:: The _Simulation Integration Name_ is the given name for the implemented simulation integration within the company's project management IT infrastructure.
 
-Obligation:: Mandatory
+Obligation:: Recommended
 
 Can have multiple values:: Yes
 
@@ -1030,7 +1030,7 @@ Additional explanation and rationale:: Providing the _Used Parameter Name_ attri
 
 Attribute description:: The _Used Test Case Name_ is the given name of a test case actually used in simulation execution.
 
-Obligation:: Mandatory
+Obligation:: Recommended
 
 Can have multiple values:: Yes
 
@@ -1092,7 +1092,7 @@ Additional explanation and rationale:: The _Execution Log_ is usually consulted 
 
 Attribute description:: The _Evaluation Results_ are the key results that emerges from the processing of the raw results.
 
-Obligation:: Mandatory
+Obligation:: Recommended
 
 Can have multiple values:: Yes
 
@@ -1126,38 +1126,6 @@ Additional explanation and rationale:: Providing the _Evaluation Quality Verdict
 
 === Fulfillment
 
-==== #Objectives Fulfilled#
-
-Attribute description:: The _Objectives Fulfilled_ attribute is the clear and unambiguous documentation of a objective fulfillment decision with a predefined set of applicable entries, that indicates whether the objectives linked with the simulation task are fulfilled or not or whether a statement of the objectives fulfillment is not possible.
-
-Obligation:: Mandatory
-
-Can have multiple values:: No
-
-Value entry examples::
-
-* Yes: Objectives are fulfilled
-* No: Objectives are not fulfilled
-* No statement possible
-
-Additional explanation and rationale:: The _Objective fulfillment_ attribute helps quickly recognize and assess the simulation results without having to inspect all the details of a simulation task.
-
-==== #Quality Fulfilled#
-
-The Quality fulfilled attribute is the clear and unambigious documentation of a quality fulfillment decision with a predifiened set of applicable entries, that indicates whether the simulation task fulfills quality requirements or not or whether a statement of the quality fulfillment ist not possible.
-
-Obligation:: Mandatory
-
-Can have multiple values:: No
-
-Value entry examples::
-
-* Yes: Quality sufficient. Statements about objectives are possible
-* No:  Quality not sufficient e.g. tolerances of sim results, confidence intervals do not allow statements about objectives
-* No statement possible: No specifications for  Quality or no evaluation carried out
-
-Additional explanation and rationale:: The Quality fulfillment attribute helps quickly recognize and assess the simulation Quality without having to inspect all the details of a simulation task. Can for example be the result of a simulation credibility assessment
-
 ==== #Task Status#
 
 Attribute description:: The _Task Status_ attribute is the final assessment of the entire simulation task. The attribute shows whether the task is still in progress, aborted, finished or checked out (possible in status in progress).
@@ -1174,6 +1142,40 @@ Value entry examples::
 * Finished: Task is finished
 
 Additional explanation and rationale:: The _Task status_ attribute helps to quickly recognize the status of the simulation task.
+
+
+==== #Quality Fulfilled#
+
+The Quality fulfilled attribute is the clear and unambigious documentation of a quality fulfillment decision with a predifiened set of applicable entries, that indicates whether the simulation task fulfills quality requirements or not or whether a statement of the quality fulfillment ist not possible.
+
+Obligation:: Recommended
+
+Can have multiple values:: No
+
+Value entry examples::
+
+* Yes: Quality sufficient. Statements about objectives are possible
+* No:  Quality not sufficient e.g. tolerances of sim results, confidence intervals do not allow statements about objectives
+* No statement possible: No specifications for  Quality or no evaluation carried out
+
+Additional explanation and rationale:: The Quality fulfillment attribute helps quickly recognize and assess the simulation Quality without having to inspect all the details of a simulation task. Can for example be the result of a simulation credibility assessment
+
+==== #Objectives Fulfilled#
+
+Attribute description:: The _Objectives Fulfilled_ attribute is the clear and unambiguous documentation of a objective fulfillment decision with a predefined set of applicable entries, that indicates whether the objectives linked with the simulation task are fulfilled or not or whether a statement of the objectives fulfillment is not possible.
+
+Obligation:: Recommended
+
+Can have multiple values:: No
+
+Value entry examples::
+
+* Yes: Objectives are fulfilled
+* No: Objectives are not fulfilled
+* No statement possible
+
+Additional explanation and rationale:: The _Objective fulfillment_ attribute helps quickly recognize and assess the simulation results without having to inspect all the details of a simulation task.
+
 
 ==== #Fulfillment Evidence#
 
