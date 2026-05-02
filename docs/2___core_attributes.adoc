@@ -1142,9 +1142,9 @@ Value entry examples::
 
 Additional explanation and rationale:: The _Objective fulfillment_ attribute helps quickly recognize and assess the simulation results without having to inspect all the details of a simulation task.
 
-==== #Credibility Fulfilled#
+==== #Quality Fulfilled#
 
-Attribute description:: The _Credibility Fulfilled_ attribute is the clear and unambiguous documentation of a credibility fulfillment decision with a predefined set of applicable entries, that indicates whether the simulation task fulfills credibility requirements or not or whether a statement of the credibility fulfillment is not possible.
+The Quality fulfilled attribute is the clear and unambigious documentation of a quality fulfillment decision with a predifiened set of applicable entries, that indicates whether the simulation task fulfills quality requirements or not or whether a statement of the quality fulfillment ist not possible.
 
 Obligation:: Mandatory
 
@@ -1152,11 +1152,11 @@ Can have multiple values:: No
 
 Value entry examples::
 
-* Yes: Credibility sufficient. Statements about objectives are possible
-* No: Credibility not sufficient e.g. tolerances of sim results, confidence intervals do not allow statements about objectives
-* No statement possible: No specifications for credibility or no evaluation carried out
+* Yes: Quality sufficient. Statements about objectives are possible
+* No:  Quality not sufficient e.g. tolerances of sim results, confidence intervals do not allow statements about objectives
+* No statement possible: No specifications for  Quality or no evaluation carried out
 
-Additional explanation and rationale:: The _Credibility fulfillment_ attribute helps quickly recognize and assess the simulation credibility without having to inspect all the details of a simulation task.
+Additional explanation and rationale:: The Quality fulfillment attribute helps quickly recognize and assess the simulation Quality without having to inspect all the details of a simulation task. Can for example be the result of a simulation credibility assessment
 
 ==== #Task Status#
 
