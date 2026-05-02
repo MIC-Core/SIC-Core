@@ -25,7 +25,7 @@ It must be possible to answer questions such as:
 
 * Were the simulation objectives and credibility requirements fulfilled?
 
-While the MIC Core specification provides metadata for simulation models, it does not describe the simulation tasks in which those models are used.
+While the MIC Core specification provides metadata for simulation models, it does not support and describe the simulation tasks in which those models are used.
 
 This specification addresses this gap.
 
