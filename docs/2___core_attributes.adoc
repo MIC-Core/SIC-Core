@@ -17,7 +17,7 @@ Example:
 
 *Simulation Model Name**
 
-The attribute includes the following sub-attributes (details in chapter 2.9):
+The attribute includes the following sub-attributes (details in chapter 2.11):
 
 *	Name (that is listed in the main List)
 
