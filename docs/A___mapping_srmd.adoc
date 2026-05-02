@@ -116,16 +116,16 @@ Note that the abbreviated explanations are not considered a normative part of th
 [cols="2,3m,^1e,17",align="center",frame="topbot",options="header"]
 |===
 | SIC Core Name | SRMD Mapping | Obligation | Short Explanation
-| Simulation Model Name | implementation.model.name | Mandatory | Name of the implemented simulation model.
+| Simulation Model Name | implementation.model.name | Recommended | Name of the implemented simulation model.
 | Simulation Model Confidentiality Level | implementation.model.confidentiality | Recommended | Confidentiality classification for implemented model information.
 | Simulation Model Quality | implementation.model.quality | Recommended | Statement describing achieved model quality after implementation.
-| Parameter Name | implementation.parameters.name | Mandatory | Name of the implemented parameter set.
+| Parameter Name | implementation.parameters.name | Recommended | Name of the implemented parameter set.
 | Parameter Confidentiality Level | implementation.parameter.confidentiality | Recommended | Confidentiality classification for parameter information.
 | Parameter Quality | implementation.parameters.quality | Recommended | Statement describing achieved parameter quality after implementation.
 | Test Case Name | implementation.test-case.name | Recommended | Name of implemented test cases.
 | Test Case Confidentiality Level | implementation.test-case.confidentiality | Recommended | Confidentiality classification for implemented test case information.
 | Test Case Quality | implementation.test-case.quality | Recommended | Statement describing achieved test case quality after implementation.
-| Simulation Environment Name | implementation.simulation-environment.name | Mandatory | Name of the implemented simulation environment.
+| Simulation Environment Name | implementation.simulation-environment.name | Recommended | Name of the implemented simulation environment.
 | Simulation Environment Quality | implementation.simulation-environment.quality | Recommended | Statement describing achieved simulation environment quality after implementation.
 | Solver Setting | implementation.simulation-integration.settings | Recommended | Relevant simulation integration settings, such as solver settings.
 | Simulation Integration Name | implementation.simulation-integration.name | Recommended | Name of the implemented simulation integration.
