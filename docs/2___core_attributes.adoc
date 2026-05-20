@@ -1,11 +1,12 @@
-[[sic-core-attributes]]
+[#sic-core-attributes]
 == SIC Core Attributes
 
 This chapter introduces and describes the list of SIC core attributes.
 Each attribute is introduced with an attribute description and an indication of the attribute obligation, i.e., whether the attribute is mandatory, recommended, or optional, and whether the attribute can be instantiated multiple times or not.
 To enhance the understanding of an attribute, some value examples and, if applicable, additional explanations or rationales for the attribute are provided.
 
-In *appendix B a subset of these attributes* is proposed that enables basic functionality for search, analysis, reuse, and traceability. This subset of metadata can also be used as starting point in implementation metadata for simulation.
+In  <<basic-subset>> a subset of the full set of SIC Core attributes is defined that enables basic functionality for search, analysis, reuse, and traceability.
+This subset of metadata can also be used as starting point in the implementation of metadata for simulation.
 
 === Composite attributes
 

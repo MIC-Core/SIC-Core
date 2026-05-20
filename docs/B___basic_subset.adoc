@@ -1,4 +1,4 @@
-[appendix]
+[appendix#basic-subset]
 == Subset of SIC Core for basic usecases (Basic Subset)
     
 The full set of metadata attributes defined in this specification is designed to support a wide range of use cases and functionalities related to simulation activities, including search, analysis, reuse, and traceability.
