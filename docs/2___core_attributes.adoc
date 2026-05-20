@@ -8,30 +8,6 @@ To enhance the understanding of an attribute, some value examples and, if applic
 In  <<basic-subset>> a subset of the full set of SIC Core attributes is defined that enables basic functionality for search, analysis, reuse, and traceability.
 This subset of metadata can also be used as starting point in the implementation of metadata for simulation.
 
-=== Composite attributes
-
-Attributes marked with an *asterisk ( * )* represent *composite or sub-attributes with a predefined internal structure.* 
-
-In the following list the sub-attributes are not separately listed.
-
-Example:
-
-*Simulation Model Name**
-
-The attribute includes the following sub-attributes (details in chapter 2.11):
-
-*	Name (that is listed in the main List)
-
-*	Version
-
-*	Identifier
-
-*	URL
-
-*	Full Name
-
-=== Attribute groups
-
 The attributes of SIC Core are organized by the following attribute groups:
 
 * Administrative Data
@@ -54,71 +30,111 @@ The attributes of SIC Core are organized by the following attribute groups:
 
 The Administrative Data category contains information used to identify and organize the simulation.
 
-==== Overall Product Name*
+==== Overall Product
 
-The Overall product name is the unique master name of the overall product within the company's project management IT infrastructure, whose development or validation requires the respective simulation.
+The _Overall Product_ is the overall product within the company's project management IT infrastructure, whose development or validation requires the respective simulation.
 
 Obligation:: Recommended
 
 Can have multiple values:: Yes
+
+Sub-attributes::
+
+* <<sub-attr-name,Name>>
+* <<sub-attr-version,Version>>
+* <<sub-attr-identifier,Identifier>>
+* <<sub-attr-url,URL>>
+* <<sub-attr-full-name,Full Name>>
 
 Value entry examples::
 
 *  carZZ, aeroplaneTT 
 
-Additional explanation and rationale:: Providing the Overall product name attribute makes it easier to track and trace the impact of a simulation result on the overall product for which the simulation is initially being requested and executed. "Overall product” can also refer to a customer's product if a company develops and simulates a relevant product as a system or component specifically for a customer product.
+Additional explanation and rationale:: Providing the _Overall Product_ attribute makes it easier to track and trace the impact of a simulation result on the overall product for which the simulation is initially being requested and executed. "Overall product" can also refer to a customer's product if a company develops and simulates a relevant product as a system or component specifically for a customer product.
 
-==== Specific Product Name*
+==== Specific Product
 
-Attribute description:: The _Specific Product Name_ is the unique master name of the specific product within the company's project management IT infrastructure, whose development or validation requires the respective simulation.
+Attribute description:: The _Specific Product_ is the specific product within the company's project management IT infrastructure, whose development or validation requires the respective simulation.
 
 Obligation:: Recommended
 
 Can have multiple values:: Yes
 
+Sub-attributes::
+
+* <<sub-attr-name,Name>>
+* <<sub-attr-version,Version>>
+* <<sub-attr-identifier,Identifier>>
+* <<sub-attr-url,URL>>
+* <<sub-attr-full-name,Full Name>>
+
 Value entry examples::
 
 * AD-34basic
 
-Additional explanation and rationale:: Providing the _Specific Product Name_ attribute makes it easier to track and trace the impact of a simulation result on the specific product for which the simulation is initially being requested.
+Additional explanation and rationale:: Providing the _Specific Product_ attribute makes it easier to track and trace the impact of a simulation result on the specific product for which the simulation is initially being requested.
 
-==== Ordering Project Name*
+==== Ordering Project
 
-Attribute description:: The _Ordering Project Name_ is the unique master name of the ordering development project within the company's project management IT infrastructure.
+Attribute description:: The _Ordering Project_ is the ordering development project within the company's project management IT infrastructure.
 
 Obligation:: Recommended
 
 Can have multiple values:: No
+
+Sub-attributes::
+
+* <<sub-attr-name,Name>>
+* <<sub-attr-version,Version>>
+* <<sub-attr-identifier,Identifier>>
+* <<sub-attr-url,URL>>
+* <<sub-attr-full-name,Full Name>>
 
 Value entry examples::
 
 * cam34basic
 
-Additional explanation and rationale:: Providing the _Ordering Project Name_ attribute makes it easier to track and trace the simulation task and the simulation request back to the ordering development project and its engineering context.
+Additional explanation and rationale:: Providing the _Ordering Project_ attribute makes it easier to track and trace the simulation task and the simulation request back to the ordering development project and its engineering context.
 
-==== Simulation Request Name*
+==== Simulation Request
 
-Attribute description:: The _Simulation Request Name_ is the unique name of the simulation request within the company's project management IT infrastructure.
+Attribute description:: The _Simulation Request_ is the simulation request within the company's project management IT infrastructure.
 
 Obligation:: Recommended
 
 Can have multiple values:: No
 
+Sub-attributes::
+
+* <<sub-attr-name,Name>>
+* <<sub-attr-version,Version>>
+* <<sub-attr-identifier,Identifier>>
+* <<sub-attr-url,URL>>
+* <<sub-attr-full-name,Full Name>>
+
 Value entry examples::
 
-Additional explanation and rationale:: Providing the _Simulation Request Name_ attribute makes it easier to trace back to the simulation request when it is referenced in a simulation task or simulation delivery, for example.
+Additional explanation and rationale:: Providing the _Simulation Request_ attribute makes it easier to trace back to the simulation request when it is referenced in a simulation task or simulation delivery, for example.
 
-==== Simulation Task Name*
+==== Simulation Task
 
-Attribute description:: The _Simulation Task Name_ is the unique name of the simulation task within the originating company's project management IT infrastructure.
+Attribute description:: The _Simulation Task_ is the simulation task within the originating company's project management IT infrastructure.
 
 Obligation:: Mandatory
 
 Can have multiple values:: No
 
+Sub-attributes::
+
+* <<sub-attr-name,Name>>
+* <<sub-attr-version,Version>>
+* <<sub-attr-identifier,Identifier>>
+* <<sub-attr-url,URL>>
+* <<sub-attr-full-name,Full Name>>
+
 Value entry examples::
 
-Additional explanation and rationale:: Providing the _Simulation Task Name_ attribute makes it easier to trace back to the simulation task when it is referenced in a simulation delivery.
+Additional explanation and rationale:: Providing the _Simulation Task_ attribute makes it easier to trace back to the simulation task when it is referenced in a simulation delivery.
 
 ==== Simulation Task Confidentiality Level
 
@@ -235,22 +251,30 @@ Additional explanation and rationale:: The _Simulation Task Creation Date_ attri
 
 === Analysis
 
-==== Name of Item under Test*
+==== Item under Test
 
-Attribute description:: The _Name of Item under Test_ specifies the product, system, component, or software, etc. that is subject of a simulation being requested by a simulation request or performed by a simulation task.
+Attribute description:: The _Item under Test_ specifies the product, system, component, or software, etc. that is subject of a simulation being requested by a simulation request or performed by a simulation task.
 
 Obligation:: Mandatory
 
 Can have multiple values:: No
+
+Sub-attributes::
+
+* <<sub-attr-name,Name>>
+* <<sub-attr-version,Version>>
+* <<sub-attr-identifier,Identifier>>
+* <<sub-attr-url,URL>>
+* <<sub-attr-full-name,Full Name>>
 
 Value entry examples::
 
 * camera34
 * camera34-A-sampleV23
 
-Additional explanation and rationale:: Providing the _Name of Item under Test_ attribute helps clarifying the subject of simulation.
+Additional explanation and rationale:: Providing the _Item under Test_ attribute helps clarifying the subject of simulation.
 
-==== Higher-level Engineering Task*
+==== Higher-level Engineering Task
 
 Attribute description:: The _Higher-level Engineering Task_ is a higher-level engineering task that sets the context of the specific engineering task.
 
@@ -258,19 +282,35 @@ Obligation:: Recommended
 
 Can have multiple values:: No
 
+Sub-attributes::
+
+* <<sub-attr-name,Name>>
+* <<sub-attr-version,Version>>
+* <<sub-attr-identifier,Identifier>>
+* <<sub-attr-url,URL>>
+* <<sub-attr-full-name,Full Name>>
+
 Value entry examples::
 
 * Development of an AD driving function based on camera signals 
 
 Additional explanation and rationale:: The _Higher-level Engineering Task_ attribute in combination with the _Specific Engineering Task_ attribute supports understanding the context in witch the simulation is placed.
 
-==== Specific Engineering Task*
+==== Specific Engineering Task
 
 Attribute description:: The _Specific Engineering Task_ is the engineering task that directly benefits from the simulation results.
 
 Obligation:: Recommended
 
 Can have multiple values:: No
+
+Sub-attributes::
+
+* <<sub-attr-name,Name>>
+* <<sub-attr-version,Version>>
+* <<sub-attr-identifier,Identifier>>
+* <<sub-attr-url,URL>>
+* <<sub-attr-full-name,Full Name>>
 
 Value entry examples::
 
@@ -372,13 +412,21 @@ Value entry examples::
 
 Additional explanation and rationale:: The _Model Purpose and Objectives_ attribute, in alignment with the simulation purpose and objectives, facilitates the specification of individual simulation models and parameters.
 
-==== Modeled Entity*
+==== Modeled Entity
 
 Attribute description:: The _Modeled Entity_ is the real-world entity that is to be modeled.
 
 Obligation:: Recommended
 
 Can have multiple values:: Yes
+
+Sub-attributes::
+
+* <<sub-attr-name,Name>>
+* <<sub-attr-version,Version>>
+* <<sub-attr-identifier,Identifier>>
+* <<sub-attr-url,URL>>
+* <<sub-attr-full-name,Full Name>>
 
 Value entry examples::
 
@@ -787,17 +835,25 @@ Additional explanation and rationale:: Providing the _Design Verification Result
 
 === Implementation
 
-==== Simulation Model Name*
+==== Simulation Model
 
-Attribute description:: The _Simulation Model Name_ is the given name for the implemented simulation model within the company's project management IT infrastructure.
+Attribute description:: The _Simulation Model_ is the implemented simulation model within the company's project management IT infrastructure.
 
 Obligation:: Recommended
 
 Can have multiple values:: Yes
 
+Sub-attributes::
+
+* <<sub-attr-name,Name>>
+* <<sub-attr-version,Version>>
+* <<sub-attr-identifier,Identifier>>
+* <<sub-attr-url,URL>>
+* <<sub-attr-full-name,Full Name>>
+
 Value entry examples::
 
-Additional explanation and rationale:: Providing the _Simulation Model Name_ attribute makes it easier to track and trace the simulation models implemented.
+Additional explanation and rationale:: Providing the _Simulation Model_ attribute makes it easier to track and trace the simulation models implemented.
 
 ==== Simulation Model Confidentiality Level
 
@@ -828,18 +884,25 @@ Value entry examples::
 
 Additional explanation and rationale:: Providing the _Simulation Model Quality_ attribute helps to assess the quality of a model.
 
+==== Parameter
 
-==== Parameter Name*
-
-Attribute description:: The _Parameter Name_ is the given name for the implemented (set of) parameters within the company's project management IT infrastructure.
+Attribute description:: The _Parameter_ is the implemented (set of) parameters within the company's project management IT infrastructure.
 
 Obligation:: Recommended
 
 Can have multiple values:: Yes
 
+Sub-attributes::
+
+* <<sub-attr-name,Name>>
+* <<sub-attr-version,Version>>
+* <<sub-attr-identifier,Identifier>>
+* <<sub-attr-url,URL>>
+* <<sub-attr-full-name,Full Name>>
+
 Value entry examples::
 
-Additional explanation and rationale:: Providing the _Parameter Name_ attribute makes it easier to track and trace the (set of) parameters implemented.
+Additional explanation and rationale:: Providing the _Parameter_ attribute makes it easier to track and trace the (set of) parameters implemented.
 
 
 ==== Parameter Confidentiality Level
@@ -871,17 +934,25 @@ Value entry examples::
 
 Additional explanation and rationale:: Providing the _Parameter Quality_ attribute helps to assess the quality of a parameter or a set of parameters.
 
-==== Test Case Name*
+==== Test Case
 
-Attribute description:: The _Test Case Name_ is the given name for the implemented test cases within the company's project management IT infrastructure.
+Attribute description:: The _Test Case_ is the implemented test cases within the company's project management IT infrastructure.
 
 Obligation:: Recommended
 
 Can have multiple values:: Yes
 
+Sub-attributes::
+
+* <<sub-attr-name,Name>>
+* <<sub-attr-version,Version>>
+* <<sub-attr-identifier,Identifier>>
+* <<sub-attr-url,URL>>
+* <<sub-attr-full-name,Full Name>>
+
 Value entry examples::
 
-Additional explanation and rationale:: Providing the _Test Case Name_ attribute makes it easier to track and trace the test cases implemented.
+Additional explanation and rationale:: Providing the _Test Case_ attribute makes it easier to track and trace the test cases implemented.
 
 ==== Test Case Confidentiality Level
 
@@ -912,17 +983,25 @@ Value entry examples::
 
 Additional explanation and rationale:: Providing the _Test Case Quality_ attribute helps to assess the quality of a test case.
 
-==== Simulation Environment Name*
+==== Simulation Environment
 
-Attribute description:: The _Simulation Environment Name_ is the given name for the implemented simulation environment within the company's project management IT infrastructure.
+Attribute description:: The _Simulation Environment_ is the implemented simulation environment within the company's project management IT infrastructure.
 
 Obligation:: Recommended
 
 Can have multiple values:: Yes
 
+Sub-attributes::
+
+* <<sub-attr-name,Name>>
+* <<sub-attr-version,Version>>
+* <<sub-attr-identifier,Identifier>>
+* <<sub-attr-url,URL>>
+* <<sub-attr-full-name,Full Name>>
+
 Value entry examples::
 
-Additional explanation and rationale:: Providing the _Simulation Environment Name_ attribute makes it easier to track and trace the simulation environment implemented.
+Additional explanation and rationale:: Providing the _Simulation Environment_ attribute makes it easier to track and trace the simulation environment implemented.
 
 ==== Simulation Environment Quality
 
@@ -936,8 +1015,6 @@ Value entry examples::
 
 Additional explanation and rationale:: Providing the _Simulation Environment Quality_ attribute helps to assess the quality of a simulation environment.
 
-
-
 ==== Solver Setting
 
 Attribute description:: A _Solver Setting_ is a specific parameter that control the behavior of simulation solver tools.
@@ -950,17 +1027,25 @@ Value entry examples::
 
 Additional explanation and rationale:: Providing the _Solver Setting_ attribute helps to complete the simulation setup with recommended settings to control the requested behavior of the solver tool.
 
-==== Simulation Integration Name*
+==== Simulation Integration
 
-Attribute description:: The _Simulation Integration Name_ is the given name for the implemented simulation integration within the company's project management IT infrastructure.
+Attribute description:: The _Simulation Integration_ is the implemented simulation integration within the company's project management IT infrastructure.
 
 Obligation:: Recommended
 
 Can have multiple values:: Yes
 
+Sub-attributes::
+
+* <<sub-attr-name,Name>>
+* <<sub-attr-version,Version>>
+* <<sub-attr-identifier,Identifier>>
+* <<sub-attr-url,URL>>
+* <<sub-attr-full-name,Full Name>>
+
 Value entry examples::
 
-Additional explanation and rationale:: Providing the _Simulation Integration Name_ attribute makes it easier to track and trace the simulation integration implemented.
+Additional explanation and rationale:: Providing the _Simulation Integration_ attribute makes it easier to track and trace the simulation integration implemented.
 
 
 
@@ -1002,53 +1087,85 @@ Additional explanation and rationale:: Providing the _Implementation Quality Ver
 
 === Execution
 
-==== Used Simulation Model Name*
+==== Used Simulation Model
 
-Attribute description:: The _Used Simulation Model Name_ is the given name of a simulation model actually used in simulation execution.
-
-Obligation:: Mandatory
-
-Can have multiple values:: Yes
-
-Value entry examples::
-
-Additional explanation and rationale:: Providing the _Used Simulation Model Name_ attribute makes it easier to track and trace the simulation model actually used in the simulation.
-
-==== Used Parameter Name*
-
-Attribute description:: The _Used Parameter Name_ is the given name of a parameter or parameter set actually used in simulation execution.
+Attribute description:: The _Used Simulation Model_ is a simulation model actually used in simulation execution.
 
 Obligation:: Mandatory
 
 Can have multiple values:: Yes
 
+Sub-attributes::
+
+* <<sub-attr-name,Name>>
+* <<sub-attr-version,Version>>
+* <<sub-attr-identifier,Identifier>>
+* <<sub-attr-url,URL>>
+* <<sub-attr-full-name,Full Name>>
+
 Value entry examples::
 
-Additional explanation and rationale:: Providing the _Used Parameter Name_ attribute makes it easier to track and trace the simulation model actually used in the simulation.
+Additional explanation and rationale:: Providing the _Used Simulation Model_ attribute makes it easier to track and trace the simulation model actually used in the simulation.
 
-==== Used Test Case Name*
+==== Used Parameter
 
-Attribute description:: The _Used Test Case Name_ is the given name of a test case actually used in simulation execution.
+Attribute description:: The _Used Parameter_ is a parameter or parameter set actually used in simulation execution.
+
+Obligation:: Mandatory
+
+Can have multiple values:: Yes
+
+Sub-attributes::
+
+* <<sub-attr-name,Name>>
+* <<sub-attr-version,Version>>
+* <<sub-attr-identifier,Identifier>>
+* <<sub-attr-url,URL>>
+* <<sub-attr-full-name,Full Name>>
+
+Value entry examples::
+
+Additional explanation and rationale:: Providing the _Used Parameter_ attribute makes it easier to track and trace the simulation model actually used in the simulation.
+
+==== Used Test Case
+
+Attribute description:: The _Used Test Case_ is a test case actually used in simulation execution.
 
 Obligation:: Recommended
 
 Can have multiple values:: Yes
 
+Sub-attributes::
+
+* <<sub-attr-name,Name>>
+* <<sub-attr-version,Version>>
+* <<sub-attr-identifier,Identifier>>
+* <<sub-attr-url,URL>>
+* <<sub-attr-full-name,Full Name>>
+
 Value entry examples::
 
-Additional explanation and rationale:: The combination of _Used Test Case Name_ and _Used Test Case Version_ shall be unique.
+Additional explanation and rationale:: The combination of _Used Test Case_ sub-attributes _Name_ and _Version_ shall be unique.
 
-==== Used Tool Name*
+==== Used Tool
 
-Attribute description:: The _Used Tool Name_ is the given name of a tool actually used in simulation execution.
+Attribute description:: The _Used Tool_ is a tool actually used in simulation execution.
 
 Obligation:: Mandatory
 
 Can have multiple values:: Yes
 
+Sub-attributes::
+
+* <<sub-attr-name,Name>>
+* <<sub-attr-version,Version>>
+* <<sub-attr-identifier,Identifier>>
+* <<sub-attr-url,URL>>
+* <<sub-attr-full-name,Full Name>>
+
 Value entry examples::
 
-Additional explanation and rationale:: The combination of _Used Tool Name_ and _Used Tool Version_ shall be unique.
+Additional explanation and rationale:: The combination of _Used Tool_ sub-attributes _Name_ and _Version_ shall be unique.
 
 ==== Execution Raw Data
 
@@ -1201,44 +1318,77 @@ Value entry examples::
 
 Additional explanation and rationale:: The _Date_ attribute is useful for evaluation.
 
-=== Composite attributes of MIC Simulation Task Extension Attributes
+[#common-sub-attributes]
+=== Common Sub-Attributes
 
-The attributes marked with an asterisk (*) have the same sub-attributes listed below.
+=== Composite attributes
 
-==== Attribute X Name* (is listed in the main list)
-Obligation:: see Main list
+Where indicated in the attribute definition, attributes can be composite attributes, which means that they have a predefined internal structure with a defined set of sub-attributes.
+The sub-attributes are listed in the attribute definition and are not separately listed in the main list of attributes.
+The use of sub-attributes is optional, however standards implementing this specification can make the use of sub-attributes, and the use of certain sub-attributes mandatory.
 
-*Sub-attributes*
+Example:
 
-==== Attribute X Version
+The _Simulation Model_ attribute includes the following sub-attributes:
 
-Attribute description:: The _Overall Product Version_ is a human readable version designation for the overall product.
-Obligation:: same as attribute X name
+*	_Name_
+
+*	_Version_
+
+*	_Identifier_
+
+*	_URL_
+
+*	_Full Name_
+
+Thus beside the attribute _Simulation Model_, the sub-attributes _Simulation Model Name_, _Simulation Model Version_, _Simulation Model Identifier_, _Simulation Model URL_, and _Simulation Model Full Name_ are defined as well, but only as sub-attributes of the attribute _Simulation Model_.
+
+The following sub-attributes are defined in this specification and can be used for any attribute where the use of these sub-attributes is allowed:
+
+[#sub-attr-name]
+==== Sub-Attribute Name
+
+Attribute description:: The _Name_ sub-attribute is the unique name of the given attribute within the originating company's project management IT infrastructure.
+Obligation:: if sub-attributes are used, the name sub-attribute is mandatory
+Can have multiple values:: No
+Value examples::
+* carZZ, aeroplaneTT
+Additional explanation and rationale:: The _Name_ sub-attribute is essential information that helps to track and trace the given attribute within the company's project management IT infrastructure.
+
+[#sub-attr-version]
+==== Sub-Attribute Version
+
+Attribute description:: The _Version_ sub-attribute is a human readable version designation for the given attribute.
+Obligation:: if sub-attributes are used, the version sub-attribute is mandatory
 Can have multiple values:: Yes
 Value examples:: 
-Additional explanation and rationale:: The _Overall Product Version_ attribute is essential information that helps keep track of which _Overall Product Version_ the simulation task was generated for.
+Additional explanation and rationale:: The _Version_ sub-attribute is essential information that helps keep track of which version of the attribute is being referenced.
 
-==== Attribute X  Identifier
+[#sub-attr-identifier]
+==== Sub-Attribute Identifier
 
-Attribute description:: The _Overall Product Identifier_ is the unique master ID of the overall product within the company's project management IT infrastructure, whose development or validation requires the respective simulation. If the company has a versioning mechanism for products in the project management IT infrastructure, the version ID is included in the identifier so that the product can be referenced with version accuracy.
-Obligation:: same as attribute X name
+Attribute description:: The _Identifier_ sub-attribute is the unique master ID of the entity referred to by the given attribute within the company's project management IT infrastructure.
+If the company has a versioning mechanism for the entities referred to by the attribute in the project management IT infrastructure, the version ID is included in the identifier so that the attribute can be referenced with version accuracy.
+Obligation:: if sub-attributes are used, the identifier sub-attribute is mandatory
 Can have multiple values:: Yes
 Value examples:: 
-Additional explanation and rationale:: The (version accurate) _Overall Product Identifier_ attribute is essential information needed to facilitate automated traceability to the overall product for which the simulation is initially requested and executed. "Overall product? can also refer to a customer's product if a company develops and simulates a relevant product as a system or component specifically for a customer product.
+Additional explanation and rationale:: The (version accurate) _Identifier_ sub-attribute is essential information needed to facilitate automated traceability to the entity referred to by the given attribute within the company's project management IT infrastructure.
 
-==== Attribute X  URL
+[#sub-attr-url]
+==== Sub-Attribute URL
 
-Attribute description:: The _Overall Product URL_ is an alternate way to identify the overall product. All information given to the _Overall Product Identifier_ attribute apply here.
+Attribute description:: The _URL_ sub-attribute is an alternate way to identify the entity referred to by the given attribute.
+The same considerations as for the _Identifier_ sub-attribute apply here.
 Obligation:: Optional
 Can have multiple values:: Yes
 Value examples:: 
-Additional explanation and rationale:: All of the information provided for the _Overall Product Identifier_ attribute applies here as well.
+Additional explanation and rationale:: The same considerations as for the _Identifier_ sub-attribute apply here as well.
 
-==== Attribute X  Full Name
+[#sub-attr-full-name]
+==== Sub-Attribute Full Name
 
-Attribute description:: The _Overall Product Full Name_ is the commonly known name of the overall product, whose development or validation requires the respective simulation.
+Attribute description:: The _Full Name_ sub-attribute is the commonly known name of the entity referred to by the given attribute.
 Obligation:: Optional
 Can have multiple values:: Yes
 Value examples:: 
-Additional explanation and rationale:: Providing the _Overall Product Full Name_ attribute with potentially relevant details helps quickly understand the overall product context for which the simulation is initially requested and executed. "Overall product? can also refer to a customer's product if a company develops and simulates a relevant product as a system or component specifically for a customer product.
-
+Additional explanation and rationale:: Providing the _Full Name_ sub-attribute with potentially relevant details helps quickly understand the context of the entity referred to by the given attribute.

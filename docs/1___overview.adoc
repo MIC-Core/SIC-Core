@@ -148,6 +148,15 @@ This approach allows organizations to implement the standard incrementally and a
 
 Additionally, the specification is designed to be technology-agnostic, meaning that it does not prescribe specific data formats or technologies for metadata representation, or mapping of metadata items to specific attribute names in a specific format.
 
+=== Sub-Attributes
+
+For a number of attributes, for example for <<Simulation Task,Simulation Task>>, the specification allows the use of sub-attributes to describe the attribute in more detail, e.g. by providing both machine-readable and human-readable variants of a name, version information, or URIs.
+
+The use of sub-attributes is per-se optional, however standards implementing this specification can make the use of sub-attributes, and the use of certain sub-attributes mandatory.
+
+The list of allowed sub-attributes is listed in the definition of an attribute.
+Since they are shared between attribute definitions, the definition of common sub-attributes is placed in <<common-sub-attributes>>.
+
 === Obligation Levels and Use-Case Dependency
 
 The attributes defined in this specification are categorized into three obligation levels: Mandatory, Recommended, and Optional.
