@@ -94,7 +94,7 @@ The goal of this specification is therefore not to prescribe a fixed metadata im
 
 === Simulation Process Context
 
-The metadata structure defined in this specification follows a simulation process aligned with the https://modelica.github.io/ssp-ls-traceability/main/#sec-crediblesimulationprocessframework[*Credible Simulation Process Framework*]
+The metadata structure defined in this specification follows a simulation process aligned with the https://modelica.github.io/ssp-ls-traceability/1.0.0/#sec-crediblesimulationprocessframework[*Credible Simulation Process Framework*], as defined in <<CSP>>, as referenced in the SSP Layered Standard Traceability 1.0.0 specification (see <<SSPLST>>):
 
 [#im-csp]
 .Credible Simulation Process with attached metadata to the process phases
