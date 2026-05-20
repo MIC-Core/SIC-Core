@@ -249,11 +249,9 @@ Value entry examples::
 
 Additional explanation and rationale:: Providing the _Name of Item under Test_ attribute helps clarifying the subject of simulation.
 
+==== Higher-level Engineering Task*
 
-
-==== Higher level engineering task*
-
-The Higher level engineering task is a higher level engineering task that sets the context of the specific engineering task.
+Attribute description:: The _Higher-level Engineering Task_ is a higher-level engineering task that sets the context of the specific engineering task.
 
 Obligation:: Recommended
 
@@ -261,22 +259,23 @@ Can have multiple values:: No
 
 Value entry examples::
 
-Development of an AD driving function based on camera signals 
+* Development of an AD driving function based on camera signals 
 
-Additional explanation and rationale:: The Higher level engineering task attribute in combination with the Specific engineering task attribute supports understanding the context in witch the simulation is placed.
+Additional explanation and rationale:: The _Higher-level Engineering Task_ attribute in combination with the _Specific Engineering Task_ attribute supports understanding the context in witch the simulation is placed.
 
-==== Specific engineering task*
+==== Specific Engineering Task*
 
-Additional explanation and rationale:: The Specific engineering task is the engineering that directly benefits from the simulation results.
+Attribute description:: The _Specific Engineering Task_ is the engineering task that directly benefits from the simulation results.
+
 Obligation:: Recommended
 
 Can have multiple values:: No
 
 Value entry examples::
 
-Detection of critical occlusions when turning right with pedestrians.
+* Detection of critical occlusions when turning right with pedestrians.
 
-Additional explanation and rationale:: The Specific engineering task attribute in combination with the Higher level engineering task attribute supports understanding the context in witch the simulation is placed.
+Additional explanation and rationale:: The _Specific Engineering Task_ attribute in combination with the _Higher-level Engineering Task_ attribute supports understanding the context in witch the simulation is placed.
 
 ==== Simulation Objective
 
@@ -292,9 +291,9 @@ Value entry examples::
 
 Additional explanation and rationale:: Providing the _Simulation Objective_ attribute helps keep the focus on the target and to ensures that the entire simulation task is streamlined to the target.
 
-==== Simulation further Requirements
+==== Further Simulation Requirements
 
-Attribute description:: The _Simulation further Requirements_ define what is to be determined, confirmed, or neglected by a simulation.
+Attribute description:: The _Further Simulation Requirements_ define what is to be determined, confirmed, or neglected by a simulation.
 
 Obligation:: Recommended
 
@@ -304,7 +303,7 @@ Value entry examples::
 
 * the distance between vehicle and pedestrian must be higher than 1.5m
 
-Additional explanation and rationale:: Providing the Simulation further requirement attribute is an important input for the development of the test cases of a simulation. Often detailed information is linked.
+Additional explanation and rationale:: Providing the _Further Simulation Requirements_ attribute is an important input for the development of the test cases of a simulation. Often detailed information is linked.
 
 ==== Quality Criterion
 
