@@ -1,0 +1,34 @@
+[appendix]
+== Subset of SIC Core for basic usecases (Basic Subset)
+    
+The full set of metadata attributes defined in this specification is designed to support a wide range of use cases and functionalities related to simulation activities, including search, analysis, reuse, and traceability.
+However, not all of these attributes may be necessary or relevant for every use case or implementation.
+The information and metadata required depend on the use case.
+Furthermore, the availability of information and metadata may vary across different environments and organizations, especially in early stages of implementation.
+
+To support incremental adoption and implementation, this appendix defines a *basic subset* of the full SIC Core metadata that enables basic functionality for search, analysis, reuse, and traceability.
+
+The basic subset contains sufficient metadata to identify and understand the simulation task, the models and parameters used, and the fulfillment of simulation objectives and quality criteria.
+A key factor for user acceptance is that most of this information can be provided by the used IT systems, or is readily available to users, and does not require significant additional effort to be collected and documented.
+
+This basic subset of SIC core can be used as a starting point in the implementation of metadata for simulation, while allowing easy growth into a more fuller use of the SIC Core metadata as needed and as information becomes available.
+
+See <<sic-core-attributes>> for the actual definition of the attributes in the basic subset, as listed below.
+
+[cols="1>m,2^e,7<",width="100%",align="center",frame="topbot",options="header"]
+|===
+| Attribute Name| Category | Obligation | Description | Typical Source
+| <<Ordering Project,Ordering Project>> | Administrative |  Recommended | Unique name of the ordering project | Project management tool
+| <<Specific Product,Specific Product>> | Administrative |  Recommended | Unique name of the specific product | Project management tool
+| <<Simulation Request,Simulation Request>> | Administrative |  Recommended | Unique name of the Simulation Request | Project management tool
+| <<Simulation Task,Simulation Task>> | Administrative | Mandatory | Unique name of the simulation task | Project management tool
+| <<Item under Test,Item under Test>> | Analysis | Mandatory | System, component, or product being analyzed | Tool / system
+| <<Simulation Objective,Simulation Objective>> | Analysis |  Mandatory | Objective or purpose of the simulation | User
+| <<Quality Criterion,Quality Criterion>> |  Analysis | Recommended | Criteria used to evaluate simulation success | User
+| <<Used Model,Used Model>> | Execution | Mandatory | Model used for the simulation | Tool / system
+| <<Used Parameter,Used Parameter>> | Execution | Mandatory | Parameter used for the simulation | user (selection)
+| <<Used Tool,Used Tool>> | Execution | Mandatory | Tool used for the simulation | Tool / system
+| <<Task Status,Task Status>> | Fulfillment | Mandatory | Is the task still in progress abortet, finished | User
+| <<Quality Fulfilled,Quality Fulfilled>> | Fulfillment | Recommended | Documentation of the quality fulfillment decision | User
+| <<Objectives Fulfilled,Objectives Fulfilled>> | Fulfillment |  Recommended | Documentation of the objectives fulfillment decision  | User
+|===

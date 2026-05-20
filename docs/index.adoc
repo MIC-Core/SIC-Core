@@ -26,4 +26,4 @@ include::4___literature.adoc[]
 
 include::A___mapping_srmd.adoc[]
 
-include::B___sic_core_subset.adoc[]
+include::B___basic_subset.adoc[]

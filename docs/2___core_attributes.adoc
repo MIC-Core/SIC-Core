@@ -31,7 +31,7 @@ The attribute includes the following sub-attributes (details in chapter 2.11):
 
 === Attribute groups
 
-The attributes of SIC-Core are organized by the following attribute groups:
+The attributes of SIC Core are organized by the following attribute groups:
 
 * Administrative Data
 
