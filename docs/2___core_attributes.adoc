@@ -455,7 +455,7 @@ Value entry examples::
 * data sheet of camera
 * material database
 
-Additional explanation and rationale:: Providing the _Entity parameter_ attribute is essential input information for the parameterization.
+Additional explanation and rationale:: Providing the _Entity Parameter_ attribute is essential input information for the parameterization.
 
 
 ==== Value Distribution Function
@@ -1141,7 +1141,7 @@ Value entry examples::
 * Aborted: simulation task is aborted
 * Finished: Task is finished
 
-Additional explanation and rationale:: The _Task status_ attribute helps to quickly recognize the status of the simulation task.
+Additional explanation and rationale:: The _Task Status_ attribute helps to quickly recognize the status of the simulation task.
 
 
 ==== Quality Fulfilled
@@ -1174,7 +1174,7 @@ Value entry examples::
 * No: Objectives are not fulfilled
 * No statement possible
 
-Additional explanation and rationale:: The _Objective fulfillment_ attribute helps quickly recognize and assess the simulation results without having to inspect all the details of a simulation task.
+Additional explanation and rationale:: The _Objective Fulfillment_ attribute helps quickly recognize and assess the simulation results without having to inspect all the details of a simulation task.
 
 
 ==== Fulfillment Evidence
