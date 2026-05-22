@@ -34,11 +34,11 @@ Note that the abbreviated explanations are not considered a normative part of th
 [cols="2,3m,^1e,17",align="center",frame="topbot",options="header"]
 |===
 | SIC Core Name | SRMD Mapping | Obligation | Short Explanation
-| Specific Product Name | administrative.specific-product.name | Mandatory | Unique master name of the specific product whose development or validation requires the simulation.
-| Ordering Project Name | administrative.ordering-project.name | Mandatory | Unique master name of the ordering development project.
-| Simulation Request Name | administrative.simulation-request.name | Mandatory | Unique name of the simulation request.
-| Simulation Task Name | administrative.simulation-task.name | Mandatory | Unique name of the simulation task.
 | Overall Product Name | administrative.overall-product.name | Recommended | Unique master name of the overall product associated with the simulation.
+| Specific Product Name | administrative.specific-product.name | Recommended | Unique master name of the specific product whose development or validation requires the simulation.
+| Ordering Project Name | administrative.ordering-project.name | Recommended | Unique master name of the ordering development project.
+| Simulation Request Name | administrative.simulation-request.name | Recommended | Unique name of the simulation request.
+| Simulation Task Name | administrative.simulation-task.name | Mandatory | Unique name of the simulation task.
 | Simulation Task Confidentiality Level | administrative.simulation-task.confidentiality | Recommended | Classification level that defines access to the contained information.
 | Predicted Simulation Start Date | administrative.simulation-task.date.start | Recommended | Date when all required information is expected to be available to start simulation.
 | Requested Simulation Delivery Date | administrative.simulation-task.date.delivery | Recommended | Date when simulation results are requested by the ordering side.
@@ -56,11 +56,11 @@ Note that the abbreviated explanations are not considered a normative part of th
 |===
 | SIC Core Name | SRMD Mapping | Obligation | Short Explanation
 | Name of Item under Test | analysis.item-under-test.name | Mandatory | Product, system, component, software, or other item that is subject to simulation.
-| Simulation Objective | analysis.simulation-task.objectives | Mandatory | Engineering question to be answered by the simulation task.
-| Simulation further Requirements | analysis.simulation-task.further-requirements | Mandatory | Additional simulation requirements defining what to determine, confirm, or neglect.
-| Quality Criterion | analysis.quality-aspects | Mandatory | Quality requirement to be fulfilled during simulation.
 | Higher Level Engineering Task | analysis.engineering-task.higher-level | Recommended | Higher-level engineering task that gives context for the specific task.
 | Specific Engineering Task | analysis.engineering-task.specific | Recommended | Concrete engineering task that directly benefits from simulation results.
+| Simulation Objective | analysis.simulation-task.objectives | Mandatory | Engineering question to be answered by the simulation task.
+| Simulation further Requirements | analysis.simulation-task.further-requirements | Recommended | Additional simulation requirements defining what to determine, confirm, or neglect.
+| Quality Criterion | analysis.quality-aspects | Recommended | Quality requirement to be fulfilled during simulation.
 | Verification Criterion | analysis.verification | Recommended | Quality requirement for verifying alignment with simulation objectives.
 | Validation Criterion | analysis.validation | Recommended | Quality requirement for validating alignment with requesting engineering needs.
 | Analysis Phase Verification Result | analysis.verification | Recommended | Result of the analysis phase closing verification.
@@ -71,24 +71,25 @@ Note that the abbreviated explanations are not considered a normative part of th
 [cols="2,3m,^1e,17",align="center",frame="topbot",options="header"]
 |===
 | SIC Core Name | SRMD Mapping | Obligation | Short Explanation
-| Model Purpose and Objectives | requirements.models.purpose-objectives | Mandatory | Individual model purposes and objectives derived from simulation objectives.
-| Modeled Entity | requirements.models.subject-information.modeled-entity | Mandatory | Real-world entity that is to be modeled.
-| Entity Parameter | requirements.parameters.subject-information.parametrized-entity | Mandatory | Referenced parameters of the entity to be modeled.
-| Simulation Environment Requirement | requirements.simulation-environment | Mandatory | Requirement placed on the simulation environment.
-| Simulation Integration Requirement | requirements.simulation-integration | Mandatory | Requirement placed on interaction of simulation setup elements.
-| Test Case Requirements | requirements.test-cases | Mandatory | Requirements for simulation test cases and their objectives.
-| Required Modeled Effect | requirements.models.effects-considered | Recommended | Real-world physical effect that shall be considered in modeling.
-| Further Model Requirements | requirements.models.further-model-requirements | Recommended | Additional requirements placed on the model.
+| Model Purpose and Objectives | requirements.models.purpose-objectives | Recommended | Individual model purposes and objectives derived from simulation objectives.
+| Modeled Entity | requirements.models.subject-information.modeled-entity | Recommended | Real-world entity that is to be modeled.
+| Required Modeled Effect | requirements.model.effects-considered | Recommended | Real-world physical effect that shall be considered in modeling.
+| Further Model Requirements | requirements.model.further-model-requirements | Recommended | Additional requirements placed on the model.
 | Simulation Model Confidentiality Level | requirements.model.confidentiality | Recommended | Confidentiality classification for model-related information.
-| Value Distribution Function | requirements.parameters-value-distribution-function | Recommended | Probability distribution used to describe parameter value deviations.
+| Model Quality Requirement | requirements.model.quality-requirements | Optional | Quality requirement for a simulation model.
+| Entity Parameter | requirements.parameters.subject-information.parametrized-entity | Mandatory | Referenced parameters of the entity to be modeled.
+| Value Distribution Function | requirements.parameter-value-distribution-function | Recommended | Probability distribution used to describe parameter value deviations.
 | Parameter Confidentiality Level | requirements.parameter.confidentiality | Recommended | Confidentiality classification for parameter-related information.
+| Parameter Quality Requirement | requirements.parameter.quality-requirements | Optional | Quality requirement for parameter sets.
+| Test Case Requirements | requirements.test-case | Recommended | Requirements for simulation test cases and their objectives.
+| Test Case Confidentiality Level | requirements.test-case.confidentiality | Recommended | Confidentiality classification for parameter-related information.
+| Test Case Quality Requirement | requirements.test-case.quality-requirements | Optional | Quality requirement for test cases.
+| Simulation Environment Requirement | requirements.simulation-environment | Recommended | Requirement placed on the simulation environment.
+| Simulation Environment Quality Requirement | requirements.simulation-environment.quality-requirements | Optional | Quality requirement for the simulation environment.
+| Simulation Integration Requirement | requirements.simulation-integration | Recommended | Requirement placed on interaction of simulation setup elements.
+| Simulation Integration Quality Requirement | requirements.simulation-integration.quality-requirements | Optional | Quality requirement for simulation integration.
 | Quality Assurance Requirements | requirements.quality-assurance | Recommended | Requirements placed on quality assurance in the requirements phase.
 | Requirements Phase Verification Result | requirements.verification | Recommended | Result of verification activities in the requirements phase.
-| Model Quality Requirement | requirements.models.quality-requirements | Optional | Quality requirement for a simulation model.
-| Parameter Quality Requirement | requirements.parameters.quality-requirements | Optional | Quality requirement for parameter sets.
-| Simulation Environment Quality Requirement | requirements.simulation-environment.quality-requirements | Optional | Quality requirement for the simulation environment.
-| Simulation Integration Quality Requirement | requirements.simulation-integration.quality-requirements | Optional | Quality requirement for simulation integration.
-| Test Case Quality Requirement | requirements.test-cases.quality-requirements | Optional | Quality requirement for test cases.
 |===
 
 ==== Design
@@ -96,18 +97,18 @@ Note that the abbreviated explanations are not considered a normative part of th
 [cols="2,3m,^1e,17",align="center",frame="topbot",options="header"]
 |===
 | SIC Core Name | SRMD Mapping | Obligation | Short Explanation
-| Model Design Specification | design.models | Recommended | Definition of how models shall be implemented.
-| Parameter Design Specification | design.parameters | Recommended | Definition of how parameters shall be implemented.
+| Model Design Specification | design.model | Recommended | Definition of how models shall be implemented.
+| Model Design Quality Requirement | design.model.quality-requirements | Optional | Quality requirement for model design.
+| Parameter Design Specification | design.parameter | Recommended | Definition of how parameters shall be implemented.
+| Parameter Design Quality Requirement | design.parameter.quality-requirements | Optional | Quality requirement for parameter design.
+| Test Case Design Specification | design.test-case | Recommended | Definition of how test cases shall be implemented.
+| Test Case Design Quality Requirement | design.test-case.quality-requirements | Optional | Quality requirement for test case design.
 | Simulation Environment Design Specification | design.simulation-environment | Recommended | Definition of how the simulation environment shall be implemented.
+| Simulation Environment Design Quality Requirement | design.simulation-environment.quality-requirements | Optional | Quality requirement for simulation environment design.
 | Simulation Integration Design Specification | design.simulation-integration | Recommended | Definition of how simulation components shall be integrated.
-| Test Case Design Specification | design.test-cases | Recommended | Definition of how test cases shall be implemented.
+| Simulation Integration Design Quality Requirement | design.simulation-integration.quality-requirements | Optional | Quality requirement for simulation integration design.
 | Design Quality Assurance | design.quality-assurance | Recommended | Quality assurance measure in the design phase.
 | Design Verification Result | design.verification | Recommended | Result of verification activities in the design phase.
-| Model Design Quality Requirement | design.models.quality-requirements | Optional | Quality requirement for model design.
-| Parameter Design Quality Requirement | design.parameters.quality-requirements | Optional | Quality requirement for parameter design.
-| Simulation Environment Design Quality Requirement | design.simulation-environment.quality-requirements | Optional | Quality requirement for simulation environment design.
-| Simulation Integration Design Quality Requirement | design.simulation-integration.quality-requirements | Optional | Quality requirement for simulation integration design.
-| Test Case Design Quality Requirement | design.test-cases.quality-requirements | Optional | Quality requirement for test case design.
 |===
 
 ==== Implementation
@@ -115,19 +116,19 @@ Note that the abbreviated explanations are not considered a normative part of th
 [cols="2,3m,^1e,17",align="center",frame="topbot",options="header"]
 |===
 | SIC Core Name | SRMD Mapping | Obligation | Short Explanation
-| Simulation Model Name | implementation.model.name | Mandatory | Name of the implemented simulation model.
-| Parameter Name | implementation.parameters.name | Mandatory | Name of the implemented parameter set.
-| Simulation Environment Name | implementation.simulation-environment.name | Mandatory | Name of the implemented simulation environment.
-| Simulation Integration Name | implementation.simulation-integration.name | Mandatory | Name of the implemented simulation integration.
+| Simulation Model Name | implementation.model.name | Recommended | Name of the implemented simulation model.
 | Simulation Model Confidentiality Level | implementation.model.confidentiality | Recommended | Confidentiality classification for implemented model information.
 | Simulation Model Quality | implementation.model.quality | Recommended | Statement describing achieved model quality after implementation.
-| Parameter Confidentiality Level | implementation.parameter.confidentiality | Recommended | Confidentiality classification for implemented parameter information.
+| Parameter Name | implementation.parameters.name | Recommended | Name of the implemented parameter set.
+| Parameter Confidentiality Level | implementation.parameter.confidentiality | Recommended | Confidentiality classification for parameter information.
 | Parameter Quality | implementation.parameters.quality | Recommended | Statement describing achieved parameter quality after implementation.
+| Test Case Name | implementation.test-case.name | Recommended | Name of implemented test cases.
+| Test Case Confidentiality Level | implementation.test-case.confidentiality | Recommended | Confidentiality classification for implemented test case information.
+| Test Case Quality | implementation.test-case.quality | Recommended | Statement describing achieved test case quality after implementation.
+| Simulation Environment Name | implementation.simulation-environment.name | Recommended | Name of the implemented simulation environment.
 | Simulation Environment Quality | implementation.simulation-environment.quality | Recommended | Statement describing achieved simulation environment quality after implementation.
-| Test Case Name | implementation.test-cases.name | Recommended | Name of implemented test cases.
-| Test Case Confidentiality Level | implementation.test-cases.confidentiality | Recommended | Confidentiality classification for implemented test case information.
-| Test Case Quality | implementation.test-cases.quality | Recommended | Statement describing achieved test case quality after implementation.
 | Solver Setting | implementation.simulation-integration.settings | Recommended | Relevant simulation integration settings, such as solver settings.
+| Simulation Integration Name | implementation.simulation-integration.name | Recommended | Name of the implemented simulation integration.
 | Simulation Integration Quality | implementation.simulation-integration.quality | Recommended | Statement describing achieved simulation integration quality after implementation.
 | Implementation Quality Assurance Results | implementation.quality-assurance-results | Recommended | Results of quality assurance activities in the implementation phase.
 | Implementation Quality Verdict | implementation.verdict | Optional | Final implementation quality decision.
@@ -140,7 +141,7 @@ Note that the abbreviated explanations are not considered a normative part of th
 | SIC Core Name | SRMD Mapping | Obligation | Short Explanation
 | Used Simulation Model Name | execution.model.names | Mandatory | Name of simulation model actually used in execution.
 | Used Parameter Name | execution.parameters.names | Mandatory | Name of parameter set actually used in execution.
-| Used Test Case Name | execution.test-cases.names | Mandatory | Name of test case actually used in execution.
+| Used Test Case Name | execution.test-cases.names | Recommended | Name of test case actually used in execution.
 | Used Tool Name | execution.tool.name | Mandatory | Name of tool actually used in execution.
 | Execution Raw Data | execution.data | Recommended | Original data resulting from simulation runs before processing.
 | Used Tool Settings | execution.tool.settings | Recommended | Tool-specific settings applied during execution.
@@ -152,7 +153,7 @@ Note that the abbreviated explanations are not considered a normative part of th
 [cols="2,3m,^1e,17",align="center",frame="topbot",options="header"]
 |===
 | SIC Core Name | SRMD Mapping | Obligation | Short Explanation
-| Evaluation Results | evaluation.results | Mandatory | Key results produced by processing simulation output data.
+| Evaluation Results | evaluation.results | Recommended | Key results produced by processing simulation output data.
 | Evaluation Quality-Assurance Results | evaluation.quality-assurance | Recommended | Results of quality assurance activities during evaluation.
 | Evaluation Quality Verdict | evaluation.verdict | Optional | Final verdict from evaluating simulation results.
 |===
@@ -162,9 +163,9 @@ Note that the abbreviated explanations are not considered a normative part of th
 [cols="2,3m,^1e,17",align="center",frame="topbot",options="header"]
 |===
 | SIC Core Name | SRMD Mapping | Obligation | Short Explanation
-| Objectives Fulfilled | fulfillment.objectives | Mandatory | Decision whether simulation objectives are fulfilled.
-| Credibility Fulfilled | fulfillment.credibility | Mandatory | Decision whether credibility requirements are fulfilled.
 | Task Status | fulfillment.task-status | Mandatory | Overall status assessment of the simulation task.
+| Quality Fulfilled | fulfillment.quality | Recommended | Decision whether simulation quality requirements are fulfilled.
+| Objectives Fulfilled | fulfillment.objectives | Recommended | Decision whether simulation objectives are fulfilled.
 | Fulfillment Evidence | fulfillment.evidence | Recommended | Link or reference to evidence supporting fulfillment decisions.
 | Fulfillment Date | fulfillment.date | Recommended | Date on which fulfillment assessment is made.
 |===
