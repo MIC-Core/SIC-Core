@@ -1,4 +1,4 @@
-[[sic-core-conformance]]
+[#sic-core-conformance]
 == Conformance
 
 This specification provides a set of standardized attributes, which other standards that define meta-data and meta-data formats can adopt by claiming conformance.

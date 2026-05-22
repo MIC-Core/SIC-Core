@@ -4,3 +4,5 @@
 - [[[PW13]]] Preston-Werner, T. (2013): **Semantic Versioning 2.0.0**.  https://semver.org/spec/v2.0.0.html
 - [[[RFC2119]]] Bradner, S. (1997): **Key words for use in RFCs to Indicate Requirement Levels**. IETF RFC 2119.  https://www.rfc-editor.org/rfc/rfc2119
 - [[[MIC]]] IRT SystemX (2020): **Model Identity Card - Toward a standard to characterize simulation models**. https://mic.irt-systemx.fr
+- [[[CSP]]] prostep ivip (2025): **Credible Simulation Process Framework** in prostep ivip SmartSE Recommendation 2025 PSI 11 V4.0 Part H: https://www.prostep.org/en/medialibrary/detail?ai%5Baction%5D=detail&ai%5Bcontroller%5D=Catalog&ai%5Bd_name%5D=prostep-ivip-smartse-recommendation-2025-psi-11-v-4-0-part-h-credible-simulation-process&ai%5Bd_pos%5D=2
+- [[[SSPLST]]] Modelica Association Project SSP (2025): **SSP Layered Standard Traceability 1.0.0**. https://ssp-standard.org/ssp-ls-traceability/1.0.0/

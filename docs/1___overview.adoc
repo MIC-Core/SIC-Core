@@ -25,7 +25,7 @@ It must be possible to answer questions such as:
 
 * Were the simulation objectives and credibility requirements fulfilled?
 
-While the MIC Core specification provides metadata for simulation models, it does not describe the simulation tasks in which those models are used.
+While the MIC Core specification provides metadata for simulation models, it does not support and describe the simulation tasks in which those models are used (see figure 1).
 
 This specification addresses this gap.
 
@@ -94,7 +94,12 @@ The goal of this specification is therefore not to prescribe a fixed metadata im
 
 === Simulation Process Context
 
-The metadata structure defined in this specification follows a simulation process aligned with the *Credible Simulation Process Framework.*
+The metadata structure defined in this specification follows a simulation process aligned with the https://modelica.github.io/ssp-ls-traceability/1.0.0/#sec-crediblesimulationprocessframework[*Credible Simulation Process Framework*], as defined in <<CSP>>, as referenced in the SSP Layered Standard Traceability 1.0.0 specification (see <<SSPLST>>):
+
+[#im-csp]
+.Credible Simulation Process with attached metadata to the process phases
+image::CSP.png[]
+
 
 This process distinguishes the following phases:
 
@@ -142,6 +147,15 @@ as long as the defined semantics remain consistent.
 This approach allows organizations to implement the standard incrementally and according to their specific engineering processes.
 
 Additionally, the specification is designed to be technology-agnostic, meaning that it does not prescribe specific data formats or technologies for metadata representation, or mapping of metadata items to specific attribute names in a specific format.
+
+=== Sub-Attributes
+
+For a number of attributes, for example for <<Simulation Task,Simulation Task>>, the specification allows the use of sub-attributes to describe the attribute in more detail, e.g. by providing both machine-readable and human-readable variants of a name, version information, or URIs.
+
+The use of sub-attributes is per-se optional, however standards implementing this specification can make the use of sub-attributes, and the use of certain sub-attributes mandatory.
+
+The list of allowed sub-attributes is listed in the definition of an attribute.
+Since they are shared between attribute definitions, the definition of common sub-attributes is placed in <<common-sub-attributes>>.
 
 === Obligation Levels and Use-Case Dependency
 
