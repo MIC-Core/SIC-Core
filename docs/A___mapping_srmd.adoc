@@ -1,4 +1,4 @@
-[appendix]
+[appendix#mapping-srmd]
 == Mapping of SIC Core to SSP LS Traceability SRMD Format
     
 This appendix is an optional part of the SIC Core specification.

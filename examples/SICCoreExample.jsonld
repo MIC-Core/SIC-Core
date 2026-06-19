@@ -1,0 +1,261 @@
+{
+    "@context":  "https://mic-core.org/ontology/sic-core-context.jsonld",
+    "@type":  "SimulationTask",
+    "@id":  "urn:example:SICSimulationTask:2026-0001",
+    "administrativeOverallProduct":  [
+                                         "carZZ"
+                                     ],
+    "administrativeSpecificProductName":  [
+                                              "AD-34basic"
+                                          ],
+    "administrativeSpecificProductVersion":  [
+                                                 "R20260003"
+                                             ],
+    "administrativeSpecificProductIdentifier":  [
+                                                    "AD-34basic_R20260003"
+                                                ],
+    "administrativeOrderingProject":  "cam34basic",
+    "administrativeSimulationRequestName":  "SIM-REQ-2026-0001",
+    "administrativeSimulationRequestVersion":  "V2",
+    "administrativeSimulationRequestIdentifier":  "SIM-REQ-2026-0001-V2",
+    "administrativeSimulationTaskName":  "SIM-TASK-2026-0001",
+    "administrativeSimulationTaskVersion":  "V1",
+    "administrativeSimulationTaskIdentifier":  "SIM-TASK-2026-0001-V1",
+    "administrativeSimulationTaskConfidentialityLevel":  "CSC-2: confidential",
+    "administrativeSimulationTaskCreationDate":  "2026-04-12",
+    "administrativePredictedSimulationStartDate":  "2026-04-20",
+    "administrativeRequestedSimulationDeliveryDate":  "2026-05-15",
+    "administrativeSimulationTaskCreatorName":  "Alex Creator",
+    "administrativeRequestingPerson":  [
+                                           "Jane Requester"
+                                       ],
+    "administrativeRequestingEntity":  [
+                                           "ADAS Engineering Dept."
+                                       ],
+    "administrativeContractingPerson":  "John Contractor",
+    "administrativeContractingEntity":  "Simulation Service Center",
+    "analysisItemUnderTestName":  "camera34-A-sample",
+    "analysisItemUnderTestVersion":  "V23",
+    "analysisItemUnderTestIdentifier":  "camera34-A-sampleV23",
+    "analysisSimulationObjective":  [
+                                        "Assess camera resolution performance for AD use case."
+                                    ],
+    "analysisFurtherSimulationRequirements":  [
+                                                  "Distance between vehicle and pedestrian must remain above 1.5 m."
+                                              ],
+    "analysisQualityCriterion":  [
+                                     "companyZ simulation quality assessment"
+                                 ],
+    "analysisHigherLevelEngineeringTask":  "Development of an AD driving function based on camera signals.",
+    "analysisSpecificEngineeringTask":  "Detection of critical occlusions when turning right with pedestrians.",
+    "analysisVerificationCriterion":  [
+                                          "Verification criterion: objective metrics reached in benchmark scenarios."
+                                      ],
+    "analysisPhaseVerificationResult":  "Verification criterion: objective metrics reached in benchmark scenarios.",
+    "analysisValidationCriterion":  [
+                                        "Validation criterion: engineering intent is represented by selected scenarios."
+                                    ],
+    "requirementsModelPurposeAndObjectives":  [
+                                                  "Specify camera resolution at object-list level for AD function."
+                                              ],
+    "requirementsModeledEntity":  [
+                                      "camera34-A-sampleV23"
+                                  ],
+    "requirementsEntityParameter":  [
+                                        "camera datasheet revision 4"
+                                    ],
+    "requirementsSimulationEnvironmentRequirement":  [
+                                                         "Tool chain shall support FMI and scenario replay."
+                                                     ],
+    "requirementsSimulationIntegrationRequirement":  [
+                                                         "Model interfaces shall be integrated via SSP and validated I/O mapping."
+                                                     ],
+    "requirementsTestCaseRequirements":  [
+                                             "Urban crossing and right-turn occlusion scenarios shall be included."
+                                         ],
+    "requirementsRequiredModeledEffect":  [
+                                              "Optical distortion and motion blur shall be considered."
+                                          ],
+    "requirementsFurtherModelRequirements":  [
+                                                 "Thermal effects are excluded for this task."
+                                             ],
+    "requirementsSimulationModelConfidentialityLevel":  "CSC-2: confidential",
+    "requirementsValueDistributionFunction":  [
+                                                  "Normal distribution with sigma based on supplier tolerance."
+                                              ],
+    "requirementsParameterConfidentialityLevel":  "CSC-1: internal",
+    "requirementsQualityAssuranceRequirements":  [
+                                                     "Peer review of requirements package required before design start."
+                                                 ],
+    "requirementsPhaseVerificationResult":  "Requirements verification passed with minor comments resolved.",
+    "requirementsModelQualityRequirement":  [
+                                                "Model shall reproduce baseline within +/-5% KPI error."
+                                            ],
+    "requirementsParameterQualityRequirement":  [
+                                                    "Parameter provenance shall be traceable to approved sources."
+                                                ],
+    "requirementsSimulationEnvironmentQualityRequirement":  [
+                                                                "Environment version shall be frozen for task execution."
+                                                            ],
+    "requirementsSimulationIntegrationQualityRequirement":  [
+                                                                "Integration test suite shall pass before execution."
+                                                            ],
+    "requirementsTestCaseQualityRequirement":  [
+                                                   "All critical scenarios shall include expected outcome definitions."
+                                               ],
+    "designModelDesignSpecification":  [
+                                           "Model architecture with sensor, perception, and environment sub-models."
+                                       ],
+    "designParameterDesignSpecification":  [
+                                               "Parameter set structure with nominal and tolerance values."
+                                           ],
+    "designSimulationEnvironmentDesignSpecification":  [
+                                                           "Environment design based on ToolX 5.2 and approved plugins."
+                                                       ],
+    "designSimulationIntegrationDesignSpecification":  "Integration design based on SSP composition with explicit connectors.",
+    "designTestCaseDesignSpecification":  [
+                                              "Test case design document TC-ADAS-CAM-2026-01."
+                                          ],
+    "designQualityAssurance":  [
+                                   "Design review checklist completed and signed."
+                               ],
+    "designVerificationResult":  "Design verification passed by simulation lead.",
+    "designModelDesignQualityRequirement":  [
+                                                "Model modularity and interface consistency criteria met."
+                                            ],
+    "designParameterDesignQualityRequirement":  [
+                                                    "Parameter naming and units follow company standard."
+                                                ],
+    "designSimulationEnvironmentDesignQualityRequirement":  [
+                                                                "Toolchain reproducibility validated on clean setup."
+                                                            ],
+    "designSimulationIntegrationDesignQualityRequirement":  [
+                                                                "Integration latency constraints verified in dry runs."
+                                                            ],
+    "designTestCaseDesignQualityRequirement":  [
+                                                   "Coverage of required scenario classes confirmed."
+                                               ],
+    "implementationSimulationModelName":  [
+                                              "cam_occlusion_model"
+                                          ],
+    "implementationSimulationModelVersion":  [
+                                                 "v2"
+                                             ],
+    "implementationSimulationModelIdentifier":  [
+                                                    "cam_occlusion_model_v2"
+                                                ],
+    "implementationParameterName":  [
+                                        "cam_params_set_2026Q2"
+                                    ],
+    "implementationParameterVersion":  [
+                                           "V101"
+                                       ],
+    "implementationParameterIdentifier":  [
+                                              "cam_params_set_2026Q2_V101"
+                                          ],
+    "implementationSimulationEnvironmentName":  [
+                                                    "ToolX_5.2_FMIStack"
+                                                ],
+    "implementationSimulationEnvironmentVersion":  [
+                                                       "dcbad9a7deadbeef"
+                                                   ],
+    "implementationSimulationEnvironmentIdentifier":  [
+                                                          "ToolX_5.2_FMIStack_dcbad9a7deadbeef"
+                                                      ],
+    "implementationSimulationIntegrationName":  [
+                                                    "ssp_integration_camstack"
+                                                ],
+    "implementationSimulationIntegrationVersion":  [
+                                                       "v4"
+                                                   ],
+    "implementationSimulationIntegrationIdentifier":  [
+                                                          "ssp_integration_camstack_v4"
+                                                      ],
+    "implementationSimulationModelConfidentialityLevel":  "CSC-2: confidential",
+    "implementationSimulationModelQuality":  [
+                                                 "Model quality assessed as fit-for-purpose."
+                                             ],
+    "implementationParameterConfidentialityLevel":  "CSC-1: internal",
+    "implementationParameterQuality":  [
+                                           "Parameter quality confirmed against source references."
+                                       ],
+    "implementationSimulationEnvironmentQuality":  [
+                                                       "Environment validated with regression baseline."
+                                                   ],
+    "implementationTestCaseName":  [
+                                       "tc_right_turn_occlusion_set"
+                                   ],
+    "implementationTestCaseVersion":  [
+                                          "rev3024"
+                                      ],
+    "implementationTestCaseIdentifier":  [
+                                             "tc_right_turn_occlusion_set_rev3024"
+                                         ],
+    "implementationTestCaseConfidentialityLevel":  "CSC-1: internal",
+    "implementationTestCaseQuality":  [
+                                          "Test cases reviewed and executable."
+                                      ],
+    "implementationSolverSetting":  [
+                                        "Solver=CVODE; step=1e-3; tolerance=1e-6"
+                                    ],
+    "implementationSimulationIntegrationQuality":  [
+                                                       "Integration quality passed all interface checks."
+                                                   ],
+    "implementationQualityAssuranceResults":  [
+                                                  "Implementation QA passed with no blocking issues."
+                                              ],
+    "implementationQualityVerdict":  "passed",
+    "executionUsedSimulationModelName":  [
+                                             "cam_occlusion_model"
+                                         ],
+    "executionUsedSimulationModelIdentifier":  [
+                                                   "cam_occlusion_model_v2"
+                                               ],
+    "executionUsedSimulationModelVersion":  [
+                                                "v2"
+                                            ],
+    "executionUsedParameterName":  [
+                                       "cam_params_set_2026Q2"
+                                   ],
+    "executionUsedParameterIdentifier":  [
+                                             "cam_params_set_2026Q2_V101"
+                                         ],
+    "executionUsedParameterVersion":  [
+                                          "V101"
+                                      ],
+    "executionUsedTestCaseName":  [
+                                      "tc_right_turn_occlusion_set"
+                                  ],
+    "executionUsedTestCaseVersion":  [
+                                         "rev3024"
+                                     ],
+    "executionUsedTestCaseIdentifier":  [
+                                            "tc_right_turn_occlusion_set_rev3024"
+                                        ],
+    "executionUsedToolName":  [
+                                  "ToolX_5.2_FMIStack_"
+                              ],
+    "executionUsedToolVersion":  [
+                                     "dcbad9a7deadbeef"
+                                 ],
+    "executionUsedToolIdentifier":  [
+                                        "ToolX_5.2_FMIStack_dcbad9a7deadbeef"
+                                    ],
+    "executionRawData":  [
+                             "results/raw/run_2026_04_12.zip"
+                         ],
+    "executionUsedToolSettings":  [
+                                      "profile=production; deterministic=true"
+                                  ],
+    "executionLog":  "logs/execution_2026_04_12.log",
+    "evaluationResults":  [
+                              "results/evaluation_summary_2026_04_12.pdf"
+                          ],
+    "evaluationQualityAssuranceResults":  "Evaluation peer review completed.",
+    "evaluationQualityVerdict":  "valid",
+    "fulfillmentObjectivesFulfilled":  "fulfilled",
+    "fulfillmentQualityFulfilled":  "fulfilled",
+    "fulfillmentTaskStatus":  "finished",
+    "fulfillmentEvidence":  "reports/fulfillment_report_2026_04_12.pdf",
+    "fulfillmentDate":  "2026-04-12"
+}

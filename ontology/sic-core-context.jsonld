@@ -1,0 +1,808 @@
+{
+    "@context":  {
+                     "sic":  "https://mic-core.org/ontology/sic-core#",
+                     "xsd":  "http://www.w3.org/2001/XMLSchema#",
+                     "SimulationTask":  "sic:SimulationTask",
+                     "administrativeOverallProduct":  {
+                                                          "@id":  "sic:administrativeOverallProduct",
+                                                          "@type":  "xsd:string",
+                                                          "@container":  "@set"
+                                                      },
+                     "administrativeOverallProductName":  {
+                                                              "@id":  "sic:administrativeOverallProductName",
+                                                              "@type":  "xsd:string",
+                                                              "@container":  "@set"
+                                                          },
+                     "administrativeOverallProductVersion":  {
+                                                                 "@id":  "sic:administrativeOverallProductVersion",
+                                                                 "@type":  "xsd:string",
+                                                                 "@container":  "@set"
+                                                             },
+                     "administrativeOverallProductIdentifier":  {
+                                                                    "@id":  "sic:administrativeOverallProductIdentifier",
+                                                                    "@type":  "xsd:string",
+                                                                    "@container":  "@set"
+                                                                },
+                     "administrativeOverallProductUrl":  {
+                                                             "@id":  "sic:administrativeOverallProductUrl",
+                                                             "@type":  "xsd:anyURI",
+                                                             "@container":  "@set"
+                                                         },
+                     "administrativeOverallProductFullName":  {
+                                                                  "@id":  "sic:administrativeOverallProductFullName",
+                                                                  "@type":  "xsd:string"
+                                                              },
+                     "administrativeSpecificProduct":  {
+                                                           "@id":  "sic:administrativeSpecificProduct",
+                                                           "@type":  "xsd:string",
+                                                           "@container":  "@set"
+                                                       },
+                     "administrativeSpecificProductName":  {
+                                                               "@id":  "sic:administrativeSpecificProductName",
+                                                               "@type":  "xsd:string",
+                                                               "@container":  "@set"
+                                                           },
+                     "administrativeSpecificProductVersion":  {
+                                                                  "@id":  "sic:administrativeSpecificProductVersion",
+                                                                  "@type":  "xsd:string",
+                                                                  "@container":  "@set"
+                                                              },
+                     "administrativeSpecificProductIdentifier":  {
+                                                                     "@id":  "sic:administrativeSpecificProductIdentifier",
+                                                                     "@type":  "xsd:string",
+                                                                     "@container":  "@set"
+                                                                 },
+                     "administrativeSpecificProductUrl":  {
+                                                              "@id":  "sic:administrativeSpecificProductUrl",
+                                                              "@type":  "xsd:anyURI",
+                                                              "@container":  "@set"
+                                                          },
+                     "administrativeSpecificProductFullName":  {
+                                                                   "@id":  "sic:administrativeSpecificProductFullName",
+                                                                   "@type":  "xsd:string"
+                                                               },
+                     "administrativeOrderingProject":  {
+                                                           "@id":  "sic:administrativeOrderingProject",
+                                                           "@type":  "xsd:string"
+                                                       },
+                     "administrativeOrderingProjectName":  {
+                                                               "@id":  "sic:administrativeOrderingProjectName",
+                                                               "@type":  "xsd:string"
+                                                           },
+                     "administrativeOrderingProjectVersion":  {
+                                                                  "@id":  "sic:administrativeOrderingProjectVersion",
+                                                                  "@type":  "xsd:string"
+                                                              },
+                     "administrativeOrderingProjectIdentifier":  {
+                                                                     "@id":  "sic:administrativeOrderingProjectIdentifier",
+                                                                     "@type":  "xsd:string"
+                                                                 },
+                     "administrativeOrderingProjectUrl":  {
+                                                              "@id":  "sic:administrativeOrderingProjectUrl",
+                                                              "@type":  "xsd:anyURI"
+                                                          },
+                     "administrativeOrderingProjectFullName":  {
+                                                                   "@id":  "sic:administrativeOrderingProjectFullName",
+                                                                   "@type":  "xsd:string"
+                                                               },
+                     "administrativeSimulationRequest":  {
+                                                             "@id":  "sic:administrativeSimulationRequest",
+                                                             "@type":  "xsd:string"
+                                                         },
+                     "administrativeSimulationRequestName":  {
+                                                                 "@id":  "sic:administrativeSimulationRequestName",
+                                                                 "@type":  "xsd:string"
+                                                             },
+                     "administrativeSimulationRequestVersion":  {
+                                                                    "@id":  "sic:administrativeSimulationRequestVersion",
+                                                                    "@type":  "xsd:string"
+                                                                },
+                     "administrativeSimulationRequestIdentifier":  {
+                                                                       "@id":  "sic:administrativeSimulationRequestIdentifier",
+                                                                       "@type":  "xsd:string"
+                                                                   },
+                     "administrativeSimulationRequestUrl":  {
+                                                                "@id":  "sic:administrativeSimulationRequestUrl",
+                                                                "@type":  "xsd:anyURI"
+                                                            },
+                     "administrativeSimulationRequestFullName":  {
+                                                                     "@id":  "sic:administrativeSimulationRequestFullName",
+                                                                     "@type":  "xsd:string"
+                                                                 },
+                     "administrativeSimulationTask":  {
+                                                          "@id":  "sic:administrativeSimulationTask",
+                                                          "@type":  "xsd:string"
+                                                      },
+                     "administrativeSimulationTaskName":  {
+                                                              "@id":  "sic:administrativeSimulationTaskName",
+                                                              "@type":  "xsd:string"
+                                                          },
+                     "administrativeSimulationTaskVersion":  {
+                                                                 "@id":  "sic:administrativeSimulationTaskVersion",
+                                                                 "@type":  "xsd:string"
+                                                             },
+                     "administrativeSimulationTaskIdentifier":  {
+                                                                    "@id":  "sic:administrativeSimulationTaskIdentifier",
+                                                                    "@type":  "xsd:string"
+                                                                },
+                     "administrativeSimulationTaskUrl":  {
+                                                             "@id":  "sic:administrativeSimulationTaskUrl",
+                                                             "@type":  "xsd:anyURI"
+                                                         },
+                     "administrativeSimulationTaskFullName":  {
+                                                                  "@id":  "sic:administrativeSimulationTaskFullName",
+                                                                  "@type":  "xsd:string"
+                                                              },
+                     "administrativeSimulationTaskConfidentialityLevel":  {
+                                                                              "@id":  "sic:administrativeSimulationTaskConfidentialityLevel",
+                                                                              "@type":  "xsd:string"
+                                                                          },
+                     "administrativePredictedSimulationStartDate":  {
+                                                                        "@id":  "sic:administrativePredictedSimulationStartDate",
+                                                                        "@type":  "xsd:date"
+                                                                    },
+                     "administrativeRequestedSimulationDeliveryDate":  {
+                                                                           "@id":  "sic:administrativeRequestedSimulationDeliveryDate",
+                                                                           "@type":  "xsd:date"
+                                                                       },
+                     "administrativeRequestingPerson":  {
+                                                            "@id":  "sic:administrativeRequestingPerson",
+                                                            "@type":  "xsd:string",
+                                                            "@container":  "@set"
+                                                        },
+                     "administrativeRequestingEntity":  {
+                                                            "@id":  "sic:administrativeRequestingEntity",
+                                                            "@type":  "xsd:string",
+                                                            "@container":  "@set"
+                                                        },
+                     "administrativeContractingPerson":  {
+                                                             "@id":  "sic:administrativeContractingPerson",
+                                                             "@type":  "xsd:string"
+                                                         },
+                     "administrativeContractingEntity":  {
+                                                             "@id":  "sic:administrativeContractingEntity",
+                                                             "@type":  "xsd:string"
+                                                         },
+                     "administrativeSimulationTaskCreatorName":  {
+                                                                     "@id":  "sic:administrativeSimulationTaskCreatorName",
+                                                                     "@type":  "xsd:string"
+                                                                 },
+                     "administrativeSimulationTaskCreationDate":  {
+                                                                      "@id":  "sic:administrativeSimulationTaskCreationDate",
+                                                                      "@type":  "xsd:date"
+                                                                  },
+                     "analysisItemUnderTest":  {
+                                                   "@id":  "sic:analysisItemUnderTest",
+                                                   "@type":  "xsd:string"
+                                               },
+                     "analysisItemUnderTestName":  {
+                                                       "@id":  "sic:analysisItemUnderTestName",
+                                                       "@type":  "xsd:string"
+                                                   },
+                     "analysisItemUnderTestVersion":  {
+                                                          "@id":  "sic:analysisItemUnderTestVersion",
+                                                          "@type":  "xsd:string"
+                                                      },
+                     "analysisItemUnderTestIdentifier":  {
+                                                             "@id":  "sic:analysisItemUnderTestIdentifier",
+                                                             "@type":  "xsd:string"
+                                                         },
+                     "analysisItemUnderTestUrl":  {
+                                                      "@id":  "sic:analysisItemUnderTestUrl",
+                                                      "@type":  "xsd:anyURI"
+                                                  },
+                     "analysisItemUnderTestFullName":  {
+                                                           "@id":  "sic:analysisItemUnderTestFullName",
+                                                           "@type":  "xsd:string"
+                                                       },
+                     "analysisHigherLevelEngineeringTask":  {
+                                                                "@id":  "sic:analysisHigherLevelEngineeringTask",
+                                                                "@type":  "xsd:string"
+                                                            },
+                     "analysisHigherLevelEngineeringTaskName":  {
+                                                                    "@id":  "sic:analysisHigherLevelEngineeringTaskName",
+                                                                    "@type":  "xsd:string"
+                                                                },
+                     "analysisHigherLevelEngineeringTaskVersion":  {
+                                                                       "@id":  "sic:analysisHigherLevelEngineeringTaskVersion",
+                                                                       "@type":  "xsd:string"
+                                                                   },
+                     "analysisHigherLevelEngineeringTaskIdentifier":  {
+                                                                          "@id":  "sic:analysisHigherLevelEngineeringTaskIdentifier",
+                                                                          "@type":  "xsd:string"
+                                                                      },
+                     "analysisHigherLevelEngineeringTaskUrl":  {
+                                                                   "@id":  "sic:analysisHigherLevelEngineeringTaskUrl",
+                                                                   "@type":  "xsd:anyURI"
+                                                               },
+                     "analysisHigherLevelEngineeringTaskFullName":  {
+                                                                        "@id":  "sic:analysisHigherLevelEngineeringTaskFullName",
+                                                                        "@type":  "xsd:string"
+                                                                    },
+                     "analysisSpecificEngineeringTask":  {
+                                                             "@id":  "sic:analysisSpecificEngineeringTask",
+                                                             "@type":  "xsd:string"
+                                                         },
+                     "analysisSpecificEngineeringTaskName":  {
+                                                                 "@id":  "sic:analysisSpecificEngineeringTaskName",
+                                                                 "@type":  "xsd:string"
+                                                             },
+                     "analysisSpecificEngineeringTaskVersion":  {
+                                                                    "@id":  "sic:analysisSpecificEngineeringTaskVersion",
+                                                                    "@type":  "xsd:string"
+                                                                },
+                     "analysisSpecificEngineeringTaskIdentifier":  {
+                                                                       "@id":  "sic:analysisSpecificEngineeringTaskIdentifier",
+                                                                       "@type":  "xsd:string"
+                                                                   },
+                     "analysisSpecificEngineeringTaskUrl":  {
+                                                                "@id":  "sic:analysisSpecificEngineeringTaskUrl",
+                                                                "@type":  "xsd:anyURI"
+                                                            },
+                     "analysisSpecificEngineeringTaskFullName":  {
+                                                                     "@id":  "sic:analysisSpecificEngineeringTaskFullName",
+                                                                     "@type":  "xsd:string"
+                                                                 },
+                     "analysisSimulationObjective":  {
+                                                         "@id":  "sic:analysisSimulationObjective",
+                                                         "@type":  "xsd:string",
+                                                         "@container":  "@set"
+                                                     },
+                     "analysisFurtherSimulationRequirements":  {
+                                                                   "@id":  "sic:analysisFurtherSimulationRequirements",
+                                                                   "@type":  "xsd:string",
+                                                                   "@container":  "@set"
+                                                               },
+                     "analysisQualityCriterion":  {
+                                                      "@id":  "sic:analysisQualityCriterion",
+                                                      "@type":  "xsd:string",
+                                                      "@container":  "@set"
+                                                  },
+                     "analysisVerificationCriterion":  {
+                                                           "@id":  "sic:analysisVerificationCriterion",
+                                                           "@type":  "xsd:string",
+                                                           "@container":  "@set"
+                                                       },
+                     "analysisValidationCriterion":  {
+                                                         "@id":  "sic:analysisValidationCriterion",
+                                                         "@type":  "xsd:string",
+                                                         "@container":  "@set"
+                                                     },
+                     "analysisPhaseVerificationResult":  {
+                                                             "@id":  "sic:analysisPhaseVerificationResult",
+                                                             "@type":  "xsd:string"
+                                                         },
+                     "requirementsModelPurposeAndObjectives":  {
+                                                                   "@id":  "sic:requirementsModelPurposeAndObjectives",
+                                                                   "@type":  "xsd:string",
+                                                                   "@container":  "@set"
+                                                               },
+                     "requirementsModeledEntity":  {
+                                                       "@id":  "sic:requirementsModeledEntity",
+                                                       "@type":  "xsd:string",
+                                                       "@container":  "@set"
+                                                   },
+                     "requirementsModeledEntityName":  {
+                                                           "@id":  "sic:requirementsModeledEntityName",
+                                                           "@type":  "xsd:string",
+                                                           "@container":  "@set"
+                                                       },
+                     "requirementsModeledEntityVersion":  {
+                                                              "@id":  "sic:requirementsModeledEntityVersion",
+                                                              "@type":  "xsd:string",
+                                                              "@container":  "@set"
+                                                          },
+                     "requirementsModeledEntityIdentifier":  {
+                                                                 "@id":  "sic:requirementsModeledEntityIdentifier",
+                                                                 "@type":  "xsd:string",
+                                                                 "@container":  "@set"
+                                                             },
+                     "requirementsModeledEntityUrl":  {
+                                                          "@id":  "sic:requirementsModeledEntityUrl",
+                                                          "@type":  "xsd:anyURI",
+                                                          "@container":  "@set"
+                                                      },
+                     "requirementsModeledEntityFullName":  {
+                                                               "@id":  "sic:requirementsModeledEntityFullName",
+                                                               "@type":  "xsd:string"
+                                                           },
+                     "requirementsRequiredModeledEffect":  {
+                                                               "@id":  "sic:requirementsRequiredModeledEffect",
+                                                               "@type":  "xsd:string",
+                                                               "@container":  "@set"
+                                                           },
+                     "requirementsFurtherModelRequirements":  {
+                                                                  "@id":  "sic:requirementsFurtherModelRequirements",
+                                                                  "@type":  "xsd:string",
+                                                                  "@container":  "@set"
+                                                              },
+                     "requirementsSimulationModelConfidentialityLevel":  {
+                                                                             "@id":  "sic:requirementsSimulationModelConfidentialityLevel",
+                                                                             "@type":  "xsd:string"
+                                                                         },
+                     "requirementsModelQualityRequirement":  {
+                                                                 "@id":  "sic:requirementsModelQualityRequirement",
+                                                                 "@type":  "xsd:string",
+                                                                 "@container":  "@set"
+                                                             },
+                     "requirementsEntityParameter":  {
+                                                         "@id":  "sic:requirementsEntityParameter",
+                                                         "@type":  "xsd:string",
+                                                         "@container":  "@set"
+                                                     },
+                     "requirementsValueDistributionFunction":  {
+                                                                   "@id":  "sic:requirementsValueDistributionFunction",
+                                                                   "@type":  "xsd:string",
+                                                                   "@container":  "@set"
+                                                               },
+                     "requirementsParameterConfidentialityLevel":  {
+                                                                       "@id":  "sic:requirementsParameterConfidentialityLevel",
+                                                                       "@type":  "xsd:string"
+                                                                   },
+                     "requirementsParameterQualityRequirement":  {
+                                                                     "@id":  "sic:requirementsParameterQualityRequirement",
+                                                                     "@type":  "xsd:string",
+                                                                     "@container":  "@set"
+                                                                 },
+                     "requirementsTestCaseRequirements":  {
+                                                              "@id":  "sic:requirementsTestCaseRequirements",
+                                                              "@type":  "xsd:string",
+                                                              "@container":  "@set"
+                                                          },
+                     "requirementsTestCaseConfidentialityLevel":  {
+                                                                      "@id":  "sic:requirementsTestCaseConfidentialityLevel",
+                                                                      "@type":  "xsd:string"
+                                                                  },
+                     "requirementsTestCaseQualityRequirement":  {
+                                                                    "@id":  "sic:requirementsTestCaseQualityRequirement",
+                                                                    "@type":  "xsd:string",
+                                                                    "@container":  "@set"
+                                                                },
+                     "requirementsSimulationEnvironmentRequirement":  {
+                                                                          "@id":  "sic:requirementsSimulationEnvironmentRequirement",
+                                                                          "@type":  "xsd:string",
+                                                                          "@container":  "@set"
+                                                                      },
+                     "requirementsSimulationEnvironmentQualityRequirement":  {
+                                                                                 "@id":  "sic:requirementsSimulationEnvironmentQualityRequirement",
+                                                                                 "@type":  "xsd:string",
+                                                                                 "@container":  "@set"
+                                                                             },
+                     "requirementsSimulationIntegrationRequirement":  {
+                                                                          "@id":  "sic:requirementsSimulationIntegrationRequirement",
+                                                                          "@type":  "xsd:string",
+                                                                          "@container":  "@set"
+                                                                      },
+                     "requirementsSimulationIntegrationQualityRequirement":  {
+                                                                                 "@id":  "sic:requirementsSimulationIntegrationQualityRequirement",
+                                                                                 "@type":  "xsd:string",
+                                                                                 "@container":  "@set"
+                                                                             },
+                     "requirementsQualityAssuranceRequirements":  {
+                                                                      "@id":  "sic:requirementsQualityAssuranceRequirements",
+                                                                      "@type":  "xsd:string",
+                                                                      "@container":  "@set"
+                                                                  },
+                     "requirementsPhaseVerificationResult":  {
+                                                                 "@id":  "sic:requirementsPhaseVerificationResult",
+                                                                 "@type":  "xsd:string"
+                                                             },
+                     "designModelDesignSpecification":  {
+                                                            "@id":  "sic:designModelDesignSpecification",
+                                                            "@type":  "xsd:string",
+                                                            "@container":  "@set"
+                                                        },
+                     "designModelDesignQualityRequirement":  {
+                                                                 "@id":  "sic:designModelDesignQualityRequirement",
+                                                                 "@type":  "xsd:string",
+                                                                 "@container":  "@set"
+                                                             },
+                     "designParameterDesignSpecification":  {
+                                                                "@id":  "sic:designParameterDesignSpecification",
+                                                                "@type":  "xsd:string",
+                                                                "@container":  "@set"
+                                                            },
+                     "designParameterDesignQualityRequirement":  {
+                                                                     "@id":  "sic:designParameterDesignQualityRequirement",
+                                                                     "@type":  "xsd:string",
+                                                                     "@container":  "@set"
+                                                                 },
+                     "designTestCaseDesignSpecification":  {
+                                                               "@id":  "sic:designTestCaseDesignSpecification",
+                                                               "@type":  "xsd:string",
+                                                               "@container":  "@set"
+                                                           },
+                     "designTestCaseDesignQualityRequirement":  {
+                                                                    "@id":  "sic:designTestCaseDesignQualityRequirement",
+                                                                    "@type":  "xsd:string",
+                                                                    "@container":  "@set"
+                                                                },
+                     "designSimulationEnvironmentDesignSpecification":  {
+                                                                            "@id":  "sic:designSimulationEnvironmentDesignSpecification",
+                                                                            "@type":  "xsd:string",
+                                                                            "@container":  "@set"
+                                                                        },
+                     "designSimulationEnvironmentDesignQualityRequirement":  {
+                                                                                 "@id":  "sic:designSimulationEnvironmentDesignQualityRequirement",
+                                                                                 "@type":  "xsd:string",
+                                                                                 "@container":  "@set"
+                                                                             },
+                     "designSimulationIntegrationDesignSpecification":  {
+                                                                            "@id":  "sic:designSimulationIntegrationDesignSpecification",
+                                                                            "@type":  "xsd:string"
+                                                                        },
+                     "designSimulationIntegrationDesignQualityRequirement":  {
+                                                                                 "@id":  "sic:designSimulationIntegrationDesignQualityRequirement",
+                                                                                 "@type":  "xsd:string",
+                                                                                 "@container":  "@set"
+                                                                             },
+                     "designQualityAssurance":  {
+                                                    "@id":  "sic:designQualityAssurance",
+                                                    "@type":  "xsd:string",
+                                                    "@container":  "@set"
+                                                },
+                     "designVerificationResult":  {
+                                                      "@id":  "sic:designVerificationResult",
+                                                      "@type":  "xsd:string"
+                                                  },
+                     "implementationSimulationModel":  {
+                                                           "@id":  "sic:implementationSimulationModel",
+                                                           "@type":  "xsd:string",
+                                                           "@container":  "@set"
+                                                       },
+                     "implementationSimulationModelName":  {
+                                                               "@id":  "sic:implementationSimulationModelName",
+                                                               "@type":  "xsd:string",
+                                                               "@container":  "@set"
+                                                           },
+                     "implementationSimulationModelVersion":  {
+                                                                  "@id":  "sic:implementationSimulationModelVersion",
+                                                                  "@type":  "xsd:string",
+                                                                  "@container":  "@set"
+                                                              },
+                     "implementationSimulationModelIdentifier":  {
+                                                                     "@id":  "sic:implementationSimulationModelIdentifier",
+                                                                     "@type":  "xsd:string",
+                                                                     "@container":  "@set"
+                                                                 },
+                     "implementationSimulationModelUrl":  {
+                                                              "@id":  "sic:implementationSimulationModelUrl",
+                                                              "@type":  "xsd:anyURI",
+                                                              "@container":  "@set"
+                                                          },
+                     "implementationSimulationModelFullName":  {
+                                                                   "@id":  "sic:implementationSimulationModelFullName",
+                                                                   "@type":  "xsd:string"
+                                                               },
+                     "implementationSimulationModelConfidentialityLevel":  {
+                                                                               "@id":  "sic:implementationSimulationModelConfidentialityLevel",
+                                                                               "@type":  "xsd:string"
+                                                                           },
+                     "implementationSimulationModelQuality":  {
+                                                                  "@id":  "sic:implementationSimulationModelQuality",
+                                                                  "@type":  "xsd:string",
+                                                                  "@container":  "@set"
+                                                              },
+                     "implementationParameter":  {
+                                                     "@id":  "sic:implementationParameter",
+                                                     "@type":  "xsd:string",
+                                                     "@container":  "@set"
+                                                 },
+                     "implementationParameterName":  {
+                                                         "@id":  "sic:implementationParameterName",
+                                                         "@type":  "xsd:string",
+                                                         "@container":  "@set"
+                                                     },
+                     "implementationParameterVersion":  {
+                                                            "@id":  "sic:implementationParameterVersion",
+                                                            "@type":  "xsd:string",
+                                                            "@container":  "@set"
+                                                        },
+                     "implementationParameterIdentifier":  {
+                                                               "@id":  "sic:implementationParameterIdentifier",
+                                                               "@type":  "xsd:string",
+                                                               "@container":  "@set"
+                                                           },
+                     "implementationParameterUrl":  {
+                                                        "@id":  "sic:implementationParameterUrl",
+                                                        "@type":  "xsd:anyURI",
+                                                        "@container":  "@set"
+                                                    },
+                     "implementationParameterFullName":  {
+                                                             "@id":  "sic:implementationParameterFullName",
+                                                             "@type":  "xsd:string"
+                                                         },
+                     "implementationParameterConfidentialityLevel":  {
+                                                                         "@id":  "sic:implementationParameterConfidentialityLevel",
+                                                                         "@type":  "xsd:string"
+                                                                     },
+                     "implementationParameterQuality":  {
+                                                            "@id":  "sic:implementationParameterQuality",
+                                                            "@type":  "xsd:string",
+                                                            "@container":  "@set"
+                                                        },
+                     "implementationTestCase":  {
+                                                    "@id":  "sic:implementationTestCase",
+                                                    "@type":  "xsd:string",
+                                                    "@container":  "@set"
+                                                },
+                     "implementationTestCaseName":  {
+                                                        "@id":  "sic:implementationTestCaseName",
+                                                        "@type":  "xsd:string",
+                                                        "@container":  "@set"
+                                                    },
+                     "implementationTestCaseVersion":  {
+                                                           "@id":  "sic:implementationTestCaseVersion",
+                                                           "@type":  "xsd:string",
+                                                           "@container":  "@set"
+                                                       },
+                     "implementationTestCaseIdentifier":  {
+                                                              "@id":  "sic:implementationTestCaseIdentifier",
+                                                              "@type":  "xsd:string",
+                                                              "@container":  "@set"
+                                                          },
+                     "implementationTestCaseUrl":  {
+                                                       "@id":  "sic:implementationTestCaseUrl",
+                                                       "@type":  "xsd:anyURI",
+                                                       "@container":  "@set"
+                                                   },
+                     "implementationTestCaseFullName":  {
+                                                            "@id":  "sic:implementationTestCaseFullName",
+                                                            "@type":  "xsd:string"
+                                                        },
+                     "implementationTestCaseConfidentialityLevel":  {
+                                                                        "@id":  "sic:implementationTestCaseConfidentialityLevel",
+                                                                        "@type":  "xsd:string"
+                                                                    },
+                     "implementationTestCaseQuality":  {
+                                                           "@id":  "sic:implementationTestCaseQuality",
+                                                           "@type":  "xsd:string",
+                                                           "@container":  "@set"
+                                                       },
+                     "implementationSimulationEnvironment":  {
+                                                                 "@id":  "sic:implementationSimulationEnvironment",
+                                                                 "@type":  "xsd:string",
+                                                                 "@container":  "@set"
+                                                             },
+                     "implementationSimulationEnvironmentName":  {
+                                                                     "@id":  "sic:implementationSimulationEnvironmentName",
+                                                                     "@type":  "xsd:string",
+                                                                     "@container":  "@set"
+                                                                 },
+                     "implementationSimulationEnvironmentVersion":  {
+                                                                        "@id":  "sic:implementationSimulationEnvironmentVersion",
+                                                                        "@type":  "xsd:string",
+                                                                        "@container":  "@set"
+                                                                    },
+                     "implementationSimulationEnvironmentIdentifier":  {
+                                                                           "@id":  "sic:implementationSimulationEnvironmentIdentifier",
+                                                                           "@type":  "xsd:string",
+                                                                           "@container":  "@set"
+                                                                       },
+                     "implementationSimulationEnvironmentUrl":  {
+                                                                    "@id":  "sic:implementationSimulationEnvironmentUrl",
+                                                                    "@type":  "xsd:anyURI",
+                                                                    "@container":  "@set"
+                                                                },
+                     "implementationSimulationEnvironmentFullName":  {
+                                                                         "@id":  "sic:implementationSimulationEnvironmentFullName",
+                                                                         "@type":  "xsd:string"
+                                                                     },
+                     "implementationSimulationEnvironmentQuality":  {
+                                                                        "@id":  "sic:implementationSimulationEnvironmentQuality",
+                                                                        "@type":  "xsd:string",
+                                                                        "@container":  "@set"
+                                                                    },
+                     "implementationSolverSetting":  {
+                                                         "@id":  "sic:implementationSolverSetting",
+                                                         "@type":  "xsd:string",
+                                                         "@container":  "@set"
+                                                     },
+                     "implementationSimulationIntegration":  {
+                                                                 "@id":  "sic:implementationSimulationIntegration",
+                                                                 "@type":  "xsd:string",
+                                                                 "@container":  "@set"
+                                                             },
+                     "implementationSimulationIntegrationName":  {
+                                                                     "@id":  "sic:implementationSimulationIntegrationName",
+                                                                     "@type":  "xsd:string",
+                                                                     "@container":  "@set"
+                                                                 },
+                     "implementationSimulationIntegrationVersion":  {
+                                                                        "@id":  "sic:implementationSimulationIntegrationVersion",
+                                                                        "@type":  "xsd:string",
+                                                                        "@container":  "@set"
+                                                                    },
+                     "implementationSimulationIntegrationIdentifier":  {
+                                                                           "@id":  "sic:implementationSimulationIntegrationIdentifier",
+                                                                           "@type":  "xsd:string",
+                                                                           "@container":  "@set"
+                                                                       },
+                     "implementationSimulationIntegrationUrl":  {
+                                                                    "@id":  "sic:implementationSimulationIntegrationUrl",
+                                                                    "@type":  "xsd:anyURI",
+                                                                    "@container":  "@set"
+                                                                },
+                     "implementationSimulationIntegrationFullName":  {
+                                                                         "@id":  "sic:implementationSimulationIntegrationFullName",
+                                                                         "@type":  "xsd:string"
+                                                                     },
+                     "implementationSimulationIntegrationQuality":  {
+                                                                        "@id":  "sic:implementationSimulationIntegrationQuality",
+                                                                        "@type":  "xsd:string",
+                                                                        "@container":  "@set"
+                                                                    },
+                     "implementationQualityAssuranceResults":  {
+                                                                   "@id":  "sic:implementationQualityAssuranceResults",
+                                                                   "@type":  "xsd:string",
+                                                                   "@container":  "@set"
+                                                               },
+                     "implementationQualityVerdict":  {
+                                                          "@id":  "sic:implementationQualityVerdict",
+                                                          "@type":  "xsd:string"
+                                                      },
+                     "executionUsedSimulationModel":  {
+                                                          "@id":  "sic:executionUsedSimulationModel",
+                                                          "@type":  "xsd:string",
+                                                          "@container":  "@set"
+                                                      },
+                     "executionUsedSimulationModelName":  {
+                                                              "@id":  "sic:executionUsedSimulationModelName",
+                                                              "@type":  "xsd:string",
+                                                              "@container":  "@set"
+                                                          },
+                     "executionUsedSimulationModelVersion":  {
+                                                                 "@id":  "sic:executionUsedSimulationModelVersion",
+                                                                 "@type":  "xsd:string",
+                                                                 "@container":  "@set"
+                                                             },
+                     "executionUsedSimulationModelIdentifier":  {
+                                                                    "@id":  "sic:executionUsedSimulationModelIdentifier",
+                                                                    "@type":  "xsd:string",
+                                                                    "@container":  "@set"
+                                                                },
+                     "executionUsedSimulationModelUrl":  {
+                                                             "@id":  "sic:executionUsedSimulationModelUrl",
+                                                             "@type":  "xsd:anyURI",
+                                                             "@container":  "@set"
+                                                         },
+                     "executionUsedSimulationModelFullName":  {
+                                                                  "@id":  "sic:executionUsedSimulationModelFullName",
+                                                                  "@type":  "xsd:string"
+                                                              },
+                     "executionUsedParameter":  {
+                                                    "@id":  "sic:executionUsedParameter",
+                                                    "@type":  "xsd:string",
+                                                    "@container":  "@set"
+                                                },
+                     "executionUsedParameterName":  {
+                                                        "@id":  "sic:executionUsedParameterName",
+                                                        "@type":  "xsd:string",
+                                                        "@container":  "@set"
+                                                    },
+                     "executionUsedParameterVersion":  {
+                                                           "@id":  "sic:executionUsedParameterVersion",
+                                                           "@type":  "xsd:string",
+                                                           "@container":  "@set"
+                                                       },
+                     "executionUsedParameterIdentifier":  {
+                                                              "@id":  "sic:executionUsedParameterIdentifier",
+                                                              "@type":  "xsd:string",
+                                                              "@container":  "@set"
+                                                          },
+                     "executionUsedParameterUrl":  {
+                                                       "@id":  "sic:executionUsedParameterUrl",
+                                                       "@type":  "xsd:anyURI",
+                                                       "@container":  "@set"
+                                                   },
+                     "executionUsedParameterFullName":  {
+                                                            "@id":  "sic:executionUsedParameterFullName",
+                                                            "@type":  "xsd:string"
+                                                        },
+                     "executionUsedTestCase":  {
+                                                   "@id":  "sic:executionUsedTestCase",
+                                                   "@type":  "xsd:string",
+                                                   "@container":  "@set"
+                                               },
+                     "executionUsedTestCaseName":  {
+                                                       "@id":  "sic:executionUsedTestCaseName",
+                                                       "@type":  "xsd:string",
+                                                       "@container":  "@set"
+                                                   },
+                     "executionUsedTestCaseVersion":  {
+                                                          "@id":  "sic:executionUsedTestCaseVersion",
+                                                          "@type":  "xsd:string",
+                                                          "@container":  "@set"
+                                                      },
+                     "executionUsedTestCaseIdentifier":  {
+                                                             "@id":  "sic:executionUsedTestCaseIdentifier",
+                                                             "@type":  "xsd:string",
+                                                             "@container":  "@set"
+                                                         },
+                     "executionUsedTestCaseUrl":  {
+                                                      "@id":  "sic:executionUsedTestCaseUrl",
+                                                      "@type":  "xsd:anyURI",
+                                                      "@container":  "@set"
+                                                  },
+                     "executionUsedTestCaseFullName":  {
+                                                           "@id":  "sic:executionUsedTestCaseFullName",
+                                                           "@type":  "xsd:string"
+                                                       },
+                     "executionUsedTool":  {
+                                               "@id":  "sic:executionUsedTool",
+                                               "@type":  "xsd:string",
+                                               "@container":  "@set"
+                                           },
+                     "executionUsedToolName":  {
+                                                   "@id":  "sic:executionUsedToolName",
+                                                   "@type":  "xsd:string",
+                                                   "@container":  "@set"
+                                               },
+                     "executionUsedToolVersion":  {
+                                                      "@id":  "sic:executionUsedToolVersion",
+                                                      "@type":  "xsd:string",
+                                                      "@container":  "@set"
+                                                  },
+                     "executionUsedToolIdentifier":  {
+                                                         "@id":  "sic:executionUsedToolIdentifier",
+                                                         "@type":  "xsd:string",
+                                                         "@container":  "@set"
+                                                     },
+                     "executionUsedToolUrl":  {
+                                                  "@id":  "sic:executionUsedToolUrl",
+                                                  "@type":  "xsd:anyURI",
+                                                  "@container":  "@set"
+                                              },
+                     "executionUsedToolFullName":  {
+                                                       "@id":  "sic:executionUsedToolFullName",
+                                                       "@type":  "xsd:string"
+                                                   },
+                     "executionRawData":  {
+                                              "@id":  "sic:executionRawData",
+                                              "@type":  "xsd:anyURI",
+                                              "@container":  "@set"
+                                          },
+                     "executionUsedToolSettings":  {
+                                                       "@id":  "sic:executionUsedToolSettings",
+                                                       "@type":  "xsd:string",
+                                                       "@container":  "@set"
+                                                   },
+                     "executionLog":  {
+                                          "@id":  "sic:executionLog",
+                                          "@type":  "xsd:anyURI"
+                                      },
+                     "evaluationResults":  {
+                                               "@id":  "sic:evaluationResults",
+                                               "@type":  "xsd:anyURI",
+                                               "@container":  "@set"
+                                           },
+                     "evaluationQualityAssuranceResults":  {
+                                                               "@id":  "sic:evaluationQualityAssuranceResults",
+                                                               "@type":  "xsd:string"
+                                                           },
+                     "evaluationQualityVerdict":  {
+                                                      "@id":  "sic:evaluationQualityVerdict",
+                                                      "@type":  "xsd:string"
+                                                  },
+                     "fulfillmentTaskStatus":  {
+                                                   "@id":  "sic:fulfillmentTaskStatus",
+                                                   "@type":  "xsd:string"
+                                               },
+                     "fulfillmentQualityFulfilled":  {
+                                                         "@id":  "sic:fulfillmentQualityFulfilled",
+                                                         "@type":  "xsd:string"
+                                                     },
+                     "fulfillmentObjectivesFulfilled":  {
+                                                            "@id":  "sic:fulfillmentObjectivesFulfilled",
+                                                            "@type":  "xsd:string"
+                                                        },
+                     "fulfillmentEvidence":  {
+                                                 "@id":  "sic:fulfillmentEvidence",
+                                                 "@type":  "xsd:anyURI"
+                                             },
+                     "fulfillmentDate":  {
+                                             "@id":  "sic:fulfillmentDate",
+                                             "@type":  "xsd:date"
+                                         }
+                 }
+}
