@@ -72,7 +72,7 @@ For composite attributes that have sub-attributes as defined in the SIC Core spe
 | Requesting Entity | administrative.contact.customer-entity | Recommended | Department or external company requesting and using the simulation results.
 | Contracting Person | administrative.contact.contractor-person | Recommended | Person accepting the simulation request to provide the simulation service.
 | Contracting Entity | administrative.contact.contractor-entity | Recommended | Department or external company accepting the simulation request.
-| Simulation Task Creator Name | administrative.simulation-task.contact.insert-name | Optional | Name or compliant identifier of the person who created the simulation task.
+| Simulation Task Creator Name | administrative.simulation-task.creator | Optional | Name or compliant identifier of the person who created the simulation task.
 | Simulation Task Creation Date | administrative.simulation-task.date.creation | Optional | Date when the simulation task was created in the project management system.
 |===
 
@@ -112,18 +112,18 @@ For composite attributes that have sub-attributes as defined in the SIC Core spe
 [cols="2,3m,^1e,17",align="center",frame="topbot",options="header"]
 |===
 | SIC Core Name | SRMD Mapping | Obligation | Short Explanation
-| Model Purpose and Objectives | requirements.models.purpose-objectives | Recommended | Individual model purposes and objectives derived from simulation objectives.
-| Modeled Entity | requirements.models.subject-information.modeled-entity | Recommended | Real-world entity that is to be modeled.
-| Modeled Entity Name | requirements.models.subject-information.modeled-entity.name | Recommended | Name of the real-world entity that is to be modeled.
-| Modeled Entity Version | requirements.models.subject-information.modeled-entity.version | Recommended | Version of the modeled entity.
-| Modeled Entity Identifier | requirements.models.subject-information.modeled-entity.identifier | Recommended | Identifier of the modeled entity.
-| Modeled Entity URL | requirements.models.subject-information.modeled-entity.url | Optional | URL of the modeled entity.
-| Modeled Entity Full Name | requirements.models.subject-information.modeled-entity.full-name | Optional | Full name of the modeled entity.
+| Model Purpose and Objectives | requirements.model.purpose-objectives | Recommended | Individual model purposes and objectives derived from simulation objectives.
+| Modeled Entity | requirements.model.subject-information.modeled-entity | Recommended | Real-world entity that is to be modeled.
+| Modeled Entity Name | requirements.model.subject-information.modeled-entity.name | Recommended | Name of the real-world entity that is to be modeled.
+| Modeled Entity Version | requirements.model.subject-information.modeled-entity.version | Recommended | Version of the modeled entity.
+| Modeled Entity Identifier | requirements.model.subject-information.modeled-entity.identifier | Recommended | Identifier of the modeled entity.
+| Modeled Entity URL | requirements.model.subject-information.modeled-entity.url | Optional | URL of the modeled entity.
+| Modeled Entity Full Name | requirements.model.subject-information.modeled-entity.full-name | Optional | Full name of the modeled entity.
 | Required Modeled Effect | requirements.model.effects-considered | Recommended | Real-world physical effect that shall be considered in modeling.
 | Further Model Requirements | requirements.model.further-model-requirements | Recommended | Additional requirements placed on the model.
 | Simulation Model Confidentiality Level | requirements.model.confidentiality | Recommended | Confidentiality classification for model-related information.
 | Model Quality Requirement | requirements.model.quality-requirements | Optional | Quality requirement for a simulation model.
-| Entity Parameter | requirements.parameters.subject-information.parametrized-entity | Mandatory | Referenced parameters of the entity to be modeled.
+| Entity Parameter | requirements.parameter.subject-information.parametrized-entity | Mandatory | Referenced parameters of the entity to be modeled.
 | Value Distribution Function | requirements.parameter-value-distribution-function | Recommended | Probability distribution used to describe parameter value deviations.
 | Parameter Confidentiality Level | requirements.parameter.confidentiality | Recommended | Confidentiality classification for parameter-related information.
 | Parameter Quality Requirement | requirements.parameter.quality-requirements | Optional | Quality requirement for parameter sets.
@@ -143,7 +143,7 @@ For composite attributes that have sub-attributes as defined in the SIC Core spe
 [cols="2,3m,^1e,17",align="center",frame="topbot",options="header"]
 |===
 | SIC Core Name | SRMD Mapping | Obligation | Short Explanation
-| Model Design Specification | design.model | Recommended | Definition of how models shall be implemented.
+| Model Design Specification | design.model | Recommended | Definition of how model shall be implemented.
 | Model Design Quality Requirement | design.model.quality-requirements | Optional | Quality requirement for model design.
 | Parameter Design Specification | design.parameter | Recommended | Definition of how parameters shall be implemented.
 | Parameter Design Quality Requirement | design.parameter.quality-requirements | Optional | Quality requirement for parameter design.
@@ -170,14 +170,14 @@ For composite attributes that have sub-attributes as defined in the SIC Core spe
 | Simulation Model Full Name | implementation.model.full-name | Optional | Full name of the implemented simulation model.
 | Simulation Model Confidentiality Level | implementation.model.confidentiality | Recommended | Confidentiality classification for implemented model information.
 | Simulation Model Quality | implementation.model.quality | Recommended | Statement describing achieved model quality after implementation.
-| Parameter | implementation.parameters | Recommended | Implemented parameter set.
-| Parameter Name | implementation.parameters.name | Recommended | Name of the implemented parameter set.
-| Parameter Version | implementation.parameters.version | Recommended | Version of the implemented parameter set.
-| Parameter Identifier | implementation.parameters.identifier | Recommended | Identifier of the implemented parameter set.
-| Parameter URL | implementation.parameters.url | Optional | URL of the implemented parameter set.
-| Parameter Full Name | implementation.parameters.full-name | Optional | Full name of the implemented parameter set.
+| Parameter | implementation.parameter | Recommended | Implemented parameter set.
+| Parameter Name | implementation.parameter.name | Recommended | Name of the implemented parameter set.
+| Parameter Version | implementation.parameter.version | Recommended | Version of the implemented parameter set.
+| Parameter Identifier | implementation.parameter.identifier | Recommended | Identifier of the implemented parameter set.
+| Parameter URL | implementation.parameter.url | Optional | URL of the implemented parameter set.
+| Parameter Full Name | implementation.parameter.full-name | Optional | Full name of the implemented parameter set.
 | Parameter Confidentiality Level | implementation.parameter.confidentiality | Recommended | Confidentiality classification for parameter information.
-| Parameter Quality | implementation.parameters.quality | Recommended | Statement describing achieved parameter quality after implementation.
+| Parameter Quality | implementation.parameter.quality | Recommended | Statement describing achieved parameter quality after implementation.
 | Test Case | implementation.test-case | Recommended | Implemented test case.
 | Test Case Name | implementation.test-case.name | Recommended | Name of implemented test cases.
 | Test Case Version | implementation.test-case.version | Recommended | Version of the implemented test case.
@@ -211,23 +211,23 @@ For composite attributes that have sub-attributes as defined in the SIC Core spe
 |===
 | SIC Core Name | SRMD Mapping | Obligation | Short Explanation
 | Used Simulation Model | execution.model | Mandatory | Simulation model actually used in execution.
-| Used Simulation Model Name | execution.model.names | Mandatory | Name of simulation model actually used in execution.
+| Used Simulation Model Name | execution.model.name | Mandatory | Name of simulation model actually used in execution.
 | Used Simulation Model Version | execution.model.version | Mandatory | Version of simulation model actually used in execution.
 | Used Simulation Model Identifier | execution.model.identifier | Mandatory | Identifier of simulation model actually used in execution.
 | Used Simulation Model URL | execution.model.url | Optional | URL of simulation model actually used in execution.
 | Used Simulation Model Full Name | execution.model.full-name | Optional | Full name of simulation model actually used in execution.
-| Used Parameter | execution.parameters | Mandatory | Parameter set actually used in execution.
-| Used Parameter Name | execution.parameters.names | Mandatory | Name of parameter set actually used in execution.
-| Used Parameter Version | execution.parameters.version | Mandatory | Version of parameter set actually used in execution.
-| Used Parameter Identifier | execution.parameters.identifier | Mandatory | Identifier of parameter set actually used in execution.
-| Used Parameter URL | execution.parameters.url | Optional | URL of parameter set actually used in execution.
-| Used Parameter Full Name | execution.parameters.full-name | Optional | Full name of parameter set actually used in execution.
-| Used Test Case | execution.test-cases | Recommended | Test case actually used in execution.
-| Used Test Case Name | execution.test-cases.names | Recommended | Name of test case actually used in execution.
-| Used Test Case Version | execution.test-cases.version | Recommended | Version of test case actually used in execution.
-| Used Test Case Identifier | execution.test-cases.identifier | Recommended | Identifier of test case actually used in execution.
-| Used Test Case URL | execution.test-cases.url | Optional | URL of test case actually used in execution.
-| Used Test Case Full Name | execution.test-cases.full-name | Optional | Full name of test case actually used in execution.
+| Used Parameter | execution.parameter | Mandatory | Parameter set actually used in execution.
+| Used Parameter Name | execution.parameter.name | Mandatory | Name of parameter set actually used in execution.
+| Used Parameter Version | execution.parameter.version | Mandatory | Version of parameter set actually used in execution.
+| Used Parameter Identifier | execution.parameter.identifier | Mandatory | Identifier of parameter set actually used in execution.
+| Used Parameter URL | execution.parameter.url | Optional | URL of parameter set actually used in execution.
+| Used Parameter Full Name | execution.parameter.full-name | Optional | Full name of parameter set actually used in execution.
+| Used Test Case | execution.test-case | Recommended | Test case actually used in execution.
+| Used Test Case Name | execution.test-case.name | Recommended | Name of test case actually used in execution.
+| Used Test Case Version | execution.test-case.version | Recommended | Version of test case actually used in execution.
+| Used Test Case Identifier | execution.test-case.identifier | Recommended | Identifier of test case actually used in execution.
+| Used Test Case URL | execution.test-case.url | Optional | URL of test case actually used in execution.
+| Used Test Case Full Name | execution.test-case.full-name | Optional | Full name of test case actually used in execution.
 | Used Tool | execution.tool | Mandatory | Tool actually used in execution.
 | Used Tool Name | execution.tool.name | Mandatory | Name of tool actually used in execution.
 | Used Tool Version | execution.tool.version | Mandatory | Version of tool actually used in execution.
