@@ -1,0 +1,78 @@
+[appendix]
+== Mapping of SIC Core to OWL Ontology and JSON-LD
+
+This appendix is an optional part of the SIC Core specification.
+It provides a formal OWL ontology, a SHACL shape model for validation, and a JSON-LD context for serialisation of SIC Core metadata.
+These artefacts allow SIC Core metadata to be expressed and exchanged using standard Semantic Web technologies.
+
+=== Introduction
+
+SIC Core standardises metadata describing simulation tasks and their process context.
+Following the approach used for MIC Core, this appendix provides a direct RDF-based representation of that metadata so that simulation-task descriptions can be exchanged consistently across tool chains.
+
+=== Design Decisions
+
+The SIC Core ontology assigns a single OWL class `sic:SimulationTask` to represent the simulation task described by SIC Core metadata.
+Each SIC Core attribute from <<mapping-srmd>> is represented by one OWL datatype property whose domain is `sic:SimulationTask`.
+
+To keep the property set collision-free across the SIC process phases, the ontology and JSON-LD context use phase-prefixed camelCase property names such as `administrativeSimulationTaskName`, `analysisSimulationObjective`, and `executionUsedToolIdentifier`.
+The mapping to the SRMD keywords from <<mapping-srmd>> is preserved in the ontology through `skos:mappingRelation` annotations on each property.
+
+The ontology namespace is `https://mic-core.org/ontology/sic-core#` with preferred prefix `sic`.
+String-valued SIC attributes are modelled as `owl:DatatypeProperty` values with range `xsd:string`.
+Date attributes use `xsd:date`, and URL or reference-like attributes use `xsd:anyURI`.
+Attributes with multiplicity `0..*` or `1..*` are represented in JSON-LD with `"@container": "@set"`.
+
+=== OWL Ontology
+
+The SIC Core OWL ontology is provided as a Turtle file (`ontology/sic-core.ttl`).
+It contains one class for the simulation task record and one property for each SIC Core attribute and sub-attribute.
+
+==== Ontology Source
+
+[source,turtle]
+----
+include::../ontology/sic-core.ttl[]
+----
+
+=== SHACL Shape Model
+
+The SIC Core SHACL shape model is provided as a Turtle file (`ontology/sic-core-shacl.ttl`).
+It defines a `sh:NodeShape` targeting `sic:SimulationTask` instances and validates the datatype and single-value cardinality constraints derived from <<sic-core-attributes>>.
+
+The SHACL severity follows the SIC Core obligation levels:
+
+* `sh:Violation` for Mandatory attributes
+* `sh:Warning` for Recommended attributes
+* `sh:Info` for Optional attributes
+
+==== SHACL Source
+
+[source,turtle]
+----
+include::../ontology/sic-core-shacl.ttl[]
+----
+
+=== JSON-LD Mapping
+
+The SIC Core JSON-LD context (`ontology/sic-core-context.jsonld`) maps each phase-prefixed JSON key to its corresponding `sic:` ontology property.
+Single-value attributes are represented as plain JSON values.
+Multi-value attributes use JSON arrays via `"@container": "@set"`.
+Date-valued attributes are typed as `xsd:date`, and URL or evidence references are typed as `xsd:anyURI`.
+
+==== JSON-LD Context Source
+
+[source,json]
+----
+include::../ontology/sic-core-context.jsonld[]
+----
+
+=== Example in JSON-LD Syntax
+
+The following example is semantically aligned with the SIC Core SRMD example from <<mapping-srmd>>.
+It uses the SIC Core JSON-LD context and demonstrates how the same simulation-task metadata can be represented in JSON-LD.
+
+[source,json]
+----
+include::../examples/SICCoreExample.jsonld[]
+----

@@ -1,0 +1,1513 @@
+@prefix sic:   <https://mic-core.org/ontology/sic-core#> .
+@prefix sh:    <http://www.w3.org/ns/shacl#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<https://mic-core.org/ontology/sic-core-shacl>
+    a owl:Ontology ;
+    rdfs:label "SIC Core SHACL Shapes"@en ;
+    rdfs:comment "SHACL shapes for validating simulation-task metadata against the SIC Core specification."@en ;
+    dcterms:creator "IRT SystemX and prostep ivip" ;
+    owl:imports <https://mic-core.org/ontology/sic-core> ;
+    owl:versionInfo "1.0" .
+
+sic:SimulationTaskShape
+    a sh:NodeShape ;
+    sh:targetClass sic:SimulationTask ;
+    rdfs:label "SimulationTask Shape"@en ;
+    rdfs:comment "Validates that a sic:SimulationTask instance carries the required SIC Core metadata attributes."@en ;
+
+    sh:property [
+        sh:path sic:administrativeOverallProduct ;
+        sh:name "Overall Product" ;
+        sh:datatype xsd:string ;
+        sh:severity sh:Warning ;
+        sh:message "sic:administrativeOverallProduct is recommended."@en ;
+    ] ;
+
+    sh:property [
+        sh:path sic:administrativeOverallProductName ;
+        sh:name "Overall Product Name" ;
+        sh:datatype xsd:string ;
+        sh:severity sh:Warning ;
+        sh:message "sic:administrativeOverallProductName is recommended."@en ;
+    ] ;
+
+    sh:property [
+        sh:path sic:administrativeOverallProductVersion ;
+        sh:name "Overall Product Version" ;
+        sh:datatype xsd:string ;
+        sh:severity sh:Warning ;
+        sh:message "sic:administrativeOverallProductVersion is recommended."@en ;
+    ] ;
+
+    sh:property [
+        sh:path sic:administrativeOverallProductIdentifier ;
+        sh:name "Overall Product Identifier" ;
+        sh:datatype xsd:string ;
+        sh:severity sh:Warning ;
+        sh:message "sic:administrativeOverallProductIdentifier is recommended."@en ;
+    ] ;
+
+    sh:property [
+        sh:path sic:administrativeOverallProductUrl ;
+        sh:name "Overall Product URL" ;
+        sh:datatype xsd:anyURI ;
+        sh:severity sh:Info ;
+        sh:message "sic:administrativeOverallProductUrl is optional."@en ;
+    ] ;
+
+    sh:property [
+        sh:path sic:administrativeOverallProductFullName ;
+        sh:name "Overall Product Full Name" ;
+        sh:datatype xsd:string ;
+        sh:maxCount 1 ;
+        sh:severity sh:Info ;
+        sh:message "sic:administrativeOverallProductFullName is optional and may appear at most once."@en ;
+    ] ;
+
+    sh:property [
+        sh:path sic:administrativeSpecificProduct ;
+        sh:name "Specific Product" ;
+        sh:datatype xsd:string ;
+        sh:severity sh:Warning ;
+        sh:message "sic:administrativeSpecificProduct is recommended."@en ;
+    ] ;
+
+    sh:property [
+        sh:path sic:administrativeSpecificProductName ;
+        sh:name "Specific Product Name" ;
+        sh:datatype xsd:string ;
+        sh:severity sh:Warning ;
+        sh:message "sic:administrativeSpecificProductName is recommended."@en ;
+    ] ;
+
+    sh:property [
+        sh:path sic:administrativeSpecificProductVersion ;
+        sh:name "Specific Product Version" ;
+        sh:datatype xsd:string ;
+        sh:severity sh:Warning ;
+        sh:message "sic:administrativeSpecificProductVersion is recommended."@en ;
+    ] ;
+
+    sh:property [
+        sh:path sic:administrativeSpecificProductIdentifier ;
+        sh:name "Specific Product Identifier" ;
+        sh:datatype xsd:string ;
+        sh:severity sh:Warning ;
+        sh:message "sic:administrativeSpecificProductIdentifier is recommended."@en ;
+    ] ;
+
+    sh:property [
+        sh:path sic:administrativeSpecificProductUrl ;
+        sh:name "Specific Product URL" ;
+        sh:datatype xsd:anyURI ;
+        sh:severity sh:Info ;
+        sh:message "sic:administrativeSpecificProductUrl is optional."@en ;
+    ] ;
+
+    sh:property [
+        sh:path sic:administrativeSpecificProductFullName ;
+        sh:name "Specific Product Full Name" ;
+        sh:datatype xsd:string ;
+        sh:maxCount 1 ;
+        sh:severity sh:Info ;
+        sh:message "sic:administrativeSpecificProductFullName is optional and may appear at most once."@en ;
+    ] ;
+
+    sh:property [
+        sh:path sic:administrativeOrderingProject ;
+        sh:name "Ordering Project" ;
+        sh:datatype xsd:string ;
+        sh:maxCount 1 ;
+        sh:severity sh:Warning ;
+        sh:message "sic:administrativeOrderingProject is recommended and may appear at most once."@en ;
+    ] ;
+
+    sh:property [
+        sh:path sic:administrativeOrderingProjectName ;
+        sh:name "Ordering Project Name" ;
+        sh:datatype xsd:string ;
+        sh:maxCount 1 ;
+        sh:severity sh:Warning ;
+        sh:message "sic:administrativeOrderingProjectName is recommended and may appear at most once."@en ;
+    ] ;
+
+    sh:property [
+        sh:path sic:administrativeOrderingProjectVersion ;
+        sh:name "Ordering Project Version" ;
+        sh:datatype xsd:string ;
+        sh:maxCount 1 ;
+        sh:severity sh:Warning ;
+        sh:message "sic:administrativeOrderingProjectVersion is recommended and may appear at most once."@en ;
+    ] ;
+
+    sh:property [
+        sh:path sic:administrativeOrderingProjectIdentifier ;
+        sh:name "Ordering Project Identifier" ;
+        sh:datatype xsd:string ;
+        sh:maxCount 1 ;
+        sh:severity sh:Warning ;
+        sh:message "sic:administrativeOrderingProjectIdentifier is recommended and may appear at most once."@en ;
+    ] ;
+
+    sh:property [
+        sh:path sic:administrativeOrderingProjectUrl ;
+        sh:name "Ordering Project URL" ;
+        sh:datatype xsd:anyURI ;
+        sh:maxCount 1 ;
+        sh:severity sh:Info ;
+        sh:message "sic:administrativeOrderingProjectUrl is optional and may appear at most once."@en ;
+    ] ;
+
+    sh:property [
+        sh:path sic:administrativeOrderingProjectFullName ;
+        sh:name "Ordering Project Full Name" ;
+        sh:datatype xsd:string ;
+        sh:maxCount 1 ;
+        sh:severity sh:Info ;
+        sh:message "sic:administrativeOrderingProjectFullName is optional and may appear at most once."@en ;
+    ] ;
+
+    sh:property [
+        sh:path sic:administrativeSimulationRequest ;
+        sh:name "Simulation Request" ;
+        sh:datatype xsd:string ;
+        sh:maxCount 1 ;
+        sh:severity sh:Warning ;
+        sh:message "sic:administrativeSimulationRequest is recommended and may appear at most once."@en ;
+    ] ;
+
+    sh:property [
+        sh:path sic:administrativeSimulationRequestName ;
+        sh:name "Simulation Request Name" ;
+        sh:datatype xsd:string ;
+        sh:maxCount 1 ;
+        sh:severity sh:Warning ;
+        sh:message "sic:administrativeSimulationRequestName is recommended and may appear at most once."@en ;
+    ] ;
+
+    sh:property [
+        sh:path sic:administrativeSimulationRequestVersion ;
+        sh:name "Simulation Request Version" ;
+        sh:datatype xsd:string ;
+        sh:maxCount 1 ;
+        sh:severity sh:Warning ;
+        sh:message "sic:administrativeSimulationRequestVersion is recommended and may appear at most once."@en ;
+    ] ;
+
+    sh:property [
+        sh:path sic:administrativeSimulationRequestIdentifier ;
+        sh:name "Simulation Request Identifier" ;
+        sh:datatype xsd:string ;
+        sh:maxCount 1 ;
+        sh:severity sh:Warning ;
+        sh:message "sic:administrativeSimulationRequestIdentifier is recommended and may appear at most once."@en ;
+    ] ;
+
+    sh:property [
+        sh:path sic:administrativeSimulationRequestUrl ;
+        sh:name "Simulation Request URL" ;
+        sh:datatype xsd:anyURI ;
+        sh:maxCount 1 ;
+        sh:severity sh:Info ;
+        sh:message "sic:administrativeSimulationRequestUrl is optional and may appear at most once."@en ;
+    ] ;
+
+    sh:property [
+        sh:path sic:administrativeSimulationRequestFullName ;
+        sh:name "Simulation Request Full Name" ;
+        sh:datatype xsd:string ;
+        sh:maxCount 1 ;
+        sh:severity sh:Info ;
+        sh:message "sic:administrativeSimulationRequestFullName is optional and may appear at most once."@en ;
+    ] ;
+
+    sh:property [
+        sh:path sic:administrativeSimulationTask ;
+        sh:name "Simulation Task" ;
+        sh:datatype xsd:string ;
+        sh:maxCount 1 ;
+        sh:severity sh:Violation ;
+        sh:message "sic:administrativeSimulationTask is mandatory when represented directly and may appear at most once."@en ;
+    ] ;
+
+    sh:property [
+        sh:path sic:administrativeSimulationTaskName ;
+        sh:name "Simulation Task Name" ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:severity sh:Violation ;
+        sh:message "sic:administrativeSimulationTaskName is mandatory and may appear at most once."@en ;
+    ] ;
+
+    sh:property [
+        sh:path sic:administrativeSimulationTaskVersion ;
+        sh:name "Simulation Task Version" ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:severity sh:Violation ;
+        sh:message "sic:administrativeSimulationTaskVersion is mandatory and may appear at most once."@en ;
+    ] ;
+
+    sh:property [
+        sh:path sic:administrativeSimulationTaskIdentifier ;
+        sh:name "Simulation Task Identifier" ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:severity sh:Violation ;
+        sh:message "sic:administrativeSimulationTaskIdentifier is mandatory and may appear at most once."@en ;
+    ] ;
+
+    sh:property [
+        sh:path sic:administrativeSimulationTaskUrl ;
+        sh:name "Simulation Task URL" ;
+        sh:datatype xsd:anyURI ;
+        sh:maxCount 1 ;
+        sh:severity sh:Info ;
+        sh:message "sic:administrativeSimulationTaskUrl is optional and may appear at most once."@en ;
+    ] ;
+
+    sh:property [
+        sh:path sic:administrativeSimulationTaskFullName ;
+        sh:name "Simulation Task Full Name" ;
+        sh:datatype xsd:string ;
+        sh:maxCount 1 ;
+        sh:severity sh:Info ;
+        sh:message "sic:administrativeSimulationTaskFullName is optional and may appear at most once."@en ;
+    ] ;
+
+    sh:property [
+        sh:path sic:administrativeSimulationTaskConfidentialityLevel ;
+        sh:name "Simulation Task Confidentiality Level" ;
+        sh:datatype xsd:string ;
+        sh:maxCount 1 ;
+        sh:severity sh:Warning ;
+        sh:message "sic:administrativeSimulationTaskConfidentialityLevel is recommended and may appear at most once."@en ;
+    ] ;
+
+    sh:property [
+        sh:path sic:administrativePredictedSimulationStartDate ;
+        sh:name "Predicted Simulation Start Date" ;
+        sh:datatype xsd:date ;
+        sh:maxCount 1 ;
+        sh:severity sh:Warning ;
+        sh:message "sic:administrativePredictedSimulationStartDate is recommended and may appear at most once."@en ;
+    ] ;
+
+    sh:property [
+        sh:path sic:administrativeRequestedSimulationDeliveryDate ;
+        sh:name "Requested Simulation Delivery Date" ;
+        sh:datatype xsd:date ;
+        sh:maxCount 1 ;
+        sh:severity sh:Warning ;
+        sh:message "sic:administrativeRequestedSimulationDeliveryDate is recommended and may appear at most once."@en ;
+    ] ;
+
+    sh:property [
+        sh:path sic:administrativeRequestingPerson ;
+        sh:name "Requesting Person" ;
+        sh:datatype xsd:string ;
+        sh:severity sh:Warning ;
+        sh:message "sic:administrativeRequestingPerson is recommended."@en ;
+    ] ;
+
+    sh:property [
+        sh:path sic:administrativeRequestingEntity ;
+        sh:name "Requesting Entity" ;
+        sh:datatype xsd:string ;
+        sh:severity sh:Warning ;
+        sh:message "sic:administrativeRequestingEntity is recommended."@en ;
+    ] ;
+
+    sh:property [
+        sh:path sic:administrativeContractingPerson ;
+        sh:name "Contracting Person" ;
+        sh:datatype xsd:string ;
+        sh:maxCount 1 ;
+        sh:severity sh:Warning ;
+        sh:message "sic:administrativeContractingPerson is recommended and may appear at most once."@en ;
+    ] ;
+
+    sh:property [
+        sh:path sic:administrativeContractingEntity ;
+        sh:name "Contracting Entity" ;
+        sh:datatype xsd:string ;
+        sh:maxCount 1 ;
+        sh:severity sh:Warning ;
+        sh:message "sic:administrativeContractingEntity is recommended and may appear at most once."@en ;
+    ] ;
+
+    sh:property [
+        sh:path sic:administrativeSimulationTaskCreatorName ;
+        sh:name "Simulation Task Creator Name" ;
+        sh:datatype xsd:string ;
+        sh:maxCount 1 ;
+        sh:severity sh:Info ;
+        sh:message "sic:administrativeSimulationTaskCreatorName is optional and may appear at most once."@en ;
+    ] ;
+
+    sh:property [
+        sh:path sic:administrativeSimulationTaskCreationDate ;
+        sh:name "Simulation Task Creation Date" ;
+        sh:datatype xsd:date ;
+        sh:maxCount 1 ;
+        sh:severity sh:Info ;
+        sh:message "sic:administrativeSimulationTaskCreationDate is optional and may appear at most once."@en ;
+    ] ;
+
+    sh:property [
+        sh:path sic:analysisItemUnderTest ;
+        sh:name "Item under Test" ;
+        sh:datatype xsd:string ;
+        sh:maxCount 1 ;
+        sh:severity sh:Violation ;
+        sh:message "sic:analysisItemUnderTest is mandatory when represented directly and may appear at most once."@en ;
+    ] ;
+
+    sh:property [
+        sh:path sic:analysisItemUnderTestName ;
+        sh:name "Item under Test Name" ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:severity sh:Violation ;
+        sh:message "sic:analysisItemUnderTestName is mandatory and may appear at most once."@en ;
+    ] ;
+
+    sh:property [
+        sh:path sic:analysisItemUnderTestVersion ;
+        sh:name "Item under Test Version" ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:severity sh:Violation ;
+        sh:message "sic:analysisItemUnderTestVersion is mandatory and may appear at most once."@en ;
+    ] ;
+
+    sh:property [
+        sh:path sic:analysisItemUnderTestIdentifier ;
+        sh:name "Item under Test Identifier" ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:severity sh:Violation ;
+        sh:message "sic:analysisItemUnderTestIdentifier is mandatory and may appear at most once."@en ;
+    ] ;
+
+    sh:property [
+        sh:path sic:analysisItemUnderTestUrl ;
+        sh:name "Item under Test URL" ;
+        sh:datatype xsd:anyURI ;
+        sh:maxCount 1 ;
+        sh:severity sh:Info ;
+        sh:message "sic:analysisItemUnderTestUrl is optional and may appear at most once."@en ;
+    ] ;
+
+    sh:property [
+        sh:path sic:analysisItemUnderTestFullName ;
+        sh:name "Item under Test Full Name" ;
+        sh:datatype xsd:string ;
+        sh:maxCount 1 ;
+        sh:severity sh:Info ;
+        sh:message "sic:analysisItemUnderTestFullName is optional and may appear at most once."@en ;
+    ] ;
+
+    sh:property [
+        sh:path sic:analysisHigherLevelEngineeringTask ;
+        sh:name "Higher Level Engineering Task" ;
+        sh:datatype xsd:string ;
+        sh:maxCount 1 ;
+        sh:severity sh:Warning ;
+        sh:message "sic:analysisHigherLevelEngineeringTask is recommended and may appear at most once."@en ;
+    ] ;
+
+    sh:property [
+        sh:path sic:analysisHigherLevelEngineeringTaskName ;
+        sh:name "Higher Level Engineering Task Name" ;
+        sh:datatype xsd:string ;
+        sh:maxCount 1 ;
+        sh:severity sh:Warning ;
+        sh:message "sic:analysisHigherLevelEngineeringTaskName is recommended and may appear at most once."@en ;
+    ] ;
+
+    sh:property [
+        sh:path sic:analysisHigherLevelEngineeringTaskVersion ;
+        sh:name "Higher Level Engineering Task Version" ;
+        sh:datatype xsd:string ;
+        sh:maxCount 1 ;
+        sh:severity sh:Warning ;
+        sh:message "sic:analysisHigherLevelEngineeringTaskVersion is recommended and may appear at most once."@en ;
+    ] ;
+
+    sh:property [
+        sh:path sic:analysisHigherLevelEngineeringTaskIdentifier ;
+        sh:name "Higher Level Engineering Task Identifier" ;
+        sh:datatype xsd:string ;
+        sh:maxCount 1 ;
+        sh:severity sh:Warning ;
+        sh:message "sic:analysisHigherLevelEngineeringTaskIdentifier is recommended and may appear at most once."@en ;
+    ] ;
+
+    sh:property [
+        sh:path sic:analysisHigherLevelEngineeringTaskUrl ;
+        sh:name "Higher Level Engineering Task URL" ;
+        sh:datatype xsd:anyURI ;
+        sh:maxCount 1 ;
+        sh:severity sh:Info ;
+        sh:message "sic:analysisHigherLevelEngineeringTaskUrl is optional and may appear at most once."@en ;
+    ] ;
+
+    sh:property [
+        sh:path sic:analysisHigherLevelEngineeringTaskFullName ;
+        sh:name "Higher Level Engineering Task Full Name" ;
+        sh:datatype xsd:string ;
+        sh:maxCount 1 ;
+        sh:severity sh:Info ;
+        sh:message "sic:analysisHigherLevelEngineeringTaskFullName is optional and may appear at most once."@en ;
+    ] ;
+
+    sh:property [
+        sh:path sic:analysisSpecificEngineeringTask ;
+        sh:name "Specific Engineering Task" ;
+        sh:datatype xsd:string ;
+        sh:maxCount 1 ;
+        sh:severity sh:Warning ;
+        sh:message "sic:analysisSpecificEngineeringTask is recommended and may appear at most once."@en ;
+    ] ;
+
+    sh:property [
+        sh:path sic:analysisSpecificEngineeringTaskName ;
+        sh:name "Specific Engineering Task Name" ;
+        sh:datatype xsd:string ;
+        sh:maxCount 1 ;
+        sh:severity sh:Warning ;
+        sh:message "sic:analysisSpecificEngineeringTaskName is recommended and may appear at most once."@en ;
+    ] ;
+
+    sh:property [
+        sh:path sic:analysisSpecificEngineeringTaskVersion ;
+        sh:name "Specific Engineering Task Version" ;
+        sh:datatype xsd:string ;
+        sh:maxCount 1 ;
+        sh:severity sh:Warning ;
+        sh:message "sic:analysisSpecificEngineeringTaskVersion is recommended and may appear at most once."@en ;
+    ] ;
+
+    sh:property [
+        sh:path sic:analysisSpecificEngineeringTaskIdentifier ;
+        sh:name "Specific Engineering Task Identifier" ;
+        sh:datatype xsd:string ;
+        sh:maxCount 1 ;
+        sh:severity sh:Warning ;
+        sh:message "sic:analysisSpecificEngineeringTaskIdentifier is recommended and may appear at most once."@en ;
+    ] ;
+
+    sh:property [
+        sh:path sic:analysisSpecificEngineeringTaskUrl ;
+        sh:name "Specific Engineering Task URL" ;
+        sh:datatype xsd:anyURI ;
+        sh:maxCount 1 ;
+        sh:severity sh:Info ;
+        sh:message "sic:analysisSpecificEngineeringTaskUrl is optional and may appear at most once."@en ;
+    ] ;
+
+    sh:property [
+        sh:path sic:analysisSpecificEngineeringTaskFullName ;
+        sh:name "Specific Engineering Task Full Name" ;
+        sh:datatype xsd:string ;
+        sh:maxCount 1 ;
+        sh:severity sh:Info ;
+        sh:message "sic:analysisSpecificEngineeringTaskFullName is optional and may appear at most once."@en ;
+    ] ;
+
+    sh:property [
+        sh:path sic:analysisSimulationObjective ;
+        sh:name "Simulation Objective" ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+        sh:severity sh:Violation ;
+        sh:message "sic:analysisSimulationObjective is mandatory."@en ;
+    ] ;
+
+    sh:property [
+        sh:path sic:analysisFurtherSimulationRequirements ;
+        sh:name "Simulation further Requirements" ;
+        sh:datatype xsd:string ;
+        sh:severity sh:Warning ;
+        sh:message "sic:analysisFurtherSimulationRequirements is recommended."@en ;
+    ] ;
+
+    sh:property [
+        sh:path sic:analysisQualityCriterion ;
+        sh:name "Quality Criterion" ;
+        sh:datatype xsd:string ;
+        sh:severity sh:Warning ;
+        sh:message "sic:analysisQualityCriterion is recommended."@en ;
+    ] ;
+
+    sh:property [
+        sh:path sic:analysisVerificationCriterion ;
+        sh:name "Verification Criterion" ;
+        sh:datatype xsd:string ;
+        sh:severity sh:Warning ;
+        sh:message "sic:analysisVerificationCriterion is recommended."@en ;
+    ] ;
+
+    sh:property [
+        sh:path sic:analysisValidationCriterion ;
+        sh:name "Validation Criterion" ;
+        sh:datatype xsd:string ;
+        sh:severity sh:Warning ;
+        sh:message "sic:analysisValidationCriterion is recommended."@en ;
+    ] ;
+
+    sh:property [
+        sh:path sic:analysisPhaseVerificationResult ;
+        sh:name "Analysis Phase Verification Result" ;
+        sh:datatype xsd:string ;
+        sh:maxCount 1 ;
+        sh:severity sh:Warning ;
+        sh:message "sic:analysisPhaseVerificationResult is recommended and may appear at most once."@en ;
+    ] ;
+
+    sh:property [
+        sh:path sic:requirementsModelPurposeAndObjectives ;
+        sh:name "Model Purpose and Objectives" ;
+        sh:datatype xsd:string ;
+        sh:severity sh:Warning ;
+        sh:message "sic:requirementsModelPurposeAndObjectives is recommended."@en ;
+    ] ;
+
+    sh:property [
+        sh:path sic:requirementsModeledEntity ;
+        sh:name "Modeled Entity" ;
+        sh:datatype xsd:string ;
+        sh:severity sh:Warning ;
+        sh:message "sic:requirementsModeledEntity is recommended."@en ;
+    ] ;
+
+    sh:property [
+        sh:path sic:requirementsModeledEntityName ;
+        sh:name "Modeled Entity Name" ;
+        sh:datatype xsd:string ;
+        sh:severity sh:Warning ;
+        sh:message "sic:requirementsModeledEntityName is recommended."@en ;
+    ] ;
+
+    sh:property [
+        sh:path sic:requirementsModeledEntityVersion ;
+        sh:name "Modeled Entity Version" ;
+        sh:datatype xsd:string ;
+        sh:severity sh:Warning ;
+        sh:message "sic:requirementsModeledEntityVersion is recommended."@en ;
+    ] ;
+
+    sh:property [
+        sh:path sic:requirementsModeledEntityIdentifier ;
+        sh:name "Modeled Entity Identifier" ;
+        sh:datatype xsd:string ;
+        sh:severity sh:Warning ;
+        sh:message "sic:requirementsModeledEntityIdentifier is recommended."@en ;
+    ] ;
+
+    sh:property [
+        sh:path sic:requirementsModeledEntityUrl ;
+        sh:name "Modeled Entity URL" ;
+        sh:datatype xsd:anyURI ;
+        sh:severity sh:Info ;
+        sh:message "sic:requirementsModeledEntityUrl is optional."@en ;
+    ] ;
+
+    sh:property [
+        sh:path sic:requirementsModeledEntityFullName ;
+        sh:name "Modeled Entity Full Name" ;
+        sh:datatype xsd:string ;
+        sh:maxCount 1 ;
+        sh:severity sh:Info ;
+        sh:message "sic:requirementsModeledEntityFullName is optional and may appear at most once."@en ;
+    ] ;
+
+    sh:property [
+        sh:path sic:requirementsRequiredModeledEffect ;
+        sh:name "Required Modeled Effect" ;
+        sh:datatype xsd:string ;
+        sh:severity sh:Warning ;
+        sh:message "sic:requirementsRequiredModeledEffect is recommended."@en ;
+    ] ;
+
+    sh:property [
+        sh:path sic:requirementsFurtherModelRequirements ;
+        sh:name "Further Model Requirements" ;
+        sh:datatype xsd:string ;
+        sh:severity sh:Warning ;
+        sh:message "sic:requirementsFurtherModelRequirements is recommended."@en ;
+    ] ;
+
+    sh:property [
+        sh:path sic:requirementsSimulationModelConfidentialityLevel ;
+        sh:name "Simulation Model Confidentiality Level" ;
+        sh:datatype xsd:string ;
+        sh:maxCount 1 ;
+        sh:severity sh:Warning ;
+        sh:message "sic:requirementsSimulationModelConfidentialityLevel is recommended and may appear at most once."@en ;
+    ] ;
+
+    sh:property [
+        sh:path sic:requirementsModelQualityRequirement ;
+        sh:name "Model Quality Requirement" ;
+        sh:datatype xsd:string ;
+        sh:severity sh:Info ;
+        sh:message "sic:requirementsModelQualityRequirement is optional."@en ;
+    ] ;
+
+    sh:property [
+        sh:path sic:requirementsEntityParameter ;
+        sh:name "Entity Parameter" ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+        sh:severity sh:Violation ;
+        sh:message "sic:requirementsEntityParameter is mandatory."@en ;
+    ] ;
+
+    sh:property [
+        sh:path sic:requirementsValueDistributionFunction ;
+        sh:name "Value Distribution Function" ;
+        sh:datatype xsd:string ;
+        sh:severity sh:Warning ;
+        sh:message "sic:requirementsValueDistributionFunction is recommended."@en ;
+    ] ;
+
+    sh:property [
+        sh:path sic:requirementsParameterConfidentialityLevel ;
+        sh:name "Parameter Confidentiality Level" ;
+        sh:datatype xsd:string ;
+        sh:maxCount 1 ;
+        sh:severity sh:Warning ;
+        sh:message "sic:requirementsParameterConfidentialityLevel is recommended and may appear at most once."@en ;
+    ] ;
+
+    sh:property [
+        sh:path sic:requirementsParameterQualityRequirement ;
+        sh:name "Parameter Quality Requirement" ;
+        sh:datatype xsd:string ;
+        sh:severity sh:Info ;
+        sh:message "sic:requirementsParameterQualityRequirement is optional."@en ;
+    ] ;
+
+    sh:property [
+        sh:path sic:requirementsTestCaseRequirements ;
+        sh:name "Test Case Requirements" ;
+        sh:datatype xsd:string ;
+        sh:severity sh:Warning ;
+        sh:message "sic:requirementsTestCaseRequirements is recommended."@en ;
+    ] ;
+
+    sh:property [
+        sh:path sic:requirementsTestCaseConfidentialityLevel ;
+        sh:name "Test Case Confidentiality Level" ;
+        sh:datatype xsd:string ;
+        sh:maxCount 1 ;
+        sh:severity sh:Warning ;
+        sh:message "sic:requirementsTestCaseConfidentialityLevel is recommended and may appear at most once."@en ;
+    ] ;
+
+    sh:property [
+        sh:path sic:requirementsTestCaseQualityRequirement ;
+        sh:name "Test Case Quality Requirement" ;
+        sh:datatype xsd:string ;
+        sh:severity sh:Info ;
+        sh:message "sic:requirementsTestCaseQualityRequirement is optional."@en ;
+    ] ;
+
+    sh:property [
+        sh:path sic:requirementsSimulationEnvironmentRequirement ;
+        sh:name "Simulation Environment Requirement" ;
+        sh:datatype xsd:string ;
+        sh:severity sh:Warning ;
+        sh:message "sic:requirementsSimulationEnvironmentRequirement is recommended."@en ;
+    ] ;
+
+    sh:property [
+        sh:path sic:requirementsSimulationEnvironmentQualityRequirement ;
+        sh:name "Simulation Environment Quality Requirement" ;
+        sh:datatype xsd:string ;
+        sh:severity sh:Info ;
+        sh:message "sic:requirementsSimulationEnvironmentQualityRequirement is optional."@en ;
+    ] ;
+
+    sh:property [
+        sh:path sic:requirementsSimulationIntegrationRequirement ;
+        sh:name "Simulation Integration Requirement" ;
+        sh:datatype xsd:string ;
+        sh:severity sh:Warning ;
+        sh:message "sic:requirementsSimulationIntegrationRequirement is recommended."@en ;
+    ] ;
+
+    sh:property [
+        sh:path sic:requirementsSimulationIntegrationQualityRequirement ;
+        sh:name "Simulation Integration Quality Requirement" ;
+        sh:datatype xsd:string ;
+        sh:severity sh:Info ;
+        sh:message "sic:requirementsSimulationIntegrationQualityRequirement is optional."@en ;
+    ] ;
+
+    sh:property [
+        sh:path sic:requirementsQualityAssuranceRequirements ;
+        sh:name "Quality Assurance Requirements" ;
+        sh:datatype xsd:string ;
+        sh:severity sh:Warning ;
+        sh:message "sic:requirementsQualityAssuranceRequirements is recommended."@en ;
+    ] ;
+
+    sh:property [
+        sh:path sic:requirementsPhaseVerificationResult ;
+        sh:name "Requirements Phase Verification Result" ;
+        sh:datatype xsd:string ;
+        sh:maxCount 1 ;
+        sh:severity sh:Warning ;
+        sh:message "sic:requirementsPhaseVerificationResult is recommended and may appear at most once."@en ;
+    ] ;
+
+    sh:property [
+        sh:path sic:designModelDesignSpecification ;
+        sh:name "Model Design Specification" ;
+        sh:datatype xsd:string ;
+        sh:severity sh:Warning ;
+        sh:message "sic:designModelDesignSpecification is recommended."@en ;
+    ] ;
+
+    sh:property [
+        sh:path sic:designModelDesignQualityRequirement ;
+        sh:name "Model Design Quality Requirement" ;
+        sh:datatype xsd:string ;
+        sh:severity sh:Info ;
+        sh:message "sic:designModelDesignQualityRequirement is optional."@en ;
+    ] ;
+
+    sh:property [
+        sh:path sic:designParameterDesignSpecification ;
+        sh:name "Parameter Design Specification" ;
+        sh:datatype xsd:string ;
+        sh:severity sh:Warning ;
+        sh:message "sic:designParameterDesignSpecification is recommended."@en ;
+    ] ;
+
+    sh:property [
+        sh:path sic:designParameterDesignQualityRequirement ;
+        sh:name "Parameter Design Quality Requirement" ;
+        sh:datatype xsd:string ;
+        sh:severity sh:Info ;
+        sh:message "sic:designParameterDesignQualityRequirement is optional."@en ;
+    ] ;
+
+    sh:property [
+        sh:path sic:designTestCaseDesignSpecification ;
+        sh:name "Test Case Design Specification" ;
+        sh:datatype xsd:string ;
+        sh:severity sh:Warning ;
+        sh:message "sic:designTestCaseDesignSpecification is recommended."@en ;
+    ] ;
+
+    sh:property [
+        sh:path sic:designTestCaseDesignQualityRequirement ;
+        sh:name "Test Case Design Quality Requirement" ;
+        sh:datatype xsd:string ;
+        sh:severity sh:Info ;
+        sh:message "sic:designTestCaseDesignQualityRequirement is optional."@en ;
+    ] ;
+
+    sh:property [
+        sh:path sic:designSimulationEnvironmentDesignSpecification ;
+        sh:name "Simulation Environment Design Specification" ;
+        sh:datatype xsd:string ;
+        sh:severity sh:Warning ;
+        sh:message "sic:designSimulationEnvironmentDesignSpecification is recommended."@en ;
+    ] ;
+
+    sh:property [
+        sh:path sic:designSimulationEnvironmentDesignQualityRequirement ;
+        sh:name "Simulation Environment Design Quality Requirement" ;
+        sh:datatype xsd:string ;
+        sh:severity sh:Info ;
+        sh:message "sic:designSimulationEnvironmentDesignQualityRequirement is optional."@en ;
+    ] ;
+
+    sh:property [
+        sh:path sic:designSimulationIntegrationDesignSpecification ;
+        sh:name "Simulation Integration Design Specification" ;
+        sh:datatype xsd:string ;
+        sh:maxCount 1 ;
+        sh:severity sh:Warning ;
+        sh:message "sic:designSimulationIntegrationDesignSpecification is recommended and may appear at most once."@en ;
+    ] ;
+
+    sh:property [
+        sh:path sic:designSimulationIntegrationDesignQualityRequirement ;
+        sh:name "Simulation Integration Design Quality Requirement" ;
+        sh:datatype xsd:string ;
+        sh:severity sh:Info ;
+        sh:message "sic:designSimulationIntegrationDesignQualityRequirement is optional."@en ;
+    ] ;
+
+    sh:property [
+        sh:path sic:designQualityAssurance ;
+        sh:name "Design Quality Assurance" ;
+        sh:datatype xsd:string ;
+        sh:severity sh:Warning ;
+        sh:message "sic:designQualityAssurance is recommended."@en ;
+    ] ;
+
+    sh:property [
+        sh:path sic:designVerificationResult ;
+        sh:name "Design Verification Result" ;
+        sh:datatype xsd:string ;
+        sh:maxCount 1 ;
+        sh:severity sh:Warning ;
+        sh:message "sic:designVerificationResult is recommended and may appear at most once."@en ;
+    ] ;
+
+    sh:property [
+        sh:path sic:implementationSimulationModel ;
+        sh:name "Simulation Model" ;
+        sh:datatype xsd:string ;
+        sh:severity sh:Warning ;
+        sh:message "sic:implementationSimulationModel is recommended."@en ;
+    ] ;
+
+    sh:property [
+        sh:path sic:implementationSimulationModelName ;
+        sh:name "Simulation Model Name" ;
+        sh:datatype xsd:string ;
+        sh:severity sh:Warning ;
+        sh:message "sic:implementationSimulationModelName is recommended."@en ;
+    ] ;
+
+    sh:property [
+        sh:path sic:implementationSimulationModelVersion ;
+        sh:name "Simulation Model Version" ;
+        sh:datatype xsd:string ;
+        sh:severity sh:Warning ;
+        sh:message "sic:implementationSimulationModelVersion is recommended."@en ;
+    ] ;
+
+    sh:property [
+        sh:path sic:implementationSimulationModelIdentifier ;
+        sh:name "Simulation Model Identifier" ;
+        sh:datatype xsd:string ;
+        sh:severity sh:Warning ;
+        sh:message "sic:implementationSimulationModelIdentifier is recommended."@en ;
+    ] ;
+
+    sh:property [
+        sh:path sic:implementationSimulationModelUrl ;
+        sh:name "Simulation Model URL" ;
+        sh:datatype xsd:anyURI ;
+        sh:severity sh:Info ;
+        sh:message "sic:implementationSimulationModelUrl is optional."@en ;
+    ] ;
+
+    sh:property [
+        sh:path sic:implementationSimulationModelFullName ;
+        sh:name "Simulation Model Full Name" ;
+        sh:datatype xsd:string ;
+        sh:maxCount 1 ;
+        sh:severity sh:Info ;
+        sh:message "sic:implementationSimulationModelFullName is optional and may appear at most once."@en ;
+    ] ;
+
+    sh:property [
+        sh:path sic:implementationSimulationModelConfidentialityLevel ;
+        sh:name "Simulation Model Confidentiality Level" ;
+        sh:datatype xsd:string ;
+        sh:maxCount 1 ;
+        sh:severity sh:Warning ;
+        sh:message "sic:implementationSimulationModelConfidentialityLevel is recommended and may appear at most once."@en ;
+    ] ;
+
+    sh:property [
+        sh:path sic:implementationSimulationModelQuality ;
+        sh:name "Simulation Model Quality" ;
+        sh:datatype xsd:string ;
+        sh:severity sh:Warning ;
+        sh:message "sic:implementationSimulationModelQuality is recommended."@en ;
+    ] ;
+
+    sh:property [
+        sh:path sic:implementationParameter ;
+        sh:name "Parameter" ;
+        sh:datatype xsd:string ;
+        sh:severity sh:Warning ;
+        sh:message "sic:implementationParameter is recommended."@en ;
+    ] ;
+
+    sh:property [
+        sh:path sic:implementationParameterName ;
+        sh:name "Parameter Name" ;
+        sh:datatype xsd:string ;
+        sh:severity sh:Warning ;
+        sh:message "sic:implementationParameterName is recommended."@en ;
+    ] ;
+
+    sh:property [
+        sh:path sic:implementationParameterVersion ;
+        sh:name "Parameter Version" ;
+        sh:datatype xsd:string ;
+        sh:severity sh:Warning ;
+        sh:message "sic:implementationParameterVersion is recommended."@en ;
+    ] ;
+
+    sh:property [
+        sh:path sic:implementationParameterIdentifier ;
+        sh:name "Parameter Identifier" ;
+        sh:datatype xsd:string ;
+        sh:severity sh:Warning ;
+        sh:message "sic:implementationParameterIdentifier is recommended."@en ;
+    ] ;
+
+    sh:property [
+        sh:path sic:implementationParameterUrl ;
+        sh:name "Parameter URL" ;
+        sh:datatype xsd:anyURI ;
+        sh:severity sh:Info ;
+        sh:message "sic:implementationParameterUrl is optional."@en ;
+    ] ;
+
+    sh:property [
+        sh:path sic:implementationParameterFullName ;
+        sh:name "Parameter Full Name" ;
+        sh:datatype xsd:string ;
+        sh:maxCount 1 ;
+        sh:severity sh:Info ;
+        sh:message "sic:implementationParameterFullName is optional and may appear at most once."@en ;
+    ] ;
+
+    sh:property [
+        sh:path sic:implementationParameterConfidentialityLevel ;
+        sh:name "Parameter Confidentiality Level" ;
+        sh:datatype xsd:string ;
+        sh:maxCount 1 ;
+        sh:severity sh:Warning ;
+        sh:message "sic:implementationParameterConfidentialityLevel is recommended and may appear at most once."@en ;
+    ] ;
+
+    sh:property [
+        sh:path sic:implementationParameterQuality ;
+        sh:name "Parameter Quality" ;
+        sh:datatype xsd:string ;
+        sh:severity sh:Warning ;
+        sh:message "sic:implementationParameterQuality is recommended."@en ;
+    ] ;
+
+    sh:property [
+        sh:path sic:implementationTestCase ;
+        sh:name "Test Case" ;
+        sh:datatype xsd:string ;
+        sh:severity sh:Warning ;
+        sh:message "sic:implementationTestCase is recommended."@en ;
+    ] ;
+
+    sh:property [
+        sh:path sic:implementationTestCaseName ;
+        sh:name "Test Case Name" ;
+        sh:datatype xsd:string ;
+        sh:severity sh:Warning ;
+        sh:message "sic:implementationTestCaseName is recommended."@en ;
+    ] ;
+
+    sh:property [
+        sh:path sic:implementationTestCaseVersion ;
+        sh:name "Test Case Version" ;
+        sh:datatype xsd:string ;
+        sh:severity sh:Warning ;
+        sh:message "sic:implementationTestCaseVersion is recommended."@en ;
+    ] ;
+
+    sh:property [
+        sh:path sic:implementationTestCaseIdentifier ;
+        sh:name "Test Case Identifier" ;
+        sh:datatype xsd:string ;
+        sh:severity sh:Warning ;
+        sh:message "sic:implementationTestCaseIdentifier is recommended."@en ;
+    ] ;
+
+    sh:property [
+        sh:path sic:implementationTestCaseUrl ;
+        sh:name "Test Case URL" ;
+        sh:datatype xsd:anyURI ;
+        sh:severity sh:Info ;
+        sh:message "sic:implementationTestCaseUrl is optional."@en ;
+    ] ;
+
+    sh:property [
+        sh:path sic:implementationTestCaseFullName ;
+        sh:name "Test Case Full Name" ;
+        sh:datatype xsd:string ;
+        sh:maxCount 1 ;
+        sh:severity sh:Info ;
+        sh:message "sic:implementationTestCaseFullName is optional and may appear at most once."@en ;
+    ] ;
+
+    sh:property [
+        sh:path sic:implementationTestCaseConfidentialityLevel ;
+        sh:name "Test Case Confidentiality Level" ;
+        sh:datatype xsd:string ;
+        sh:maxCount 1 ;
+        sh:severity sh:Warning ;
+        sh:message "sic:implementationTestCaseConfidentialityLevel is recommended and may appear at most once."@en ;
+    ] ;
+
+    sh:property [
+        sh:path sic:implementationTestCaseQuality ;
+        sh:name "Test Case Quality" ;
+        sh:datatype xsd:string ;
+        sh:severity sh:Warning ;
+        sh:message "sic:implementationTestCaseQuality is recommended."@en ;
+    ] ;
+
+    sh:property [
+        sh:path sic:implementationSimulationEnvironment ;
+        sh:name "Simulation Environment" ;
+        sh:datatype xsd:string ;
+        sh:severity sh:Warning ;
+        sh:message "sic:implementationSimulationEnvironment is recommended."@en ;
+    ] ;
+
+    sh:property [
+        sh:path sic:implementationSimulationEnvironmentName ;
+        sh:name "Simulation Environment Name" ;
+        sh:datatype xsd:string ;
+        sh:severity sh:Warning ;
+        sh:message "sic:implementationSimulationEnvironmentName is recommended."@en ;
+    ] ;
+
+    sh:property [
+        sh:path sic:implementationSimulationEnvironmentVersion ;
+        sh:name "Simulation Environment Version" ;
+        sh:datatype xsd:string ;
+        sh:severity sh:Warning ;
+        sh:message "sic:implementationSimulationEnvironmentVersion is recommended."@en ;
+    ] ;
+
+    sh:property [
+        sh:path sic:implementationSimulationEnvironmentIdentifier ;
+        sh:name "Simulation Environment Identifier" ;
+        sh:datatype xsd:string ;
+        sh:severity sh:Warning ;
+        sh:message "sic:implementationSimulationEnvironmentIdentifier is recommended."@en ;
+    ] ;
+
+    sh:property [
+        sh:path sic:implementationSimulationEnvironmentUrl ;
+        sh:name "Simulation Environment URL" ;
+        sh:datatype xsd:anyURI ;
+        sh:severity sh:Info ;
+        sh:message "sic:implementationSimulationEnvironmentUrl is optional."@en ;
+    ] ;
+
+    sh:property [
+        sh:path sic:implementationSimulationEnvironmentFullName ;
+        sh:name "Simulation Environment Full Name" ;
+        sh:datatype xsd:string ;
+        sh:maxCount 1 ;
+        sh:severity sh:Info ;
+        sh:message "sic:implementationSimulationEnvironmentFullName is optional and may appear at most once."@en ;
+    ] ;
+
+    sh:property [
+        sh:path sic:implementationSimulationEnvironmentQuality ;
+        sh:name "Simulation Environment Quality" ;
+        sh:datatype xsd:string ;
+        sh:severity sh:Warning ;
+        sh:message "sic:implementationSimulationEnvironmentQuality is recommended."@en ;
+    ] ;
+
+    sh:property [
+        sh:path sic:implementationSolverSetting ;
+        sh:name "Solver Setting" ;
+        sh:datatype xsd:string ;
+        sh:severity sh:Warning ;
+        sh:message "sic:implementationSolverSetting is recommended."@en ;
+    ] ;
+
+    sh:property [
+        sh:path sic:implementationSimulationIntegration ;
+        sh:name "Simulation Integration" ;
+        sh:datatype xsd:string ;
+        sh:severity sh:Warning ;
+        sh:message "sic:implementationSimulationIntegration is recommended."@en ;
+    ] ;
+
+    sh:property [
+        sh:path sic:implementationSimulationIntegrationName ;
+        sh:name "Simulation Integration Name" ;
+        sh:datatype xsd:string ;
+        sh:severity sh:Warning ;
+        sh:message "sic:implementationSimulationIntegrationName is recommended."@en ;
+    ] ;
+
+    sh:property [
+        sh:path sic:implementationSimulationIntegrationVersion ;
+        sh:name "Simulation Integration Version" ;
+        sh:datatype xsd:string ;
+        sh:severity sh:Warning ;
+        sh:message "sic:implementationSimulationIntegrationVersion is recommended."@en ;
+    ] ;
+
+    sh:property [
+        sh:path sic:implementationSimulationIntegrationIdentifier ;
+        sh:name "Simulation Integration Identifier" ;
+        sh:datatype xsd:string ;
+        sh:severity sh:Warning ;
+        sh:message "sic:implementationSimulationIntegrationIdentifier is recommended."@en ;
+    ] ;
+
+    sh:property [
+        sh:path sic:implementationSimulationIntegrationUrl ;
+        sh:name "Simulation Integration URL" ;
+        sh:datatype xsd:anyURI ;
+        sh:severity sh:Info ;
+        sh:message "sic:implementationSimulationIntegrationUrl is optional."@en ;
+    ] ;
+
+    sh:property [
+        sh:path sic:implementationSimulationIntegrationFullName ;
+        sh:name "Simulation Integration Full Name" ;
+        sh:datatype xsd:string ;
+        sh:maxCount 1 ;
+        sh:severity sh:Info ;
+        sh:message "sic:implementationSimulationIntegrationFullName is optional and may appear at most once."@en ;
+    ] ;
+
+    sh:property [
+        sh:path sic:implementationSimulationIntegrationQuality ;
+        sh:name "Simulation Integration Quality" ;
+        sh:datatype xsd:string ;
+        sh:severity sh:Warning ;
+        sh:message "sic:implementationSimulationIntegrationQuality is recommended."@en ;
+    ] ;
+
+    sh:property [
+        sh:path sic:implementationQualityAssuranceResults ;
+        sh:name "Implementation Quality Assurance Results" ;
+        sh:datatype xsd:string ;
+        sh:severity sh:Warning ;
+        sh:message "sic:implementationQualityAssuranceResults is recommended."@en ;
+    ] ;
+
+    sh:property [
+        sh:path sic:implementationQualityVerdict ;
+        sh:name "Implementation Quality Verdict" ;
+        sh:datatype xsd:string ;
+        sh:maxCount 1 ;
+        sh:severity sh:Info ;
+        sh:message "sic:implementationQualityVerdict is optional and may appear at most once."@en ;
+    ] ;
+
+    sh:property [
+        sh:path sic:executionUsedSimulationModel ;
+        sh:name "Used Simulation Model" ;
+        sh:datatype xsd:string ;
+        sh:severity sh:Violation ;
+        sh:message "sic:executionUsedSimulationModel is mandatory when represented directly."@en ;
+    ] ;
+
+    sh:property [
+        sh:path sic:executionUsedSimulationModelName ;
+        sh:name "Used Simulation Model Name" ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+        sh:severity sh:Violation ;
+        sh:message "sic:executionUsedSimulationModelName is mandatory."@en ;
+    ] ;
+
+    sh:property [
+        sh:path sic:executionUsedSimulationModelVersion ;
+        sh:name "Used Simulation Model Version" ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+        sh:severity sh:Violation ;
+        sh:message "sic:executionUsedSimulationModelVersion is mandatory."@en ;
+    ] ;
+
+    sh:property [
+        sh:path sic:executionUsedSimulationModelIdentifier ;
+        sh:name "Used Simulation Model Identifier" ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+        sh:severity sh:Violation ;
+        sh:message "sic:executionUsedSimulationModelIdentifier is mandatory."@en ;
+    ] ;
+
+    sh:property [
+        sh:path sic:executionUsedSimulationModelUrl ;
+        sh:name "Used Simulation Model URL" ;
+        sh:datatype xsd:anyURI ;
+        sh:severity sh:Info ;
+        sh:message "sic:executionUsedSimulationModelUrl is optional."@en ;
+    ] ;
+
+    sh:property [
+        sh:path sic:executionUsedSimulationModelFullName ;
+        sh:name "Used Simulation Model Full Name" ;
+        sh:datatype xsd:string ;
+        sh:maxCount 1 ;
+        sh:severity sh:Info ;
+        sh:message "sic:executionUsedSimulationModelFullName is optional and may appear at most once."@en ;
+    ] ;
+
+    sh:property [
+        sh:path sic:executionUsedParameter ;
+        sh:name "Used Parameter" ;
+        sh:datatype xsd:string ;
+        sh:severity sh:Violation ;
+        sh:message "sic:executionUsedParameter is mandatory when represented directly."@en ;
+    ] ;
+
+    sh:property [
+        sh:path sic:executionUsedParameterName ;
+        sh:name "Used Parameter Name" ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+        sh:severity sh:Violation ;
+        sh:message "sic:executionUsedParameterName is mandatory."@en ;
+    ] ;
+
+    sh:property [
+        sh:path sic:executionUsedParameterVersion ;
+        sh:name "Used Parameter Version" ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+        sh:severity sh:Violation ;
+        sh:message "sic:executionUsedParameterVersion is mandatory."@en ;
+    ] ;
+
+    sh:property [
+        sh:path sic:executionUsedParameterIdentifier ;
+        sh:name "Used Parameter Identifier" ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+        sh:severity sh:Violation ;
+        sh:message "sic:executionUsedParameterIdentifier is mandatory."@en ;
+    ] ;
+
+    sh:property [
+        sh:path sic:executionUsedParameterUrl ;
+        sh:name "Used Parameter URL" ;
+        sh:datatype xsd:anyURI ;
+        sh:severity sh:Info ;
+        sh:message "sic:executionUsedParameterUrl is optional."@en ;
+    ] ;
+
+    sh:property [
+        sh:path sic:executionUsedParameterFullName ;
+        sh:name "Used Parameter Full Name" ;
+        sh:datatype xsd:string ;
+        sh:maxCount 1 ;
+        sh:severity sh:Info ;
+        sh:message "sic:executionUsedParameterFullName is optional and may appear at most once."@en ;
+    ] ;
+
+    sh:property [
+        sh:path sic:executionUsedTestCase ;
+        sh:name "Used Test Case" ;
+        sh:datatype xsd:string ;
+        sh:severity sh:Warning ;
+        sh:message "sic:executionUsedTestCase is recommended."@en ;
+    ] ;
+
+    sh:property [
+        sh:path sic:executionUsedTestCaseName ;
+        sh:name "Used Test Case Name" ;
+        sh:datatype xsd:string ;
+        sh:severity sh:Warning ;
+        sh:message "sic:executionUsedTestCaseName is recommended."@en ;
+    ] ;
+
+    sh:property [
+        sh:path sic:executionUsedTestCaseVersion ;
+        sh:name "Used Test Case Version" ;
+        sh:datatype xsd:string ;
+        sh:severity sh:Warning ;
+        sh:message "sic:executionUsedTestCaseVersion is recommended."@en ;
+    ] ;
+
+    sh:property [
+        sh:path sic:executionUsedTestCaseIdentifier ;
+        sh:name "Used Test Case Identifier" ;
+        sh:datatype xsd:string ;
+        sh:severity sh:Warning ;
+        sh:message "sic:executionUsedTestCaseIdentifier is recommended."@en ;
+    ] ;
+
+    sh:property [
+        sh:path sic:executionUsedTestCaseUrl ;
+        sh:name "Used Test Case URL" ;
+        sh:datatype xsd:anyURI ;
+        sh:severity sh:Info ;
+        sh:message "sic:executionUsedTestCaseUrl is optional."@en ;
+    ] ;
+
+    sh:property [
+        sh:path sic:executionUsedTestCaseFullName ;
+        sh:name "Used Test Case Full Name" ;
+        sh:datatype xsd:string ;
+        sh:maxCount 1 ;
+        sh:severity sh:Info ;
+        sh:message "sic:executionUsedTestCaseFullName is optional and may appear at most once."@en ;
+    ] ;
+
+    sh:property [
+        sh:path sic:executionUsedTool ;
+        sh:name "Used Tool" ;
+        sh:datatype xsd:string ;
+        sh:severity sh:Violation ;
+        sh:message "sic:executionUsedTool is mandatory when represented directly."@en ;
+    ] ;
+
+    sh:property [
+        sh:path sic:executionUsedToolName ;
+        sh:name "Used Tool Name" ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+        sh:severity sh:Violation ;
+        sh:message "sic:executionUsedToolName is mandatory."@en ;
+    ] ;
+
+    sh:property [
+        sh:path sic:executionUsedToolVersion ;
+        sh:name "Used Tool Version" ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+        sh:severity sh:Violation ;
+        sh:message "sic:executionUsedToolVersion is mandatory."@en ;
+    ] ;
+
+    sh:property [
+        sh:path sic:executionUsedToolIdentifier ;
+        sh:name "Used Tool Identifier" ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+        sh:severity sh:Violation ;
+        sh:message "sic:executionUsedToolIdentifier is mandatory."@en ;
+    ] ;
+
+    sh:property [
+        sh:path sic:executionUsedToolUrl ;
+        sh:name "Used Tool URL" ;
+        sh:datatype xsd:anyURI ;
+        sh:severity sh:Info ;
+        sh:message "sic:executionUsedToolUrl is optional."@en ;
+    ] ;
+
+    sh:property [
+        sh:path sic:executionUsedToolFullName ;
+        sh:name "Used Tool Full Name" ;
+        sh:datatype xsd:string ;
+        sh:maxCount 1 ;
+        sh:severity sh:Info ;
+        sh:message "sic:executionUsedToolFullName is optional and may appear at most once."@en ;
+    ] ;
+
+    sh:property [
+        sh:path sic:executionRawData ;
+        sh:name "Execution Raw Data" ;
+        sh:datatype xsd:anyURI ;
+        sh:severity sh:Warning ;
+        sh:message "sic:executionRawData is recommended."@en ;
+    ] ;
+
+    sh:property [
+        sh:path sic:executionUsedToolSettings ;
+        sh:name "Used Tool Settings" ;
+        sh:datatype xsd:string ;
+        sh:severity sh:Warning ;
+        sh:message "sic:executionUsedToolSettings is recommended."@en ;
+    ] ;
+
+    sh:property [
+        sh:path sic:executionLog ;
+        sh:name "Execution Log" ;
+        sh:datatype xsd:anyURI ;
+        sh:maxCount 1 ;
+        sh:severity sh:Info ;
+        sh:message "sic:executionLog is optional and may appear at most once."@en ;
+    ] ;
+
+    sh:property [
+        sh:path sic:evaluationResults ;
+        sh:name "Evaluation Results" ;
+        sh:datatype xsd:anyURI ;
+        sh:severity sh:Warning ;
+        sh:message "sic:evaluationResults is recommended."@en ;
+    ] ;
+
+    sh:property [
+        sh:path sic:evaluationQualityAssuranceResults ;
+        sh:name "Evaluation Quality-Assurance Results" ;
+        sh:datatype xsd:string ;
+        sh:maxCount 1 ;
+        sh:severity sh:Warning ;
+        sh:message "sic:evaluationQualityAssuranceResults is recommended and may appear at most once."@en ;
+    ] ;
+
+    sh:property [
+        sh:path sic:evaluationQualityVerdict ;
+        sh:name "Evaluation Quality Verdict" ;
+        sh:datatype xsd:string ;
+        sh:maxCount 1 ;
+        sh:severity sh:Info ;
+        sh:message "sic:evaluationQualityVerdict is optional and may appear at most once."@en ;
+    ] ;
+
+    sh:property [
+        sh:path sic:fulfillmentTaskStatus ;
+        sh:name "Task Status" ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:severity sh:Violation ;
+        sh:message "sic:fulfillmentTaskStatus is mandatory and may appear at most once."@en ;
+    ] ;
+
+    sh:property [
+        sh:path sic:fulfillmentQualityFulfilled ;
+        sh:name "Quality Fulfilled" ;
+        sh:datatype xsd:string ;
+        sh:maxCount 1 ;
+        sh:severity sh:Warning ;
+        sh:message "sic:fulfillmentQualityFulfilled is recommended and may appear at most once."@en ;
+    ] ;
+
+    sh:property [
+        sh:path sic:fulfillmentObjectivesFulfilled ;
+        sh:name "Objectives Fulfilled" ;
+        sh:datatype xsd:string ;
+        sh:maxCount 1 ;
+        sh:severity sh:Warning ;
+        sh:message "sic:fulfillmentObjectivesFulfilled is recommended and may appear at most once."@en ;
+    ] ;
+
+    sh:property [
+        sh:path sic:fulfillmentEvidence ;
+        sh:name "Fulfillment Evidence" ;
+        sh:datatype xsd:anyURI ;
+        sh:maxCount 1 ;
+        sh:severity sh:Warning ;
+        sh:message "sic:fulfillmentEvidence is recommended and may appear at most once."@en ;
+    ] ;
+
+    sh:property [
+        sh:path sic:fulfillmentDate ;
+        sh:name "Fulfillment Date" ;
+        sh:datatype xsd:date ;
+        sh:maxCount 1 ;
+        sh:severity sh:Warning ;
+        sh:message "sic:fulfillmentDate is recommended and may appear at most once."@en ;
+    ] .
+

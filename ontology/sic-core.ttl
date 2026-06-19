@@ -1,0 +1,1599 @@
+@prefix sic:   <https://mic-core.org/ontology/sic-core#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vann:  <http://purl.org/vocab/vann/> .
+
+<https://mic-core.org/ontology/sic-core>
+    a owl:Ontology ;
+    rdfs:label "SIC Core Ontology"@en ;
+    rdfs:comment "OWL ontology for the Simulation Information Card (SIC) Core specification."@en ;
+    dcterms:title "SIC Core Ontology"@en ;
+    dcterms:description "This ontology formalises the SIC Core attribute set so that simulation-task metadata can be expressed, exchanged and validated in standard Semantic-Web formats (RDF/OWL, SHACL, JSON-LD)."@en ;
+    dcterms:creator "IRT SystemX and prostep ivip" ;
+    vann:preferredNamespacePrefix "sic" ;
+    vann:preferredNamespaceUri "https://mic-core.org/ontology/sic-core#" ;
+    owl:versionInfo "1.0" .
+
+sic:SimulationTask
+    a owl:Class ;
+    rdfs:label "Simulation Task"@en ;
+    rdfs:comment "A simulation task described by SIC Core metadata attributes."@en .
+
+sic:administrativeOverallProduct
+    a owl:DatatypeProperty ;
+    rdfs:label "Overall Product"@en ;
+    rdfs:comment "Administrative Data attribute mapped from SIC Core to SRMD keyword administrative.overall-product."@en ;
+    rdfs:domain sic:SimulationTask ;
+    rdfs:range xsd:string ;
+    skos:note "Obligation: Recommended. Multiple values allowed."@en ;
+    skos:mappingRelation "SRMD classification keyword: administrative.overall-product"@en .
+
+sic:administrativeOverallProductName
+    a owl:DatatypeProperty ;
+    rdfs:label "Overall Product Name"@en ;
+    rdfs:comment "Administrative Data attribute mapped from SIC Core to SRMD keyword administrative.overall-product.name."@en ;
+    rdfs:domain sic:SimulationTask ;
+    rdfs:range xsd:string ;
+    skos:note "Obligation: Recommended. Multiple values allowed."@en ;
+    skos:mappingRelation "SRMD classification keyword: administrative.overall-product.name"@en .
+
+sic:administrativeOverallProductVersion
+    a owl:DatatypeProperty ;
+    rdfs:label "Overall Product Version"@en ;
+    rdfs:comment "Administrative Data attribute mapped from SIC Core to SRMD keyword administrative.overall-product.version."@en ;
+    rdfs:domain sic:SimulationTask ;
+    rdfs:range xsd:string ;
+    skos:note "Obligation: Recommended. Multiple values allowed."@en ;
+    skos:mappingRelation "SRMD classification keyword: administrative.overall-product.version"@en .
+
+sic:administrativeOverallProductIdentifier
+    a owl:DatatypeProperty ;
+    rdfs:label "Overall Product Identifier"@en ;
+    rdfs:comment "Administrative Data attribute mapped from SIC Core to SRMD keyword administrative.overall-product.identifier."@en ;
+    rdfs:domain sic:SimulationTask ;
+    rdfs:range xsd:string ;
+    skos:note "Obligation: Recommended. Multiple values allowed."@en ;
+    skos:mappingRelation "SRMD classification keyword: administrative.overall-product.identifier"@en .
+
+sic:administrativeOverallProductUrl
+    a owl:DatatypeProperty ;
+    rdfs:label "Overall Product URL"@en ;
+    rdfs:comment "Administrative Data attribute mapped from SIC Core to SRMD keyword administrative.overall-product.url."@en ;
+    rdfs:domain sic:SimulationTask ;
+    rdfs:range xsd:anyURI ;
+    skos:note "Obligation: Optional. Multiple values allowed."@en ;
+    skos:mappingRelation "SRMD classification keyword: administrative.overall-product.url"@en .
+
+sic:administrativeOverallProductFullName
+    a owl:DatatypeProperty ;
+    rdfs:label "Overall Product Full Name"@en ;
+    rdfs:comment "Administrative Data attribute mapped from SIC Core to SRMD keyword administrative.overall-product.full-name."@en ;
+    rdfs:domain sic:SimulationTask ;
+    rdfs:range xsd:string ;
+    skos:note "Obligation: Optional. Single value."@en ;
+    skos:mappingRelation "SRMD classification keyword: administrative.overall-product.full-name"@en .
+
+sic:administrativeSpecificProduct
+    a owl:DatatypeProperty ;
+    rdfs:label "Specific Product"@en ;
+    rdfs:comment "Administrative Data attribute mapped from SIC Core to SRMD keyword administrative.specific-product."@en ;
+    rdfs:domain sic:SimulationTask ;
+    rdfs:range xsd:string ;
+    skos:note "Obligation: Recommended. Multiple values allowed."@en ;
+    skos:mappingRelation "SRMD classification keyword: administrative.specific-product"@en .
+
+sic:administrativeSpecificProductName
+    a owl:DatatypeProperty ;
+    rdfs:label "Specific Product Name"@en ;
+    rdfs:comment "Administrative Data attribute mapped from SIC Core to SRMD keyword administrative.specific-product.name."@en ;
+    rdfs:domain sic:SimulationTask ;
+    rdfs:range xsd:string ;
+    skos:note "Obligation: Recommended. Multiple values allowed."@en ;
+    skos:mappingRelation "SRMD classification keyword: administrative.specific-product.name"@en .
+
+sic:administrativeSpecificProductVersion
+    a owl:DatatypeProperty ;
+    rdfs:label "Specific Product Version"@en ;
+    rdfs:comment "Administrative Data attribute mapped from SIC Core to SRMD keyword administrative.specific-product.version."@en ;
+    rdfs:domain sic:SimulationTask ;
+    rdfs:range xsd:string ;
+    skos:note "Obligation: Recommended. Multiple values allowed."@en ;
+    skos:mappingRelation "SRMD classification keyword: administrative.specific-product.version"@en .
+
+sic:administrativeSpecificProductIdentifier
+    a owl:DatatypeProperty ;
+    rdfs:label "Specific Product Identifier"@en ;
+    rdfs:comment "Administrative Data attribute mapped from SIC Core to SRMD keyword administrative.specific-product.identifier."@en ;
+    rdfs:domain sic:SimulationTask ;
+    rdfs:range xsd:string ;
+    skos:note "Obligation: Recommended. Multiple values allowed."@en ;
+    skos:mappingRelation "SRMD classification keyword: administrative.specific-product.identifier"@en .
+
+sic:administrativeSpecificProductUrl
+    a owl:DatatypeProperty ;
+    rdfs:label "Specific Product URL"@en ;
+    rdfs:comment "Administrative Data attribute mapped from SIC Core to SRMD keyword administrative.specific-product.url."@en ;
+    rdfs:domain sic:SimulationTask ;
+    rdfs:range xsd:anyURI ;
+    skos:note "Obligation: Optional. Multiple values allowed."@en ;
+    skos:mappingRelation "SRMD classification keyword: administrative.specific-product.url"@en .
+
+sic:administrativeSpecificProductFullName
+    a owl:DatatypeProperty ;
+    rdfs:label "Specific Product Full Name"@en ;
+    rdfs:comment "Administrative Data attribute mapped from SIC Core to SRMD keyword administrative.specific-product.full-name."@en ;
+    rdfs:domain sic:SimulationTask ;
+    rdfs:range xsd:string ;
+    skos:note "Obligation: Optional. Single value."@en ;
+    skos:mappingRelation "SRMD classification keyword: administrative.specific-product.full-name"@en .
+
+sic:administrativeOrderingProject
+    a owl:DatatypeProperty ;
+    rdfs:label "Ordering Project"@en ;
+    rdfs:comment "Administrative Data attribute mapped from SIC Core to SRMD keyword administrative.ordering-project."@en ;
+    rdfs:domain sic:SimulationTask ;
+    rdfs:range xsd:string ;
+    skos:note "Obligation: Recommended. Single value."@en ;
+    skos:mappingRelation "SRMD classification keyword: administrative.ordering-project"@en .
+
+sic:administrativeOrderingProjectName
+    a owl:DatatypeProperty ;
+    rdfs:label "Ordering Project Name"@en ;
+    rdfs:comment "Administrative Data attribute mapped from SIC Core to SRMD keyword administrative.ordering-project.name."@en ;
+    rdfs:domain sic:SimulationTask ;
+    rdfs:range xsd:string ;
+    skos:note "Obligation: Recommended. Single value."@en ;
+    skos:mappingRelation "SRMD classification keyword: administrative.ordering-project.name"@en .
+
+sic:administrativeOrderingProjectVersion
+    a owl:DatatypeProperty ;
+    rdfs:label "Ordering Project Version"@en ;
+    rdfs:comment "Administrative Data attribute mapped from SIC Core to SRMD keyword administrative.ordering-project.version."@en ;
+    rdfs:domain sic:SimulationTask ;
+    rdfs:range xsd:string ;
+    skos:note "Obligation: Recommended. Single value."@en ;
+    skos:mappingRelation "SRMD classification keyword: administrative.ordering-project.version"@en .
+
+sic:administrativeOrderingProjectIdentifier
+    a owl:DatatypeProperty ;
+    rdfs:label "Ordering Project Identifier"@en ;
+    rdfs:comment "Administrative Data attribute mapped from SIC Core to SRMD keyword administrative.ordering-project.identifier."@en ;
+    rdfs:domain sic:SimulationTask ;
+    rdfs:range xsd:string ;
+    skos:note "Obligation: Recommended. Single value."@en ;
+    skos:mappingRelation "SRMD classification keyword: administrative.ordering-project.identifier"@en .
+
+sic:administrativeOrderingProjectUrl
+    a owl:DatatypeProperty ;
+    rdfs:label "Ordering Project URL"@en ;
+    rdfs:comment "Administrative Data attribute mapped from SIC Core to SRMD keyword administrative.ordering-project.url."@en ;
+    rdfs:domain sic:SimulationTask ;
+    rdfs:range xsd:anyURI ;
+    skos:note "Obligation: Optional. Single value."@en ;
+    skos:mappingRelation "SRMD classification keyword: administrative.ordering-project.url"@en .
+
+sic:administrativeOrderingProjectFullName
+    a owl:DatatypeProperty ;
+    rdfs:label "Ordering Project Full Name"@en ;
+    rdfs:comment "Administrative Data attribute mapped from SIC Core to SRMD keyword administrative.ordering-project.full-name."@en ;
+    rdfs:domain sic:SimulationTask ;
+    rdfs:range xsd:string ;
+    skos:note "Obligation: Optional. Single value."@en ;
+    skos:mappingRelation "SRMD classification keyword: administrative.ordering-project.full-name"@en .
+
+sic:administrativeSimulationRequest
+    a owl:DatatypeProperty ;
+    rdfs:label "Simulation Request"@en ;
+    rdfs:comment "Administrative Data attribute mapped from SIC Core to SRMD keyword administrative.simulation-request."@en ;
+    rdfs:domain sic:SimulationTask ;
+    rdfs:range xsd:string ;
+    skos:note "Obligation: Recommended. Single value."@en ;
+    skos:mappingRelation "SRMD classification keyword: administrative.simulation-request"@en .
+
+sic:administrativeSimulationRequestName
+    a owl:DatatypeProperty ;
+    rdfs:label "Simulation Request Name"@en ;
+    rdfs:comment "Administrative Data attribute mapped from SIC Core to SRMD keyword administrative.simulation-request.name."@en ;
+    rdfs:domain sic:SimulationTask ;
+    rdfs:range xsd:string ;
+    skos:note "Obligation: Recommended. Single value."@en ;
+    skos:mappingRelation "SRMD classification keyword: administrative.simulation-request.name"@en .
+
+sic:administrativeSimulationRequestVersion
+    a owl:DatatypeProperty ;
+    rdfs:label "Simulation Request Version"@en ;
+    rdfs:comment "Administrative Data attribute mapped from SIC Core to SRMD keyword administrative.simulation-request.version."@en ;
+    rdfs:domain sic:SimulationTask ;
+    rdfs:range xsd:string ;
+    skos:note "Obligation: Recommended. Single value."@en ;
+    skos:mappingRelation "SRMD classification keyword: administrative.simulation-request.version"@en .
+
+sic:administrativeSimulationRequestIdentifier
+    a owl:DatatypeProperty ;
+    rdfs:label "Simulation Request Identifier"@en ;
+    rdfs:comment "Administrative Data attribute mapped from SIC Core to SRMD keyword administrative.simulation-request.identifier."@en ;
+    rdfs:domain sic:SimulationTask ;
+    rdfs:range xsd:string ;
+    skos:note "Obligation: Recommended. Single value."@en ;
+    skos:mappingRelation "SRMD classification keyword: administrative.simulation-request.identifier"@en .
+
+sic:administrativeSimulationRequestUrl
+    a owl:DatatypeProperty ;
+    rdfs:label "Simulation Request URL"@en ;
+    rdfs:comment "Administrative Data attribute mapped from SIC Core to SRMD keyword administrative.simulation-request.url."@en ;
+    rdfs:domain sic:SimulationTask ;
+    rdfs:range xsd:anyURI ;
+    skos:note "Obligation: Optional. Single value."@en ;
+    skos:mappingRelation "SRMD classification keyword: administrative.simulation-request.url"@en .
+
+sic:administrativeSimulationRequestFullName
+    a owl:DatatypeProperty ;
+    rdfs:label "Simulation Request Full Name"@en ;
+    rdfs:comment "Administrative Data attribute mapped from SIC Core to SRMD keyword administrative.simulation-request.full-name."@en ;
+    rdfs:domain sic:SimulationTask ;
+    rdfs:range xsd:string ;
+    skos:note "Obligation: Optional. Single value."@en ;
+    skos:mappingRelation "SRMD classification keyword: administrative.simulation-request.full-name"@en .
+
+sic:administrativeSimulationTask
+    a owl:DatatypeProperty ;
+    rdfs:label "Simulation Task"@en ;
+    rdfs:comment "Administrative Data attribute mapped from SIC Core to SRMD keyword administrative.simulation-task."@en ;
+    rdfs:domain sic:SimulationTask ;
+    rdfs:range xsd:string ;
+    skos:note "Obligation: Mandatory. Single value."@en ;
+    skos:mappingRelation "SRMD classification keyword: administrative.simulation-task"@en .
+
+sic:administrativeSimulationTaskName
+    a owl:DatatypeProperty ;
+    rdfs:label "Simulation Task Name"@en ;
+    rdfs:comment "Administrative Data attribute mapped from SIC Core to SRMD keyword administrative.simulation-task.name."@en ;
+    rdfs:domain sic:SimulationTask ;
+    rdfs:range xsd:string ;
+    skos:note "Obligation: Mandatory. Single value."@en ;
+    skos:mappingRelation "SRMD classification keyword: administrative.simulation-task.name"@en .
+
+sic:administrativeSimulationTaskVersion
+    a owl:DatatypeProperty ;
+    rdfs:label "Simulation Task Version"@en ;
+    rdfs:comment "Administrative Data attribute mapped from SIC Core to SRMD keyword administrative.simulation-task.version."@en ;
+    rdfs:domain sic:SimulationTask ;
+    rdfs:range xsd:string ;
+    skos:note "Obligation: Mandatory. Single value."@en ;
+    skos:mappingRelation "SRMD classification keyword: administrative.simulation-task.version"@en .
+
+sic:administrativeSimulationTaskIdentifier
+    a owl:DatatypeProperty ;
+    rdfs:label "Simulation Task Identifier"@en ;
+    rdfs:comment "Administrative Data attribute mapped from SIC Core to SRMD keyword administrative.simulation-task.identifier."@en ;
+    rdfs:domain sic:SimulationTask ;
+    rdfs:range xsd:string ;
+    skos:note "Obligation: Mandatory. Single value."@en ;
+    skos:mappingRelation "SRMD classification keyword: administrative.simulation-task.identifier"@en .
+
+sic:administrativeSimulationTaskUrl
+    a owl:DatatypeProperty ;
+    rdfs:label "Simulation Task URL"@en ;
+    rdfs:comment "Administrative Data attribute mapped from SIC Core to SRMD keyword administrative.simulation-task.url."@en ;
+    rdfs:domain sic:SimulationTask ;
+    rdfs:range xsd:anyURI ;
+    skos:note "Obligation: Optional. Single value."@en ;
+    skos:mappingRelation "SRMD classification keyword: administrative.simulation-task.url"@en .
+
+sic:administrativeSimulationTaskFullName
+    a owl:DatatypeProperty ;
+    rdfs:label "Simulation Task Full Name"@en ;
+    rdfs:comment "Administrative Data attribute mapped from SIC Core to SRMD keyword administrative.simulation-task.full-name."@en ;
+    rdfs:domain sic:SimulationTask ;
+    rdfs:range xsd:string ;
+    skos:note "Obligation: Optional. Single value."@en ;
+    skos:mappingRelation "SRMD classification keyword: administrative.simulation-task.full-name"@en .
+
+sic:administrativeSimulationTaskConfidentialityLevel
+    a owl:DatatypeProperty ;
+    rdfs:label "Simulation Task Confidentiality Level"@en ;
+    rdfs:comment "Administrative Data attribute mapped from SIC Core to SRMD keyword administrative.simulation-task.confidentiality."@en ;
+    rdfs:domain sic:SimulationTask ;
+    rdfs:range xsd:string ;
+    skos:note "Obligation: Recommended. Single value."@en ;
+    skos:mappingRelation "SRMD classification keyword: administrative.simulation-task.confidentiality"@en .
+
+sic:administrativePredictedSimulationStartDate
+    a owl:DatatypeProperty ;
+    rdfs:label "Predicted Simulation Start Date"@en ;
+    rdfs:comment "Administrative Data attribute mapped from SIC Core to SRMD keyword administrative.simulation-task.date.start."@en ;
+    rdfs:domain sic:SimulationTask ;
+    rdfs:range xsd:date ;
+    skos:note "Obligation: Recommended. Single value."@en ;
+    skos:mappingRelation "SRMD classification keyword: administrative.simulation-task.date.start"@en .
+
+sic:administrativeRequestedSimulationDeliveryDate
+    a owl:DatatypeProperty ;
+    rdfs:label "Requested Simulation Delivery Date"@en ;
+    rdfs:comment "Administrative Data attribute mapped from SIC Core to SRMD keyword administrative.simulation-task.date.delivery."@en ;
+    rdfs:domain sic:SimulationTask ;
+    rdfs:range xsd:date ;
+    skos:note "Obligation: Recommended. Single value."@en ;
+    skos:mappingRelation "SRMD classification keyword: administrative.simulation-task.date.delivery"@en .
+
+sic:administrativeRequestingPerson
+    a owl:DatatypeProperty ;
+    rdfs:label "Requesting Person"@en ;
+    rdfs:comment "Administrative Data attribute mapped from SIC Core to SRMD keyword administrative.contact.customer-person."@en ;
+    rdfs:domain sic:SimulationTask ;
+    rdfs:range xsd:string ;
+    skos:note "Obligation: Recommended. Multiple values allowed."@en ;
+    skos:mappingRelation "SRMD classification keyword: administrative.contact.customer-person"@en .
+
+sic:administrativeRequestingEntity
+    a owl:DatatypeProperty ;
+    rdfs:label "Requesting Entity"@en ;
+    rdfs:comment "Administrative Data attribute mapped from SIC Core to SRMD keyword administrative.contact.customer-entity."@en ;
+    rdfs:domain sic:SimulationTask ;
+    rdfs:range xsd:string ;
+    skos:note "Obligation: Recommended. Multiple values allowed."@en ;
+    skos:mappingRelation "SRMD classification keyword: administrative.contact.customer-entity"@en .
+
+sic:administrativeContractingPerson
+    a owl:DatatypeProperty ;
+    rdfs:label "Contracting Person"@en ;
+    rdfs:comment "Administrative Data attribute mapped from SIC Core to SRMD keyword administrative.contact.contractor-person."@en ;
+    rdfs:domain sic:SimulationTask ;
+    rdfs:range xsd:string ;
+    skos:note "Obligation: Recommended. Single value."@en ;
+    skos:mappingRelation "SRMD classification keyword: administrative.contact.contractor-person"@en .
+
+sic:administrativeContractingEntity
+    a owl:DatatypeProperty ;
+    rdfs:label "Contracting Entity"@en ;
+    rdfs:comment "Administrative Data attribute mapped from SIC Core to SRMD keyword administrative.contact.contractor-entity."@en ;
+    rdfs:domain sic:SimulationTask ;
+    rdfs:range xsd:string ;
+    skos:note "Obligation: Recommended. Single value."@en ;
+    skos:mappingRelation "SRMD classification keyword: administrative.contact.contractor-entity"@en .
+
+sic:administrativeSimulationTaskCreatorName
+    a owl:DatatypeProperty ;
+    rdfs:label "Simulation Task Creator Name"@en ;
+    rdfs:comment "Administrative Data attribute mapped from SIC Core to SRMD keyword administrative.simulation-task.creator."@en ;
+    rdfs:domain sic:SimulationTask ;
+    rdfs:range xsd:string ;
+    skos:note "Obligation: Optional. Single value."@en ;
+    skos:mappingRelation "SRMD classification keyword: administrative.simulation-task.creator"@en .
+
+sic:administrativeSimulationTaskCreationDate
+    a owl:DatatypeProperty ;
+    rdfs:label "Simulation Task Creation Date"@en ;
+    rdfs:comment "Administrative Data attribute mapped from SIC Core to SRMD keyword administrative.simulation-task.date.creation."@en ;
+    rdfs:domain sic:SimulationTask ;
+    rdfs:range xsd:date ;
+    skos:note "Obligation: Optional. Single value."@en ;
+    skos:mappingRelation "SRMD classification keyword: administrative.simulation-task.date.creation"@en .
+
+sic:analysisItemUnderTest
+    a owl:DatatypeProperty ;
+    rdfs:label "Item under Test"@en ;
+    rdfs:comment "Analysis attribute mapped from SIC Core to SRMD keyword analysis.item-under-test."@en ;
+    rdfs:domain sic:SimulationTask ;
+    rdfs:range xsd:string ;
+    skos:note "Obligation: Mandatory. Single value."@en ;
+    skos:mappingRelation "SRMD classification keyword: analysis.item-under-test"@en .
+
+sic:analysisItemUnderTestName
+    a owl:DatatypeProperty ;
+    rdfs:label "Item under Test Name"@en ;
+    rdfs:comment "Analysis attribute mapped from SIC Core to SRMD keyword analysis.item-under-test.name."@en ;
+    rdfs:domain sic:SimulationTask ;
+    rdfs:range xsd:string ;
+    skos:note "Obligation: Mandatory. Single value."@en ;
+    skos:mappingRelation "SRMD classification keyword: analysis.item-under-test.name"@en .
+
+sic:analysisItemUnderTestVersion
+    a owl:DatatypeProperty ;
+    rdfs:label "Item under Test Version"@en ;
+    rdfs:comment "Analysis attribute mapped from SIC Core to SRMD keyword analysis.item-under-test.version."@en ;
+    rdfs:domain sic:SimulationTask ;
+    rdfs:range xsd:string ;
+    skos:note "Obligation: Mandatory. Single value."@en ;
+    skos:mappingRelation "SRMD classification keyword: analysis.item-under-test.version"@en .
+
+sic:analysisItemUnderTestIdentifier
+    a owl:DatatypeProperty ;
+    rdfs:label "Item under Test Identifier"@en ;
+    rdfs:comment "Analysis attribute mapped from SIC Core to SRMD keyword analysis.item-under-test.identifier."@en ;
+    rdfs:domain sic:SimulationTask ;
+    rdfs:range xsd:string ;
+    skos:note "Obligation: Mandatory. Single value."@en ;
+    skos:mappingRelation "SRMD classification keyword: analysis.item-under-test.identifier"@en .
+
+sic:analysisItemUnderTestUrl
+    a owl:DatatypeProperty ;
+    rdfs:label "Item under Test URL"@en ;
+    rdfs:comment "Analysis attribute mapped from SIC Core to SRMD keyword analysis.item-under-test.url."@en ;
+    rdfs:domain sic:SimulationTask ;
+    rdfs:range xsd:anyURI ;
+    skos:note "Obligation: Optional. Single value."@en ;
+    skos:mappingRelation "SRMD classification keyword: analysis.item-under-test.url"@en .
+
+sic:analysisItemUnderTestFullName
+    a owl:DatatypeProperty ;
+    rdfs:label "Item under Test Full Name"@en ;
+    rdfs:comment "Analysis attribute mapped from SIC Core to SRMD keyword analysis.item-under-test.full-name."@en ;
+    rdfs:domain sic:SimulationTask ;
+    rdfs:range xsd:string ;
+    skos:note "Obligation: Optional. Single value."@en ;
+    skos:mappingRelation "SRMD classification keyword: analysis.item-under-test.full-name"@en .
+
+sic:analysisHigherLevelEngineeringTask
+    a owl:DatatypeProperty ;
+    rdfs:label "Higher Level Engineering Task"@en ;
+    rdfs:comment "Analysis attribute mapped from SIC Core to SRMD keyword analysis.engineering-task.higher-level."@en ;
+    rdfs:domain sic:SimulationTask ;
+    rdfs:range xsd:string ;
+    skos:note "Obligation: Recommended. Single value."@en ;
+    skos:mappingRelation "SRMD classification keyword: analysis.engineering-task.higher-level"@en .
+
+sic:analysisHigherLevelEngineeringTaskName
+    a owl:DatatypeProperty ;
+    rdfs:label "Higher Level Engineering Task Name"@en ;
+    rdfs:comment "Analysis attribute mapped from SIC Core to SRMD keyword analysis.engineering-task.higher-level.name."@en ;
+    rdfs:domain sic:SimulationTask ;
+    rdfs:range xsd:string ;
+    skos:note "Obligation: Recommended. Single value."@en ;
+    skos:mappingRelation "SRMD classification keyword: analysis.engineering-task.higher-level.name"@en .
+
+sic:analysisHigherLevelEngineeringTaskVersion
+    a owl:DatatypeProperty ;
+    rdfs:label "Higher Level Engineering Task Version"@en ;
+    rdfs:comment "Analysis attribute mapped from SIC Core to SRMD keyword analysis.engineering-task.higher-level.version."@en ;
+    rdfs:domain sic:SimulationTask ;
+    rdfs:range xsd:string ;
+    skos:note "Obligation: Recommended. Single value."@en ;
+    skos:mappingRelation "SRMD classification keyword: analysis.engineering-task.higher-level.version"@en .
+
+sic:analysisHigherLevelEngineeringTaskIdentifier
+    a owl:DatatypeProperty ;
+    rdfs:label "Higher Level Engineering Task Identifier"@en ;
+    rdfs:comment "Analysis attribute mapped from SIC Core to SRMD keyword analysis.engineering-task.higher-level.identifier."@en ;
+    rdfs:domain sic:SimulationTask ;
+    rdfs:range xsd:string ;
+    skos:note "Obligation: Recommended. Single value."@en ;
+    skos:mappingRelation "SRMD classification keyword: analysis.engineering-task.higher-level.identifier"@en .
+
+sic:analysisHigherLevelEngineeringTaskUrl
+    a owl:DatatypeProperty ;
+    rdfs:label "Higher Level Engineering Task URL"@en ;
+    rdfs:comment "Analysis attribute mapped from SIC Core to SRMD keyword analysis.engineering-task.higher-level.url."@en ;
+    rdfs:domain sic:SimulationTask ;
+    rdfs:range xsd:anyURI ;
+    skos:note "Obligation: Optional. Single value."@en ;
+    skos:mappingRelation "SRMD classification keyword: analysis.engineering-task.higher-level.url"@en .
+
+sic:analysisHigherLevelEngineeringTaskFullName
+    a owl:DatatypeProperty ;
+    rdfs:label "Higher Level Engineering Task Full Name"@en ;
+    rdfs:comment "Analysis attribute mapped from SIC Core to SRMD keyword analysis.engineering-task.higher-level.full-name."@en ;
+    rdfs:domain sic:SimulationTask ;
+    rdfs:range xsd:string ;
+    skos:note "Obligation: Optional. Single value."@en ;
+    skos:mappingRelation "SRMD classification keyword: analysis.engineering-task.higher-level.full-name"@en .
+
+sic:analysisSpecificEngineeringTask
+    a owl:DatatypeProperty ;
+    rdfs:label "Specific Engineering Task"@en ;
+    rdfs:comment "Analysis attribute mapped from SIC Core to SRMD keyword analysis.engineering-task.specific."@en ;
+    rdfs:domain sic:SimulationTask ;
+    rdfs:range xsd:string ;
+    skos:note "Obligation: Recommended. Single value."@en ;
+    skos:mappingRelation "SRMD classification keyword: analysis.engineering-task.specific"@en .
+
+sic:analysisSpecificEngineeringTaskName
+    a owl:DatatypeProperty ;
+    rdfs:label "Specific Engineering Task Name"@en ;
+    rdfs:comment "Analysis attribute mapped from SIC Core to SRMD keyword analysis.engineering-task.specific.name."@en ;
+    rdfs:domain sic:SimulationTask ;
+    rdfs:range xsd:string ;
+    skos:note "Obligation: Recommended. Single value."@en ;
+    skos:mappingRelation "SRMD classification keyword: analysis.engineering-task.specific.name"@en .
+
+sic:analysisSpecificEngineeringTaskVersion
+    a owl:DatatypeProperty ;
+    rdfs:label "Specific Engineering Task Version"@en ;
+    rdfs:comment "Analysis attribute mapped from SIC Core to SRMD keyword analysis.engineering-task.specific.version."@en ;
+    rdfs:domain sic:SimulationTask ;
+    rdfs:range xsd:string ;
+    skos:note "Obligation: Recommended. Single value."@en ;
+    skos:mappingRelation "SRMD classification keyword: analysis.engineering-task.specific.version"@en .
+
+sic:analysisSpecificEngineeringTaskIdentifier
+    a owl:DatatypeProperty ;
+    rdfs:label "Specific Engineering Task Identifier"@en ;
+    rdfs:comment "Analysis attribute mapped from SIC Core to SRMD keyword analysis.engineering-task.specific.identifier."@en ;
+    rdfs:domain sic:SimulationTask ;
+    rdfs:range xsd:string ;
+    skos:note "Obligation: Recommended. Single value."@en ;
+    skos:mappingRelation "SRMD classification keyword: analysis.engineering-task.specific.identifier"@en .
+
+sic:analysisSpecificEngineeringTaskUrl
+    a owl:DatatypeProperty ;
+    rdfs:label "Specific Engineering Task URL"@en ;
+    rdfs:comment "Analysis attribute mapped from SIC Core to SRMD keyword analysis.engineering-task.specific.url."@en ;
+    rdfs:domain sic:SimulationTask ;
+    rdfs:range xsd:anyURI ;
+    skos:note "Obligation: Optional. Single value."@en ;
+    skos:mappingRelation "SRMD classification keyword: analysis.engineering-task.specific.url"@en .
+
+sic:analysisSpecificEngineeringTaskFullName
+    a owl:DatatypeProperty ;
+    rdfs:label "Specific Engineering Task Full Name"@en ;
+    rdfs:comment "Analysis attribute mapped from SIC Core to SRMD keyword analysis.engineering-task.specific.full-name."@en ;
+    rdfs:domain sic:SimulationTask ;
+    rdfs:range xsd:string ;
+    skos:note "Obligation: Optional. Single value."@en ;
+    skos:mappingRelation "SRMD classification keyword: analysis.engineering-task.specific.full-name"@en .
+
+sic:analysisSimulationObjective
+    a owl:DatatypeProperty ;
+    rdfs:label "Simulation Objective"@en ;
+    rdfs:comment "Analysis attribute mapped from SIC Core to SRMD keyword analysis.simulation-task.objectives."@en ;
+    rdfs:domain sic:SimulationTask ;
+    rdfs:range xsd:string ;
+    skos:note "Obligation: Mandatory. Multiple values allowed."@en ;
+    skos:mappingRelation "SRMD classification keyword: analysis.simulation-task.objectives"@en .
+
+sic:analysisFurtherSimulationRequirements
+    a owl:DatatypeProperty ;
+    rdfs:label "Simulation further Requirements"@en ;
+    rdfs:comment "Analysis attribute mapped from SIC Core to SRMD keyword analysis.simulation-task.further-requirements."@en ;
+    rdfs:domain sic:SimulationTask ;
+    rdfs:range xsd:string ;
+    skos:note "Obligation: Recommended. Multiple values allowed."@en ;
+    skos:mappingRelation "SRMD classification keyword: analysis.simulation-task.further-requirements"@en .
+
+sic:analysisQualityCriterion
+    a owl:DatatypeProperty ;
+    rdfs:label "Quality Criterion"@en ;
+    rdfs:comment "Analysis attribute mapped from SIC Core to SRMD keyword analysis.quality-aspects."@en ;
+    rdfs:domain sic:SimulationTask ;
+    rdfs:range xsd:string ;
+    skos:note "Obligation: Recommended. Multiple values allowed."@en ;
+    skos:mappingRelation "SRMD classification keyword: analysis.quality-aspects"@en .
+
+sic:analysisVerificationCriterion
+    a owl:DatatypeProperty ;
+    rdfs:label "Verification Criterion"@en ;
+    rdfs:comment "Analysis attribute mapped from SIC Core to SRMD keyword analysis.verification."@en ;
+    rdfs:domain sic:SimulationTask ;
+    rdfs:range xsd:string ;
+    skos:note "Obligation: Recommended. Multiple values allowed."@en ;
+    skos:mappingRelation "SRMD classification keyword: analysis.verification"@en .
+
+sic:analysisValidationCriterion
+    a owl:DatatypeProperty ;
+    rdfs:label "Validation Criterion"@en ;
+    rdfs:comment "Analysis attribute mapped from SIC Core to SRMD keyword analysis.validation."@en ;
+    rdfs:domain sic:SimulationTask ;
+    rdfs:range xsd:string ;
+    skos:note "Obligation: Recommended. Multiple values allowed."@en ;
+    skos:mappingRelation "SRMD classification keyword: analysis.validation"@en .
+
+sic:analysisPhaseVerificationResult
+    a owl:DatatypeProperty ;
+    rdfs:label "Analysis Phase Verification Result"@en ;
+    rdfs:comment "Analysis attribute mapped from SIC Core to SRMD keyword analysis.verification."@en ;
+    rdfs:domain sic:SimulationTask ;
+    rdfs:range xsd:string ;
+    skos:note "Obligation: Recommended. Single value."@en ;
+    skos:mappingRelation "SRMD classification keyword: analysis.verification"@en .
+
+sic:requirementsModelPurposeAndObjectives
+    a owl:DatatypeProperty ;
+    rdfs:label "Model Purpose and Objectives"@en ;
+    rdfs:comment "Requirements attribute mapped from SIC Core to SRMD keyword requirements.model.purpose-objectives."@en ;
+    rdfs:domain sic:SimulationTask ;
+    rdfs:range xsd:string ;
+    skos:note "Obligation: Recommended. Multiple values allowed."@en ;
+    skos:mappingRelation "SRMD classification keyword: requirements.model.purpose-objectives"@en .
+
+sic:requirementsModeledEntity
+    a owl:DatatypeProperty ;
+    rdfs:label "Modeled Entity"@en ;
+    rdfs:comment "Requirements attribute mapped from SIC Core to SRMD keyword requirements.model.subject-information.modeled-entity."@en ;
+    rdfs:domain sic:SimulationTask ;
+    rdfs:range xsd:string ;
+    skos:note "Obligation: Recommended. Multiple values allowed."@en ;
+    skos:mappingRelation "SRMD classification keyword: requirements.model.subject-information.modeled-entity"@en .
+
+sic:requirementsModeledEntityName
+    a owl:DatatypeProperty ;
+    rdfs:label "Modeled Entity Name"@en ;
+    rdfs:comment "Requirements attribute mapped from SIC Core to SRMD keyword requirements.model.subject-information.modeled-entity.name."@en ;
+    rdfs:domain sic:SimulationTask ;
+    rdfs:range xsd:string ;
+    skos:note "Obligation: Recommended. Multiple values allowed."@en ;
+    skos:mappingRelation "SRMD classification keyword: requirements.model.subject-information.modeled-entity.name"@en .
+
+sic:requirementsModeledEntityVersion
+    a owl:DatatypeProperty ;
+    rdfs:label "Modeled Entity Version"@en ;
+    rdfs:comment "Requirements attribute mapped from SIC Core to SRMD keyword requirements.model.subject-information.modeled-entity.version."@en ;
+    rdfs:domain sic:SimulationTask ;
+    rdfs:range xsd:string ;
+    skos:note "Obligation: Recommended. Multiple values allowed."@en ;
+    skos:mappingRelation "SRMD classification keyword: requirements.model.subject-information.modeled-entity.version"@en .
+
+sic:requirementsModeledEntityIdentifier
+    a owl:DatatypeProperty ;
+    rdfs:label "Modeled Entity Identifier"@en ;
+    rdfs:comment "Requirements attribute mapped from SIC Core to SRMD keyword requirements.model.subject-information.modeled-entity.identifier."@en ;
+    rdfs:domain sic:SimulationTask ;
+    rdfs:range xsd:string ;
+    skos:note "Obligation: Recommended. Multiple values allowed."@en ;
+    skos:mappingRelation "SRMD classification keyword: requirements.model.subject-information.modeled-entity.identifier"@en .
+
+sic:requirementsModeledEntityUrl
+    a owl:DatatypeProperty ;
+    rdfs:label "Modeled Entity URL"@en ;
+    rdfs:comment "Requirements attribute mapped from SIC Core to SRMD keyword requirements.model.subject-information.modeled-entity.url."@en ;
+    rdfs:domain sic:SimulationTask ;
+    rdfs:range xsd:anyURI ;
+    skos:note "Obligation: Optional. Multiple values allowed."@en ;
+    skos:mappingRelation "SRMD classification keyword: requirements.model.subject-information.modeled-entity.url"@en .
+
+sic:requirementsModeledEntityFullName
+    a owl:DatatypeProperty ;
+    rdfs:label "Modeled Entity Full Name"@en ;
+    rdfs:comment "Requirements attribute mapped from SIC Core to SRMD keyword requirements.model.subject-information.modeled-entity.full-name."@en ;
+    rdfs:domain sic:SimulationTask ;
+    rdfs:range xsd:string ;
+    skos:note "Obligation: Optional. Single value."@en ;
+    skos:mappingRelation "SRMD classification keyword: requirements.model.subject-information.modeled-entity.full-name"@en .
+
+sic:requirementsRequiredModeledEffect
+    a owl:DatatypeProperty ;
+    rdfs:label "Required Modeled Effect"@en ;
+    rdfs:comment "Requirements attribute mapped from SIC Core to SRMD keyword requirements.model.effects-considered."@en ;
+    rdfs:domain sic:SimulationTask ;
+    rdfs:range xsd:string ;
+    skos:note "Obligation: Recommended. Multiple values allowed."@en ;
+    skos:mappingRelation "SRMD classification keyword: requirements.model.effects-considered"@en .
+
+sic:requirementsFurtherModelRequirements
+    a owl:DatatypeProperty ;
+    rdfs:label "Further Model Requirements"@en ;
+    rdfs:comment "Requirements attribute mapped from SIC Core to SRMD keyword requirements.model.further-model-requirements."@en ;
+    rdfs:domain sic:SimulationTask ;
+    rdfs:range xsd:string ;
+    skos:note "Obligation: Recommended. Multiple values allowed."@en ;
+    skos:mappingRelation "SRMD classification keyword: requirements.model.further-model-requirements"@en .
+
+sic:requirementsSimulationModelConfidentialityLevel
+    a owl:DatatypeProperty ;
+    rdfs:label "Simulation Model Confidentiality Level"@en ;
+    rdfs:comment "Requirements attribute mapped from SIC Core to SRMD keyword requirements.model.confidentiality."@en ;
+    rdfs:domain sic:SimulationTask ;
+    rdfs:range xsd:string ;
+    skos:note "Obligation: Recommended. Single value."@en ;
+    skos:mappingRelation "SRMD classification keyword: requirements.model.confidentiality"@en .
+
+sic:requirementsModelQualityRequirement
+    a owl:DatatypeProperty ;
+    rdfs:label "Model Quality Requirement"@en ;
+    rdfs:comment "Requirements attribute mapped from SIC Core to SRMD keyword requirements.model.quality-requirements."@en ;
+    rdfs:domain sic:SimulationTask ;
+    rdfs:range xsd:string ;
+    skos:note "Obligation: Optional. Multiple values allowed."@en ;
+    skos:mappingRelation "SRMD classification keyword: requirements.model.quality-requirements"@en .
+
+sic:requirementsEntityParameter
+    a owl:DatatypeProperty ;
+    rdfs:label "Entity Parameter"@en ;
+    rdfs:comment "Requirements attribute mapped from SIC Core to SRMD keyword requirements.parameter.subject-information.parametrized-entity."@en ;
+    rdfs:domain sic:SimulationTask ;
+    rdfs:range xsd:string ;
+    skos:note "Obligation: Mandatory. Multiple values allowed."@en ;
+    skos:mappingRelation "SRMD classification keyword: requirements.parameter.subject-information.parametrized-entity"@en .
+
+sic:requirementsValueDistributionFunction
+    a owl:DatatypeProperty ;
+    rdfs:label "Value Distribution Function"@en ;
+    rdfs:comment "Requirements attribute mapped from SIC Core to SRMD keyword requirements.parameter-value-distribution-function."@en ;
+    rdfs:domain sic:SimulationTask ;
+    rdfs:range xsd:string ;
+    skos:note "Obligation: Recommended. Multiple values allowed."@en ;
+    skos:mappingRelation "SRMD classification keyword: requirements.parameter-value-distribution-function"@en .
+
+sic:requirementsParameterConfidentialityLevel
+    a owl:DatatypeProperty ;
+    rdfs:label "Parameter Confidentiality Level"@en ;
+    rdfs:comment "Requirements attribute mapped from SIC Core to SRMD keyword requirements.parameter.confidentiality."@en ;
+    rdfs:domain sic:SimulationTask ;
+    rdfs:range xsd:string ;
+    skos:note "Obligation: Recommended. Single value."@en ;
+    skos:mappingRelation "SRMD classification keyword: requirements.parameter.confidentiality"@en .
+
+sic:requirementsParameterQualityRequirement
+    a owl:DatatypeProperty ;
+    rdfs:label "Parameter Quality Requirement"@en ;
+    rdfs:comment "Requirements attribute mapped from SIC Core to SRMD keyword requirements.parameter.quality-requirements."@en ;
+    rdfs:domain sic:SimulationTask ;
+    rdfs:range xsd:string ;
+    skos:note "Obligation: Optional. Multiple values allowed."@en ;
+    skos:mappingRelation "SRMD classification keyword: requirements.parameter.quality-requirements"@en .
+
+sic:requirementsTestCaseRequirements
+    a owl:DatatypeProperty ;
+    rdfs:label "Test Case Requirements"@en ;
+    rdfs:comment "Requirements attribute mapped from SIC Core to SRMD keyword requirements.test-case."@en ;
+    rdfs:domain sic:SimulationTask ;
+    rdfs:range xsd:string ;
+    skos:note "Obligation: Recommended. Multiple values allowed."@en ;
+    skos:mappingRelation "SRMD classification keyword: requirements.test-case"@en .
+
+sic:requirementsTestCaseConfidentialityLevel
+    a owl:DatatypeProperty ;
+    rdfs:label "Test Case Confidentiality Level"@en ;
+    rdfs:comment "Requirements attribute mapped from SIC Core to SRMD keyword requirements.test-case.confidentiality."@en ;
+    rdfs:domain sic:SimulationTask ;
+    rdfs:range xsd:string ;
+    skos:note "Obligation: Recommended. Single value."@en ;
+    skos:mappingRelation "SRMD classification keyword: requirements.test-case.confidentiality"@en .
+
+sic:requirementsTestCaseQualityRequirement
+    a owl:DatatypeProperty ;
+    rdfs:label "Test Case Quality Requirement"@en ;
+    rdfs:comment "Requirements attribute mapped from SIC Core to SRMD keyword requirements.test-case.quality-requirements."@en ;
+    rdfs:domain sic:SimulationTask ;
+    rdfs:range xsd:string ;
+    skos:note "Obligation: Optional. Multiple values allowed."@en ;
+    skos:mappingRelation "SRMD classification keyword: requirements.test-case.quality-requirements"@en .
+
+sic:requirementsSimulationEnvironmentRequirement
+    a owl:DatatypeProperty ;
+    rdfs:label "Simulation Environment Requirement"@en ;
+    rdfs:comment "Requirements attribute mapped from SIC Core to SRMD keyword requirements.simulation-environment."@en ;
+    rdfs:domain sic:SimulationTask ;
+    rdfs:range xsd:string ;
+    skos:note "Obligation: Recommended. Multiple values allowed."@en ;
+    skos:mappingRelation "SRMD classification keyword: requirements.simulation-environment"@en .
+
+sic:requirementsSimulationEnvironmentQualityRequirement
+    a owl:DatatypeProperty ;
+    rdfs:label "Simulation Environment Quality Requirement"@en ;
+    rdfs:comment "Requirements attribute mapped from SIC Core to SRMD keyword requirements.simulation-environment.quality-requirements."@en ;
+    rdfs:domain sic:SimulationTask ;
+    rdfs:range xsd:string ;
+    skos:note "Obligation: Optional. Multiple values allowed."@en ;
+    skos:mappingRelation "SRMD classification keyword: requirements.simulation-environment.quality-requirements"@en .
+
+sic:requirementsSimulationIntegrationRequirement
+    a owl:DatatypeProperty ;
+    rdfs:label "Simulation Integration Requirement"@en ;
+    rdfs:comment "Requirements attribute mapped from SIC Core to SRMD keyword requirements.simulation-integration."@en ;
+    rdfs:domain sic:SimulationTask ;
+    rdfs:range xsd:string ;
+    skos:note "Obligation: Recommended. Multiple values allowed."@en ;
+    skos:mappingRelation "SRMD classification keyword: requirements.simulation-integration"@en .
+
+sic:requirementsSimulationIntegrationQualityRequirement
+    a owl:DatatypeProperty ;
+    rdfs:label "Simulation Integration Quality Requirement"@en ;
+    rdfs:comment "Requirements attribute mapped from SIC Core to SRMD keyword requirements.simulation-integration.quality-requirements."@en ;
+    rdfs:domain sic:SimulationTask ;
+    rdfs:range xsd:string ;
+    skos:note "Obligation: Optional. Multiple values allowed."@en ;
+    skos:mappingRelation "SRMD classification keyword: requirements.simulation-integration.quality-requirements"@en .
+
+sic:requirementsQualityAssuranceRequirements
+    a owl:DatatypeProperty ;
+    rdfs:label "Quality Assurance Requirements"@en ;
+    rdfs:comment "Requirements attribute mapped from SIC Core to SRMD keyword requirements.quality-assurance."@en ;
+    rdfs:domain sic:SimulationTask ;
+    rdfs:range xsd:string ;
+    skos:note "Obligation: Recommended. Multiple values allowed."@en ;
+    skos:mappingRelation "SRMD classification keyword: requirements.quality-assurance"@en .
+
+sic:requirementsPhaseVerificationResult
+    a owl:DatatypeProperty ;
+    rdfs:label "Requirements Phase Verification Result"@en ;
+    rdfs:comment "Requirements attribute mapped from SIC Core to SRMD keyword requirements.verification."@en ;
+    rdfs:domain sic:SimulationTask ;
+    rdfs:range xsd:string ;
+    skos:note "Obligation: Recommended. Single value."@en ;
+    skos:mappingRelation "SRMD classification keyword: requirements.verification"@en .
+
+sic:designModelDesignSpecification
+    a owl:DatatypeProperty ;
+    rdfs:label "Model Design Specification"@en ;
+    rdfs:comment "Design attribute mapped from SIC Core to SRMD keyword design.model."@en ;
+    rdfs:domain sic:SimulationTask ;
+    rdfs:range xsd:string ;
+    skos:note "Obligation: Recommended. Multiple values allowed."@en ;
+    skos:mappingRelation "SRMD classification keyword: design.model"@en .
+
+sic:designModelDesignQualityRequirement
+    a owl:DatatypeProperty ;
+    rdfs:label "Model Design Quality Requirement"@en ;
+    rdfs:comment "Design attribute mapped from SIC Core to SRMD keyword design.model.quality-requirements."@en ;
+    rdfs:domain sic:SimulationTask ;
+    rdfs:range xsd:string ;
+    skos:note "Obligation: Optional. Multiple values allowed."@en ;
+    skos:mappingRelation "SRMD classification keyword: design.model.quality-requirements"@en .
+
+sic:designParameterDesignSpecification
+    a owl:DatatypeProperty ;
+    rdfs:label "Parameter Design Specification"@en ;
+    rdfs:comment "Design attribute mapped from SIC Core to SRMD keyword design.parameter."@en ;
+    rdfs:domain sic:SimulationTask ;
+    rdfs:range xsd:string ;
+    skos:note "Obligation: Recommended. Multiple values allowed."@en ;
+    skos:mappingRelation "SRMD classification keyword: design.parameter"@en .
+
+sic:designParameterDesignQualityRequirement
+    a owl:DatatypeProperty ;
+    rdfs:label "Parameter Design Quality Requirement"@en ;
+    rdfs:comment "Design attribute mapped from SIC Core to SRMD keyword design.parameter.quality-requirements."@en ;
+    rdfs:domain sic:SimulationTask ;
+    rdfs:range xsd:string ;
+    skos:note "Obligation: Optional. Multiple values allowed."@en ;
+    skos:mappingRelation "SRMD classification keyword: design.parameter.quality-requirements"@en .
+
+sic:designTestCaseDesignSpecification
+    a owl:DatatypeProperty ;
+    rdfs:label "Test Case Design Specification"@en ;
+    rdfs:comment "Design attribute mapped from SIC Core to SRMD keyword design.test-case."@en ;
+    rdfs:domain sic:SimulationTask ;
+    rdfs:range xsd:string ;
+    skos:note "Obligation: Recommended. Multiple values allowed."@en ;
+    skos:mappingRelation "SRMD classification keyword: design.test-case"@en .
+
+sic:designTestCaseDesignQualityRequirement
+    a owl:DatatypeProperty ;
+    rdfs:label "Test Case Design Quality Requirement"@en ;
+    rdfs:comment "Design attribute mapped from SIC Core to SRMD keyword design.test-case.quality-requirements."@en ;
+    rdfs:domain sic:SimulationTask ;
+    rdfs:range xsd:string ;
+    skos:note "Obligation: Optional. Multiple values allowed."@en ;
+    skos:mappingRelation "SRMD classification keyword: design.test-case.quality-requirements"@en .
+
+sic:designSimulationEnvironmentDesignSpecification
+    a owl:DatatypeProperty ;
+    rdfs:label "Simulation Environment Design Specification"@en ;
+    rdfs:comment "Design attribute mapped from SIC Core to SRMD keyword design.simulation-environment."@en ;
+    rdfs:domain sic:SimulationTask ;
+    rdfs:range xsd:string ;
+    skos:note "Obligation: Recommended. Multiple values allowed."@en ;
+    skos:mappingRelation "SRMD classification keyword: design.simulation-environment"@en .
+
+sic:designSimulationEnvironmentDesignQualityRequirement
+    a owl:DatatypeProperty ;
+    rdfs:label "Simulation Environment Design Quality Requirement"@en ;
+    rdfs:comment "Design attribute mapped from SIC Core to SRMD keyword design.simulation-environment.quality-requirements."@en ;
+    rdfs:domain sic:SimulationTask ;
+    rdfs:range xsd:string ;
+    skos:note "Obligation: Optional. Multiple values allowed."@en ;
+    skos:mappingRelation "SRMD classification keyword: design.simulation-environment.quality-requirements"@en .
+
+sic:designSimulationIntegrationDesignSpecification
+    a owl:DatatypeProperty ;
+    rdfs:label "Simulation Integration Design Specification"@en ;
+    rdfs:comment "Design attribute mapped from SIC Core to SRMD keyword design.simulation-integration."@en ;
+    rdfs:domain sic:SimulationTask ;
+    rdfs:range xsd:string ;
+    skos:note "Obligation: Recommended. Single value."@en ;
+    skos:mappingRelation "SRMD classification keyword: design.simulation-integration"@en .
+
+sic:designSimulationIntegrationDesignQualityRequirement
+    a owl:DatatypeProperty ;
+    rdfs:label "Simulation Integration Design Quality Requirement"@en ;
+    rdfs:comment "Design attribute mapped from SIC Core to SRMD keyword design.simulation-integration.quality-requirements."@en ;
+    rdfs:domain sic:SimulationTask ;
+    rdfs:range xsd:string ;
+    skos:note "Obligation: Optional. Multiple values allowed."@en ;
+    skos:mappingRelation "SRMD classification keyword: design.simulation-integration.quality-requirements"@en .
+
+sic:designQualityAssurance
+    a owl:DatatypeProperty ;
+    rdfs:label "Design Quality Assurance"@en ;
+    rdfs:comment "Design attribute mapped from SIC Core to SRMD keyword design.quality-assurance."@en ;
+    rdfs:domain sic:SimulationTask ;
+    rdfs:range xsd:string ;
+    skos:note "Obligation: Recommended. Multiple values allowed."@en ;
+    skos:mappingRelation "SRMD classification keyword: design.quality-assurance"@en .
+
+sic:designVerificationResult
+    a owl:DatatypeProperty ;
+    rdfs:label "Design Verification Result"@en ;
+    rdfs:comment "Design attribute mapped from SIC Core to SRMD keyword design.verification."@en ;
+    rdfs:domain sic:SimulationTask ;
+    rdfs:range xsd:string ;
+    skos:note "Obligation: Recommended. Single value."@en ;
+    skos:mappingRelation "SRMD classification keyword: design.verification"@en .
+
+sic:implementationSimulationModel
+    a owl:DatatypeProperty ;
+    rdfs:label "Simulation Model"@en ;
+    rdfs:comment "Implementation attribute mapped from SIC Core to SRMD keyword implementation.model."@en ;
+    rdfs:domain sic:SimulationTask ;
+    rdfs:range xsd:string ;
+    skos:note "Obligation: Recommended. Multiple values allowed."@en ;
+    skos:mappingRelation "SRMD classification keyword: implementation.model"@en .
+
+sic:implementationSimulationModelName
+    a owl:DatatypeProperty ;
+    rdfs:label "Simulation Model Name"@en ;
+    rdfs:comment "Implementation attribute mapped from SIC Core to SRMD keyword implementation.model.name."@en ;
+    rdfs:domain sic:SimulationTask ;
+    rdfs:range xsd:string ;
+    skos:note "Obligation: Recommended. Multiple values allowed."@en ;
+    skos:mappingRelation "SRMD classification keyword: implementation.model.name"@en .
+
+sic:implementationSimulationModelVersion
+    a owl:DatatypeProperty ;
+    rdfs:label "Simulation Model Version"@en ;
+    rdfs:comment "Implementation attribute mapped from SIC Core to SRMD keyword implementation.model.version."@en ;
+    rdfs:domain sic:SimulationTask ;
+    rdfs:range xsd:string ;
+    skos:note "Obligation: Recommended. Multiple values allowed."@en ;
+    skos:mappingRelation "SRMD classification keyword: implementation.model.version"@en .
+
+sic:implementationSimulationModelIdentifier
+    a owl:DatatypeProperty ;
+    rdfs:label "Simulation Model Identifier"@en ;
+    rdfs:comment "Implementation attribute mapped from SIC Core to SRMD keyword implementation.model.identifier."@en ;
+    rdfs:domain sic:SimulationTask ;
+    rdfs:range xsd:string ;
+    skos:note "Obligation: Recommended. Multiple values allowed."@en ;
+    skos:mappingRelation "SRMD classification keyword: implementation.model.identifier"@en .
+
+sic:implementationSimulationModelUrl
+    a owl:DatatypeProperty ;
+    rdfs:label "Simulation Model URL"@en ;
+    rdfs:comment "Implementation attribute mapped from SIC Core to SRMD keyword implementation.model.url."@en ;
+    rdfs:domain sic:SimulationTask ;
+    rdfs:range xsd:anyURI ;
+    skos:note "Obligation: Optional. Multiple values allowed."@en ;
+    skos:mappingRelation "SRMD classification keyword: implementation.model.url"@en .
+
+sic:implementationSimulationModelFullName
+    a owl:DatatypeProperty ;
+    rdfs:label "Simulation Model Full Name"@en ;
+    rdfs:comment "Implementation attribute mapped from SIC Core to SRMD keyword implementation.model.full-name."@en ;
+    rdfs:domain sic:SimulationTask ;
+    rdfs:range xsd:string ;
+    skos:note "Obligation: Optional. Single value."@en ;
+    skos:mappingRelation "SRMD classification keyword: implementation.model.full-name"@en .
+
+sic:implementationSimulationModelConfidentialityLevel
+    a owl:DatatypeProperty ;
+    rdfs:label "Simulation Model Confidentiality Level"@en ;
+    rdfs:comment "Implementation attribute mapped from SIC Core to SRMD keyword implementation.model.confidentiality."@en ;
+    rdfs:domain sic:SimulationTask ;
+    rdfs:range xsd:string ;
+    skos:note "Obligation: Recommended. Single value."@en ;
+    skos:mappingRelation "SRMD classification keyword: implementation.model.confidentiality"@en .
+
+sic:implementationSimulationModelQuality
+    a owl:DatatypeProperty ;
+    rdfs:label "Simulation Model Quality"@en ;
+    rdfs:comment "Implementation attribute mapped from SIC Core to SRMD keyword implementation.model.quality."@en ;
+    rdfs:domain sic:SimulationTask ;
+    rdfs:range xsd:string ;
+    skos:note "Obligation: Recommended. Multiple values allowed."@en ;
+    skos:mappingRelation "SRMD classification keyword: implementation.model.quality"@en .
+
+sic:implementationParameter
+    a owl:DatatypeProperty ;
+    rdfs:label "Parameter"@en ;
+    rdfs:comment "Implementation attribute mapped from SIC Core to SRMD keyword implementation.parameter."@en ;
+    rdfs:domain sic:SimulationTask ;
+    rdfs:range xsd:string ;
+    skos:note "Obligation: Recommended. Multiple values allowed."@en ;
+    skos:mappingRelation "SRMD classification keyword: implementation.parameter"@en .
+
+sic:implementationParameterName
+    a owl:DatatypeProperty ;
+    rdfs:label "Parameter Name"@en ;
+    rdfs:comment "Implementation attribute mapped from SIC Core to SRMD keyword implementation.parameter.name."@en ;
+    rdfs:domain sic:SimulationTask ;
+    rdfs:range xsd:string ;
+    skos:note "Obligation: Recommended. Multiple values allowed."@en ;
+    skos:mappingRelation "SRMD classification keyword: implementation.parameter.name"@en .
+
+sic:implementationParameterVersion
+    a owl:DatatypeProperty ;
+    rdfs:label "Parameter Version"@en ;
+    rdfs:comment "Implementation attribute mapped from SIC Core to SRMD keyword implementation.parameter.version."@en ;
+    rdfs:domain sic:SimulationTask ;
+    rdfs:range xsd:string ;
+    skos:note "Obligation: Recommended. Multiple values allowed."@en ;
+    skos:mappingRelation "SRMD classification keyword: implementation.parameter.version"@en .
+
+sic:implementationParameterIdentifier
+    a owl:DatatypeProperty ;
+    rdfs:label "Parameter Identifier"@en ;
+    rdfs:comment "Implementation attribute mapped from SIC Core to SRMD keyword implementation.parameter.identifier."@en ;
+    rdfs:domain sic:SimulationTask ;
+    rdfs:range xsd:string ;
+    skos:note "Obligation: Recommended. Multiple values allowed."@en ;
+    skos:mappingRelation "SRMD classification keyword: implementation.parameter.identifier"@en .
+
+sic:implementationParameterUrl
+    a owl:DatatypeProperty ;
+    rdfs:label "Parameter URL"@en ;
+    rdfs:comment "Implementation attribute mapped from SIC Core to SRMD keyword implementation.parameter.url."@en ;
+    rdfs:domain sic:SimulationTask ;
+    rdfs:range xsd:anyURI ;
+    skos:note "Obligation: Optional. Multiple values allowed."@en ;
+    skos:mappingRelation "SRMD classification keyword: implementation.parameter.url"@en .
+
+sic:implementationParameterFullName
+    a owl:DatatypeProperty ;
+    rdfs:label "Parameter Full Name"@en ;
+    rdfs:comment "Implementation attribute mapped from SIC Core to SRMD keyword implementation.parameter.full-name."@en ;
+    rdfs:domain sic:SimulationTask ;
+    rdfs:range xsd:string ;
+    skos:note "Obligation: Optional. Single value."@en ;
+    skos:mappingRelation "SRMD classification keyword: implementation.parameter.full-name"@en .
+
+sic:implementationParameterConfidentialityLevel
+    a owl:DatatypeProperty ;
+    rdfs:label "Parameter Confidentiality Level"@en ;
+    rdfs:comment "Implementation attribute mapped from SIC Core to SRMD keyword implementation.parameter.confidentiality."@en ;
+    rdfs:domain sic:SimulationTask ;
+    rdfs:range xsd:string ;
+    skos:note "Obligation: Recommended. Single value."@en ;
+    skos:mappingRelation "SRMD classification keyword: implementation.parameter.confidentiality"@en .
+
+sic:implementationParameterQuality
+    a owl:DatatypeProperty ;
+    rdfs:label "Parameter Quality"@en ;
+    rdfs:comment "Implementation attribute mapped from SIC Core to SRMD keyword implementation.parameter.quality."@en ;
+    rdfs:domain sic:SimulationTask ;
+    rdfs:range xsd:string ;
+    skos:note "Obligation: Recommended. Multiple values allowed."@en ;
+    skos:mappingRelation "SRMD classification keyword: implementation.parameter.quality"@en .
+
+sic:implementationTestCase
+    a owl:DatatypeProperty ;
+    rdfs:label "Test Case"@en ;
+    rdfs:comment "Implementation attribute mapped from SIC Core to SRMD keyword implementation.test-case."@en ;
+    rdfs:domain sic:SimulationTask ;
+    rdfs:range xsd:string ;
+    skos:note "Obligation: Recommended. Multiple values allowed."@en ;
+    skos:mappingRelation "SRMD classification keyword: implementation.test-case"@en .
+
+sic:implementationTestCaseName
+    a owl:DatatypeProperty ;
+    rdfs:label "Test Case Name"@en ;
+    rdfs:comment "Implementation attribute mapped from SIC Core to SRMD keyword implementation.test-case.name."@en ;
+    rdfs:domain sic:SimulationTask ;
+    rdfs:range xsd:string ;
+    skos:note "Obligation: Recommended. Multiple values allowed."@en ;
+    skos:mappingRelation "SRMD classification keyword: implementation.test-case.name"@en .
+
+sic:implementationTestCaseVersion
+    a owl:DatatypeProperty ;
+    rdfs:label "Test Case Version"@en ;
+    rdfs:comment "Implementation attribute mapped from SIC Core to SRMD keyword implementation.test-case.version."@en ;
+    rdfs:domain sic:SimulationTask ;
+    rdfs:range xsd:string ;
+    skos:note "Obligation: Recommended. Multiple values allowed."@en ;
+    skos:mappingRelation "SRMD classification keyword: implementation.test-case.version"@en .
+
+sic:implementationTestCaseIdentifier
+    a owl:DatatypeProperty ;
+    rdfs:label "Test Case Identifier"@en ;
+    rdfs:comment "Implementation attribute mapped from SIC Core to SRMD keyword implementation.test-case.identifier."@en ;
+    rdfs:domain sic:SimulationTask ;
+    rdfs:range xsd:string ;
+    skos:note "Obligation: Recommended. Multiple values allowed."@en ;
+    skos:mappingRelation "SRMD classification keyword: implementation.test-case.identifier"@en .
+
+sic:implementationTestCaseUrl
+    a owl:DatatypeProperty ;
+    rdfs:label "Test Case URL"@en ;
+    rdfs:comment "Implementation attribute mapped from SIC Core to SRMD keyword implementation.test-case.url."@en ;
+    rdfs:domain sic:SimulationTask ;
+    rdfs:range xsd:anyURI ;
+    skos:note "Obligation: Optional. Multiple values allowed."@en ;
+    skos:mappingRelation "SRMD classification keyword: implementation.test-case.url"@en .
+
+sic:implementationTestCaseFullName
+    a owl:DatatypeProperty ;
+    rdfs:label "Test Case Full Name"@en ;
+    rdfs:comment "Implementation attribute mapped from SIC Core to SRMD keyword implementation.test-case.full-name."@en ;
+    rdfs:domain sic:SimulationTask ;
+    rdfs:range xsd:string ;
+    skos:note "Obligation: Optional. Single value."@en ;
+    skos:mappingRelation "SRMD classification keyword: implementation.test-case.full-name"@en .
+
+sic:implementationTestCaseConfidentialityLevel
+    a owl:DatatypeProperty ;
+    rdfs:label "Test Case Confidentiality Level"@en ;
+    rdfs:comment "Implementation attribute mapped from SIC Core to SRMD keyword implementation.test-case.confidentiality."@en ;
+    rdfs:domain sic:SimulationTask ;
+    rdfs:range xsd:string ;
+    skos:note "Obligation: Recommended. Single value."@en ;
+    skos:mappingRelation "SRMD classification keyword: implementation.test-case.confidentiality"@en .
+
+sic:implementationTestCaseQuality
+    a owl:DatatypeProperty ;
+    rdfs:label "Test Case Quality"@en ;
+    rdfs:comment "Implementation attribute mapped from SIC Core to SRMD keyword implementation.test-case.quality."@en ;
+    rdfs:domain sic:SimulationTask ;
+    rdfs:range xsd:string ;
+    skos:note "Obligation: Recommended. Multiple values allowed."@en ;
+    skos:mappingRelation "SRMD classification keyword: implementation.test-case.quality"@en .
+
+sic:implementationSimulationEnvironment
+    a owl:DatatypeProperty ;
+    rdfs:label "Simulation Environment"@en ;
+    rdfs:comment "Implementation attribute mapped from SIC Core to SRMD keyword implementation.simulation-environment."@en ;
+    rdfs:domain sic:SimulationTask ;
+    rdfs:range xsd:string ;
+    skos:note "Obligation: Recommended. Multiple values allowed."@en ;
+    skos:mappingRelation "SRMD classification keyword: implementation.simulation-environment"@en .
+
+sic:implementationSimulationEnvironmentName
+    a owl:DatatypeProperty ;
+    rdfs:label "Simulation Environment Name"@en ;
+    rdfs:comment "Implementation attribute mapped from SIC Core to SRMD keyword implementation.simulation-environment.name."@en ;
+    rdfs:domain sic:SimulationTask ;
+    rdfs:range xsd:string ;
+    skos:note "Obligation: Recommended. Multiple values allowed."@en ;
+    skos:mappingRelation "SRMD classification keyword: implementation.simulation-environment.name"@en .
+
+sic:implementationSimulationEnvironmentVersion
+    a owl:DatatypeProperty ;
+    rdfs:label "Simulation Environment Version"@en ;
+    rdfs:comment "Implementation attribute mapped from SIC Core to SRMD keyword implementation.simulation-environment.version."@en ;
+    rdfs:domain sic:SimulationTask ;
+    rdfs:range xsd:string ;
+    skos:note "Obligation: Recommended. Multiple values allowed."@en ;
+    skos:mappingRelation "SRMD classification keyword: implementation.simulation-environment.version"@en .
+
+sic:implementationSimulationEnvironmentIdentifier
+    a owl:DatatypeProperty ;
+    rdfs:label "Simulation Environment Identifier"@en ;
+    rdfs:comment "Implementation attribute mapped from SIC Core to SRMD keyword implementation.simulation-environment.identifier."@en ;
+    rdfs:domain sic:SimulationTask ;
+    rdfs:range xsd:string ;
+    skos:note "Obligation: Recommended. Multiple values allowed."@en ;
+    skos:mappingRelation "SRMD classification keyword: implementation.simulation-environment.identifier"@en .
+
+sic:implementationSimulationEnvironmentUrl
+    a owl:DatatypeProperty ;
+    rdfs:label "Simulation Environment URL"@en ;
+    rdfs:comment "Implementation attribute mapped from SIC Core to SRMD keyword implementation.simulation-environment.url."@en ;
+    rdfs:domain sic:SimulationTask ;
+    rdfs:range xsd:anyURI ;
+    skos:note "Obligation: Optional. Multiple values allowed."@en ;
+    skos:mappingRelation "SRMD classification keyword: implementation.simulation-environment.url"@en .
+
+sic:implementationSimulationEnvironmentFullName
+    a owl:DatatypeProperty ;
+    rdfs:label "Simulation Environment Full Name"@en ;
+    rdfs:comment "Implementation attribute mapped from SIC Core to SRMD keyword implementation.simulation-environment.full-name."@en ;
+    rdfs:domain sic:SimulationTask ;
+    rdfs:range xsd:string ;
+    skos:note "Obligation: Optional. Single value."@en ;
+    skos:mappingRelation "SRMD classification keyword: implementation.simulation-environment.full-name"@en .
+
+sic:implementationSimulationEnvironmentQuality
+    a owl:DatatypeProperty ;
+    rdfs:label "Simulation Environment Quality"@en ;
+    rdfs:comment "Implementation attribute mapped from SIC Core to SRMD keyword implementation.simulation-environment.quality."@en ;
+    rdfs:domain sic:SimulationTask ;
+    rdfs:range xsd:string ;
+    skos:note "Obligation: Recommended. Multiple values allowed."@en ;
+    skos:mappingRelation "SRMD classification keyword: implementation.simulation-environment.quality"@en .
+
+sic:implementationSolverSetting
+    a owl:DatatypeProperty ;
+    rdfs:label "Solver Setting"@en ;
+    rdfs:comment "Implementation attribute mapped from SIC Core to SRMD keyword implementation.simulation-integration.settings."@en ;
+    rdfs:domain sic:SimulationTask ;
+    rdfs:range xsd:string ;
+    skos:note "Obligation: Recommended. Multiple values allowed."@en ;
+    skos:mappingRelation "SRMD classification keyword: implementation.simulation-integration.settings"@en .
+
+sic:implementationSimulationIntegration
+    a owl:DatatypeProperty ;
+    rdfs:label "Simulation Integration"@en ;
+    rdfs:comment "Implementation attribute mapped from SIC Core to SRMD keyword implementation.simulation-integration."@en ;
+    rdfs:domain sic:SimulationTask ;
+    rdfs:range xsd:string ;
+    skos:note "Obligation: Recommended. Multiple values allowed."@en ;
+    skos:mappingRelation "SRMD classification keyword: implementation.simulation-integration"@en .
+
+sic:implementationSimulationIntegrationName
+    a owl:DatatypeProperty ;
+    rdfs:label "Simulation Integration Name"@en ;
+    rdfs:comment "Implementation attribute mapped from SIC Core to SRMD keyword implementation.simulation-integration.name."@en ;
+    rdfs:domain sic:SimulationTask ;
+    rdfs:range xsd:string ;
+    skos:note "Obligation: Recommended. Multiple values allowed."@en ;
+    skos:mappingRelation "SRMD classification keyword: implementation.simulation-integration.name"@en .
+
+sic:implementationSimulationIntegrationVersion
+    a owl:DatatypeProperty ;
+    rdfs:label "Simulation Integration Version"@en ;
+    rdfs:comment "Implementation attribute mapped from SIC Core to SRMD keyword implementation.simulation-integration.version."@en ;
+    rdfs:domain sic:SimulationTask ;
+    rdfs:range xsd:string ;
+    skos:note "Obligation: Recommended. Multiple values allowed."@en ;
+    skos:mappingRelation "SRMD classification keyword: implementation.simulation-integration.version"@en .
+
+sic:implementationSimulationIntegrationIdentifier
+    a owl:DatatypeProperty ;
+    rdfs:label "Simulation Integration Identifier"@en ;
+    rdfs:comment "Implementation attribute mapped from SIC Core to SRMD keyword implementation.simulation-integration.identifier."@en ;
+    rdfs:domain sic:SimulationTask ;
+    rdfs:range xsd:string ;
+    skos:note "Obligation: Recommended. Multiple values allowed."@en ;
+    skos:mappingRelation "SRMD classification keyword: implementation.simulation-integration.identifier"@en .
+
+sic:implementationSimulationIntegrationUrl
+    a owl:DatatypeProperty ;
+    rdfs:label "Simulation Integration URL"@en ;
+    rdfs:comment "Implementation attribute mapped from SIC Core to SRMD keyword implementation.simulation-integration.url."@en ;
+    rdfs:domain sic:SimulationTask ;
+    rdfs:range xsd:anyURI ;
+    skos:note "Obligation: Optional. Multiple values allowed."@en ;
+    skos:mappingRelation "SRMD classification keyword: implementation.simulation-integration.url"@en .
+
+sic:implementationSimulationIntegrationFullName
+    a owl:DatatypeProperty ;
+    rdfs:label "Simulation Integration Full Name"@en ;
+    rdfs:comment "Implementation attribute mapped from SIC Core to SRMD keyword implementation.simulation-integration.full-name."@en ;
+    rdfs:domain sic:SimulationTask ;
+    rdfs:range xsd:string ;
+    skos:note "Obligation: Optional. Single value."@en ;
+    skos:mappingRelation "SRMD classification keyword: implementation.simulation-integration.full-name"@en .
+
+sic:implementationSimulationIntegrationQuality
+    a owl:DatatypeProperty ;
+    rdfs:label "Simulation Integration Quality"@en ;
+    rdfs:comment "Implementation attribute mapped from SIC Core to SRMD keyword implementation.simulation-integration.quality."@en ;
+    rdfs:domain sic:SimulationTask ;
+    rdfs:range xsd:string ;
+    skos:note "Obligation: Recommended. Multiple values allowed."@en ;
+    skos:mappingRelation "SRMD classification keyword: implementation.simulation-integration.quality"@en .
+
+sic:implementationQualityAssuranceResults
+    a owl:DatatypeProperty ;
+    rdfs:label "Implementation Quality Assurance Results"@en ;
+    rdfs:comment "Implementation attribute mapped from SIC Core to SRMD keyword implementation.quality-assurance-results."@en ;
+    rdfs:domain sic:SimulationTask ;
+    rdfs:range xsd:string ;
+    skos:note "Obligation: Recommended. Multiple values allowed."@en ;
+    skos:mappingRelation "SRMD classification keyword: implementation.quality-assurance-results"@en .
+
+sic:implementationQualityVerdict
+    a owl:DatatypeProperty ;
+    rdfs:label "Implementation Quality Verdict"@en ;
+    rdfs:comment "Implementation attribute mapped from SIC Core to SRMD keyword implementation.verdict."@en ;
+    rdfs:domain sic:SimulationTask ;
+    rdfs:range xsd:string ;
+    skos:note "Obligation: Optional. Single value."@en ;
+    skos:mappingRelation "SRMD classification keyword: implementation.verdict"@en .
+
+sic:executionUsedSimulationModel
+    a owl:DatatypeProperty ;
+    rdfs:label "Used Simulation Model"@en ;
+    rdfs:comment "Execution attribute mapped from SIC Core to SRMD keyword execution.model."@en ;
+    rdfs:domain sic:SimulationTask ;
+    rdfs:range xsd:string ;
+    skos:note "Obligation: Mandatory. Multiple values allowed."@en ;
+    skos:mappingRelation "SRMD classification keyword: execution.model"@en .
+
+sic:executionUsedSimulationModelName
+    a owl:DatatypeProperty ;
+    rdfs:label "Used Simulation Model Name"@en ;
+    rdfs:comment "Execution attribute mapped from SIC Core to SRMD keyword execution.model.name."@en ;
+    rdfs:domain sic:SimulationTask ;
+    rdfs:range xsd:string ;
+    skos:note "Obligation: Mandatory. Multiple values allowed."@en ;
+    skos:mappingRelation "SRMD classification keyword: execution.model.name"@en .
+
+sic:executionUsedSimulationModelVersion
+    a owl:DatatypeProperty ;
+    rdfs:label "Used Simulation Model Version"@en ;
+    rdfs:comment "Execution attribute mapped from SIC Core to SRMD keyword execution.model.version."@en ;
+    rdfs:domain sic:SimulationTask ;
+    rdfs:range xsd:string ;
+    skos:note "Obligation: Mandatory. Multiple values allowed."@en ;
+    skos:mappingRelation "SRMD classification keyword: execution.model.version"@en .
+
+sic:executionUsedSimulationModelIdentifier
+    a owl:DatatypeProperty ;
+    rdfs:label "Used Simulation Model Identifier"@en ;
+    rdfs:comment "Execution attribute mapped from SIC Core to SRMD keyword execution.model.identifier."@en ;
+    rdfs:domain sic:SimulationTask ;
+    rdfs:range xsd:string ;
+    skos:note "Obligation: Mandatory. Multiple values allowed."@en ;
+    skos:mappingRelation "SRMD classification keyword: execution.model.identifier"@en .
+
+sic:executionUsedSimulationModelUrl
+    a owl:DatatypeProperty ;
+    rdfs:label "Used Simulation Model URL"@en ;
+    rdfs:comment "Execution attribute mapped from SIC Core to SRMD keyword execution.model.url."@en ;
+    rdfs:domain sic:SimulationTask ;
+    rdfs:range xsd:anyURI ;
+    skos:note "Obligation: Optional. Multiple values allowed."@en ;
+    skos:mappingRelation "SRMD classification keyword: execution.model.url"@en .
+
+sic:executionUsedSimulationModelFullName
+    a owl:DatatypeProperty ;
+    rdfs:label "Used Simulation Model Full Name"@en ;
+    rdfs:comment "Execution attribute mapped from SIC Core to SRMD keyword execution.model.full-name."@en ;
+    rdfs:domain sic:SimulationTask ;
+    rdfs:range xsd:string ;
+    skos:note "Obligation: Optional. Single value."@en ;
+    skos:mappingRelation "SRMD classification keyword: execution.model.full-name"@en .
+
+sic:executionUsedParameter
+    a owl:DatatypeProperty ;
+    rdfs:label "Used Parameter"@en ;
+    rdfs:comment "Execution attribute mapped from SIC Core to SRMD keyword execution.parameter."@en ;
+    rdfs:domain sic:SimulationTask ;
+    rdfs:range xsd:string ;
+    skos:note "Obligation: Mandatory. Multiple values allowed."@en ;
+    skos:mappingRelation "SRMD classification keyword: execution.parameter"@en .
+
+sic:executionUsedParameterName
+    a owl:DatatypeProperty ;
+    rdfs:label "Used Parameter Name"@en ;
+    rdfs:comment "Execution attribute mapped from SIC Core to SRMD keyword execution.parameter.name."@en ;
+    rdfs:domain sic:SimulationTask ;
+    rdfs:range xsd:string ;
+    skos:note "Obligation: Mandatory. Multiple values allowed."@en ;
+    skos:mappingRelation "SRMD classification keyword: execution.parameter.name"@en .
+
+sic:executionUsedParameterVersion
+    a owl:DatatypeProperty ;
+    rdfs:label "Used Parameter Version"@en ;
+    rdfs:comment "Execution attribute mapped from SIC Core to SRMD keyword execution.parameter.version."@en ;
+    rdfs:domain sic:SimulationTask ;
+    rdfs:range xsd:string ;
+    skos:note "Obligation: Mandatory. Multiple values allowed."@en ;
+    skos:mappingRelation "SRMD classification keyword: execution.parameter.version"@en .
+
+sic:executionUsedParameterIdentifier
+    a owl:DatatypeProperty ;
+    rdfs:label "Used Parameter Identifier"@en ;
+    rdfs:comment "Execution attribute mapped from SIC Core to SRMD keyword execution.parameter.identifier."@en ;
+    rdfs:domain sic:SimulationTask ;
+    rdfs:range xsd:string ;
+    skos:note "Obligation: Mandatory. Multiple values allowed."@en ;
+    skos:mappingRelation "SRMD classification keyword: execution.parameter.identifier"@en .
+
+sic:executionUsedParameterUrl
+    a owl:DatatypeProperty ;
+    rdfs:label "Used Parameter URL"@en ;
+    rdfs:comment "Execution attribute mapped from SIC Core to SRMD keyword execution.parameter.url."@en ;
+    rdfs:domain sic:SimulationTask ;
+    rdfs:range xsd:anyURI ;
+    skos:note "Obligation: Optional. Multiple values allowed."@en ;
+    skos:mappingRelation "SRMD classification keyword: execution.parameter.url"@en .
+
+sic:executionUsedParameterFullName
+    a owl:DatatypeProperty ;
+    rdfs:label "Used Parameter Full Name"@en ;
+    rdfs:comment "Execution attribute mapped from SIC Core to SRMD keyword execution.parameter.full-name."@en ;
+    rdfs:domain sic:SimulationTask ;
+    rdfs:range xsd:string ;
+    skos:note "Obligation: Optional. Single value."@en ;
+    skos:mappingRelation "SRMD classification keyword: execution.parameter.full-name"@en .
+
+sic:executionUsedTestCase
+    a owl:DatatypeProperty ;
+    rdfs:label "Used Test Case"@en ;
+    rdfs:comment "Execution attribute mapped from SIC Core to SRMD keyword execution.test-case."@en ;
+    rdfs:domain sic:SimulationTask ;
+    rdfs:range xsd:string ;
+    skos:note "Obligation: Recommended. Multiple values allowed."@en ;
+    skos:mappingRelation "SRMD classification keyword: execution.test-case"@en .
+
+sic:executionUsedTestCaseName
+    a owl:DatatypeProperty ;
+    rdfs:label "Used Test Case Name"@en ;
+    rdfs:comment "Execution attribute mapped from SIC Core to SRMD keyword execution.test-case.name."@en ;
+    rdfs:domain sic:SimulationTask ;
+    rdfs:range xsd:string ;
+    skos:note "Obligation: Recommended. Multiple values allowed."@en ;
+    skos:mappingRelation "SRMD classification keyword: execution.test-case.name"@en .
+
+sic:executionUsedTestCaseVersion
+    a owl:DatatypeProperty ;
+    rdfs:label "Used Test Case Version"@en ;
+    rdfs:comment "Execution attribute mapped from SIC Core to SRMD keyword execution.test-case.version."@en ;
+    rdfs:domain sic:SimulationTask ;
+    rdfs:range xsd:string ;
+    skos:note "Obligation: Recommended. Multiple values allowed."@en ;
+    skos:mappingRelation "SRMD classification keyword: execution.test-case.version"@en .
+
+sic:executionUsedTestCaseIdentifier
+    a owl:DatatypeProperty ;
+    rdfs:label "Used Test Case Identifier"@en ;
+    rdfs:comment "Execution attribute mapped from SIC Core to SRMD keyword execution.test-case.identifier."@en ;
+    rdfs:domain sic:SimulationTask ;
+    rdfs:range xsd:string ;
+    skos:note "Obligation: Recommended. Multiple values allowed."@en ;
+    skos:mappingRelation "SRMD classification keyword: execution.test-case.identifier"@en .
+
+sic:executionUsedTestCaseUrl
+    a owl:DatatypeProperty ;
+    rdfs:label "Used Test Case URL"@en ;
+    rdfs:comment "Execution attribute mapped from SIC Core to SRMD keyword execution.test-case.url."@en ;
+    rdfs:domain sic:SimulationTask ;
+    rdfs:range xsd:anyURI ;
+    skos:note "Obligation: Optional. Multiple values allowed."@en ;
+    skos:mappingRelation "SRMD classification keyword: execution.test-case.url"@en .
+
+sic:executionUsedTestCaseFullName
+    a owl:DatatypeProperty ;
+    rdfs:label "Used Test Case Full Name"@en ;
+    rdfs:comment "Execution attribute mapped from SIC Core to SRMD keyword execution.test-case.full-name."@en ;
+    rdfs:domain sic:SimulationTask ;
+    rdfs:range xsd:string ;
+    skos:note "Obligation: Optional. Single value."@en ;
+    skos:mappingRelation "SRMD classification keyword: execution.test-case.full-name"@en .
+
+sic:executionUsedTool
+    a owl:DatatypeProperty ;
+    rdfs:label "Used Tool"@en ;
+    rdfs:comment "Execution attribute mapped from SIC Core to SRMD keyword execution.tool."@en ;
+    rdfs:domain sic:SimulationTask ;
+    rdfs:range xsd:string ;
+    skos:note "Obligation: Mandatory. Multiple values allowed."@en ;
+    skos:mappingRelation "SRMD classification keyword: execution.tool"@en .
+
+sic:executionUsedToolName
+    a owl:DatatypeProperty ;
+    rdfs:label "Used Tool Name"@en ;
+    rdfs:comment "Execution attribute mapped from SIC Core to SRMD keyword execution.tool.name."@en ;
+    rdfs:domain sic:SimulationTask ;
+    rdfs:range xsd:string ;
+    skos:note "Obligation: Mandatory. Multiple values allowed."@en ;
+    skos:mappingRelation "SRMD classification keyword: execution.tool.name"@en .
+
+sic:executionUsedToolVersion
+    a owl:DatatypeProperty ;
+    rdfs:label "Used Tool Version"@en ;
+    rdfs:comment "Execution attribute mapped from SIC Core to SRMD keyword execution.tool.version."@en ;
+    rdfs:domain sic:SimulationTask ;
+    rdfs:range xsd:string ;
+    skos:note "Obligation: Mandatory. Multiple values allowed."@en ;
+    skos:mappingRelation "SRMD classification keyword: execution.tool.version"@en .
+
+sic:executionUsedToolIdentifier
+    a owl:DatatypeProperty ;
+    rdfs:label "Used Tool Identifier"@en ;
+    rdfs:comment "Execution attribute mapped from SIC Core to SRMD keyword execution.tool.identifier."@en ;
+    rdfs:domain sic:SimulationTask ;
+    rdfs:range xsd:string ;
+    skos:note "Obligation: Mandatory. Multiple values allowed."@en ;
+    skos:mappingRelation "SRMD classification keyword: execution.tool.identifier"@en .
+
+sic:executionUsedToolUrl
+    a owl:DatatypeProperty ;
+    rdfs:label "Used Tool URL"@en ;
+    rdfs:comment "Execution attribute mapped from SIC Core to SRMD keyword execution.tool.url."@en ;
+    rdfs:domain sic:SimulationTask ;
+    rdfs:range xsd:anyURI ;
+    skos:note "Obligation: Optional. Multiple values allowed."@en ;
+    skos:mappingRelation "SRMD classification keyword: execution.tool.url"@en .
+
+sic:executionUsedToolFullName
+    a owl:DatatypeProperty ;
+    rdfs:label "Used Tool Full Name"@en ;
+    rdfs:comment "Execution attribute mapped from SIC Core to SRMD keyword execution.tool.full-name."@en ;
+    rdfs:domain sic:SimulationTask ;
+    rdfs:range xsd:string ;
+    skos:note "Obligation: Optional. Single value."@en ;
+    skos:mappingRelation "SRMD classification keyword: execution.tool.full-name"@en .
+
+sic:executionRawData
+    a owl:DatatypeProperty ;
+    rdfs:label "Execution Raw Data"@en ;
+    rdfs:comment "Execution attribute mapped from SIC Core to SRMD keyword execution.data."@en ;
+    rdfs:domain sic:SimulationTask ;
+    rdfs:range xsd:anyURI ;
+    skos:note "Obligation: Recommended. Multiple values allowed."@en ;
+    skos:mappingRelation "SRMD classification keyword: execution.data"@en .
+
+sic:executionUsedToolSettings
+    a owl:DatatypeProperty ;
+    rdfs:label "Used Tool Settings"@en ;
+    rdfs:comment "Execution attribute mapped from SIC Core to SRMD keyword execution.tool.settings."@en ;
+    rdfs:domain sic:SimulationTask ;
+    rdfs:range xsd:string ;
+    skos:note "Obligation: Recommended. Multiple values allowed."@en ;
+    skos:mappingRelation "SRMD classification keyword: execution.tool.settings"@en .
+
+sic:executionLog
+    a owl:DatatypeProperty ;
+    rdfs:label "Execution Log"@en ;
+    rdfs:comment "Execution attribute mapped from SIC Core to SRMD keyword execution.log."@en ;
+    rdfs:domain sic:SimulationTask ;
+    rdfs:range xsd:anyURI ;
+    skos:note "Obligation: Optional. Single value."@en ;
+    skos:mappingRelation "SRMD classification keyword: execution.log"@en .
+
+sic:evaluationResults
+    a owl:DatatypeProperty ;
+    rdfs:label "Evaluation Results"@en ;
+    rdfs:comment "Evaluation attribute mapped from SIC Core to SRMD keyword evaluation.results."@en ;
+    rdfs:domain sic:SimulationTask ;
+    rdfs:range xsd:anyURI ;
+    skos:note "Obligation: Recommended. Multiple values allowed."@en ;
+    skos:mappingRelation "SRMD classification keyword: evaluation.results"@en .
+
+sic:evaluationQualityAssuranceResults
+    a owl:DatatypeProperty ;
+    rdfs:label "Evaluation Quality-Assurance Results"@en ;
+    rdfs:comment "Evaluation attribute mapped from SIC Core to SRMD keyword evaluation.quality-assurance."@en ;
+    rdfs:domain sic:SimulationTask ;
+    rdfs:range xsd:string ;
+    skos:note "Obligation: Recommended. Single value."@en ;
+    skos:mappingRelation "SRMD classification keyword: evaluation.quality-assurance"@en .
+
+sic:evaluationQualityVerdict
+    a owl:DatatypeProperty ;
+    rdfs:label "Evaluation Quality Verdict"@en ;
+    rdfs:comment "Evaluation attribute mapped from SIC Core to SRMD keyword evaluation.verdict."@en ;
+    rdfs:domain sic:SimulationTask ;
+    rdfs:range xsd:string ;
+    skos:note "Obligation: Optional. Single value."@en ;
+    skos:mappingRelation "SRMD classification keyword: evaluation.verdict"@en .
+
+sic:fulfillmentTaskStatus
+    a owl:DatatypeProperty ;
+    rdfs:label "Task Status"@en ;
+    rdfs:comment "Fulfillment attribute mapped from SIC Core to SRMD keyword fulfillment.task-status."@en ;
+    rdfs:domain sic:SimulationTask ;
+    rdfs:range xsd:string ;
+    skos:note "Obligation: Mandatory. Single value."@en ;
+    skos:mappingRelation "SRMD classification keyword: fulfillment.task-status"@en .
+
+sic:fulfillmentQualityFulfilled
+    a owl:DatatypeProperty ;
+    rdfs:label "Quality Fulfilled"@en ;
+    rdfs:comment "Fulfillment attribute mapped from SIC Core to SRMD keyword fulfillment.quality."@en ;
+    rdfs:domain sic:SimulationTask ;
+    rdfs:range xsd:string ;
+    skos:note "Obligation: Recommended. Single value."@en ;
+    skos:mappingRelation "SRMD classification keyword: fulfillment.quality"@en .
+
+sic:fulfillmentObjectivesFulfilled
+    a owl:DatatypeProperty ;
+    rdfs:label "Objectives Fulfilled"@en ;
+    rdfs:comment "Fulfillment attribute mapped from SIC Core to SRMD keyword fulfillment.objectives."@en ;
+    rdfs:domain sic:SimulationTask ;
+    rdfs:range xsd:string ;
+    skos:note "Obligation: Recommended. Single value."@en ;
+    skos:mappingRelation "SRMD classification keyword: fulfillment.objectives"@en .
+
+sic:fulfillmentEvidence
+    a owl:DatatypeProperty ;
+    rdfs:label "Fulfillment Evidence"@en ;
+    rdfs:comment "Fulfillment attribute mapped from SIC Core to SRMD keyword fulfillment.evidence."@en ;
+    rdfs:domain sic:SimulationTask ;
+    rdfs:range xsd:anyURI ;
+    skos:note "Obligation: Recommended. Single value."@en ;
+    skos:mappingRelation "SRMD classification keyword: fulfillment.evidence"@en .
+
+sic:fulfillmentDate
+    a owl:DatatypeProperty ;
+    rdfs:label "Fulfillment Date"@en ;
+    rdfs:comment "Fulfillment attribute mapped from SIC Core to SRMD keyword fulfillment.date."@en ;
+    rdfs:domain sic:SimulationTask ;
+    rdfs:range xsd:date ;
+    skos:note "Obligation: Recommended. Single value."@en ;
+    skos:mappingRelation "SRMD classification keyword: fulfillment.date"@en .
+
